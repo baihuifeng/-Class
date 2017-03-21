@@ -42,6 +42,12 @@
         return cell;
        
 }
+- (IBAction)moreClassBtn:(UIButton *)sender {
+    
+    [LZJumpNextViewController presentNextViewController:3 Url:@"" title:@""];
+    
+    
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

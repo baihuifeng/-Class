@@ -12,11 +12,12 @@
 #import "LZLoginViewController.h"
 #import "LZRegisterViewController.h"
 #import "LZFoundPassWordViewController.h"
+#import "LZClassesViewController.h"
 
 @implementation LZJumpNextViewController
 
 /*
-0:登录
+0:登录 1:注册 2忘记密码 3课程列表
 */
 
 + (void)presentNextViewController:(int)index Url:(NSString *)url title:(NSString *)titlt{
@@ -40,6 +41,13 @@
         case 2:
         {
             LZFoundPassWordViewController *FoundVC = [[LZFoundPassWordViewController alloc] init];
+            FoundVC.title = titlt;
+            [(UINavigationController *)tabar.selectedViewController pushViewController:FoundVC animated:YES];
+        }
+            break;
+        case 3:
+        {
+            LZClassesViewController *FoundVC = [[LZClassesViewController alloc] init];
             FoundVC.title = titlt;
             [(UINavigationController *)tabar.selectedViewController pushViewController:FoundVC animated:YES];
         }
