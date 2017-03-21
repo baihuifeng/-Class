@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="396.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="396"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MR-yY-iNh">
@@ -40,24 +40,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKc-Q5-NVO">
-                                <rect key="frame" x="0.0" y="44.5" width="320" height="0.5"/>
+                                <rect key="frame" x="0.0" y="45" width="320" height="0.0"/>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="00Y-q8-VKI"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-qD-99L">
+                                <rect key="frame" x="245" y="0.0" width="61" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="7G2-Ca-xZ0"/>
+                                </constraints>
+                                <state key="normal" title="更多">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreClassBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ct9-9b-f9y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfC-QQ-WxB" firstAttribute="leading" secondItem="5MR-yY-iNh" secondAttribute="leading" constant="20" id="0bH-SW-Ke8"/>
                             <constraint firstItem="wfC-QQ-WxB" firstAttribute="top" secondItem="5MR-yY-iNh" secondAttribute="top" id="13P-Dr-j3m"/>
+                            <constraint firstAttribute="trailing" secondItem="EDl-qD-99L" secondAttribute="trailing" constant="14" id="C0T-Ma-Bgv"/>
                             <constraint firstAttribute="bottom" secondItem="wfC-QQ-WxB" secondAttribute="bottom" id="FoB-47-a3q"/>
                             <constraint firstItem="U92-X1-DGc" firstAttribute="centerY" secondItem="5MR-yY-iNh" secondAttribute="centerY" id="G6n-CA-EeT"/>
                             <constraint firstAttribute="bottom" secondItem="kKc-Q5-NVO" secondAttribute="bottom" id="LT5-OI-Ql5"/>
                             <constraint firstItem="U92-X1-DGc" firstAttribute="leading" secondItem="5MR-yY-iNh" secondAttribute="leading" constant="12" id="P9Q-m5-DhG"/>
                             <constraint firstItem="kKc-Q5-NVO" firstAttribute="leading" secondItem="5MR-yY-iNh" secondAttribute="leading" id="eqm-uF-sCu"/>
+                            <constraint firstItem="EDl-qD-99L" firstAttribute="top" secondItem="5MR-yY-iNh" secondAttribute="top" id="fBy-G2-7aw"/>
                             <constraint firstAttribute="trailing" secondItem="kKc-Q5-NVO" secondAttribute="trailing" id="gHd-DA-6Gy"/>
                             <constraint firstAttribute="height" constant="45" id="jbm-vE-omM"/>
+                            <constraint firstAttribute="bottom" secondItem="EDl-qD-99L" secondAttribute="bottom" id="oAb-aL-gAH"/>
                         </constraints>
                     </view>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gUL-Xy-BcV">
@@ -84,7 +99,7 @@
             <connections>
                 <outlet property="tableView" destination="gUL-Xy-BcV" id="WcS-cY-2Pe"/>
             </connections>
-            <point key="canvasLocation" x="-19" y="40.5"/>
+            <point key="canvasLocation" x="41" y="-59"/>
         </tableViewCell>
     </objects>
 </document>
