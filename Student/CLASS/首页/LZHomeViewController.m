@@ -11,6 +11,7 @@
 #import "LZHomeSecondCell.h"
 #import "LZHomeThirdCell.h"
 #import "LZHomeFourCell.h"
+#import "LZHomeHeadView.h"
 
 @interface LZHomeViewController ()
 
@@ -21,6 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    LZHomeHeadView *headView = [[LZHomeHeadView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 64)];
+    headView.frame = CGRectMake(0, 0, kScreen_Width, 64);
+
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.view addSubview:headView];
 
     
 }
@@ -84,6 +91,16 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

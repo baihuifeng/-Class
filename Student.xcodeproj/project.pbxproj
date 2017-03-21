@@ -77,6 +77,8 @@
 		49D0F25F1E811A93009B56CF /* LZClassesItmesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F25D1E811A93009B56CF /* LZClassesItmesCell.xib */; };
 		49D0F2631E811C31009B56CF /* LZClassesListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2611E811C31009B56CF /* LZClassesListCell.m */; };
 		49D0F2641E811C31009B56CF /* LZClassesListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2621E811C31009B56CF /* LZClassesListCell.xib */; };
+		49D0F2671E81270F009B56CF /* LZHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2661E81270F009B56CF /* LZHomeHeadView.m */; };
+		49D0F2691E812722009B56CF /* LZHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2681E812722009B56CF /* LZHomeHeadView.xib */; };
 		8CCECCB608BFC5A07FAA469B /* libPods-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B6E76FDE9E22696F3E978 /* libPods-Student.a */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +215,9 @@
 		49D0F2601E811C31009B56CF /* LZClassesListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassesListCell.h; sourceTree = "<group>"; };
 		49D0F2611E811C31009B56CF /* LZClassesListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassesListCell.m; sourceTree = "<group>"; };
 		49D0F2621E811C31009B56CF /* LZClassesListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassesListCell.xib; sourceTree = "<group>"; };
+		49D0F2651E81270F009B56CF /* LZHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeHeadView.h; sourceTree = "<group>"; };
+		49D0F2661E81270F009B56CF /* LZHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeHeadView.m; sourceTree = "<group>"; };
+		49D0F2681E812722009B56CF /* LZHomeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHomeHeadView.xib; sourceTree = "<group>"; };
 		A5C597EA389BB4CA16AFB72C /* Pods-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student/Pods-Student.release.xcconfig"; sourceTree = "<group>"; };
 		DA3B6E76FDE9E22696F3E978 /* libPods-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E437E0DEFE33777EB704FF /* Pods-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student/Pods-Student.debug.xcconfig"; sourceTree = "<group>"; };
@@ -506,6 +511,9 @@
 				21EE18221E801E5F00FB7D31 /* LZTeacherListCell.h */,
 				21EE18231E801E5F00FB7D31 /* LZTeacherListCell.m */,
 				21EE18241E801E5F00FB7D31 /* LZTeacherListCell.xib */,
+				49D0F2651E81270F009B56CF /* LZHomeHeadView.h */,
+				49D0F2661E81270F009B56CF /* LZHomeHeadView.m */,
+				49D0F2681E812722009B56CF /* LZHomeHeadView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491BA29C1E7FB70400E92175 /* LZHomeSecondCell.xib in Resources */,
+				49D0F2691E812722009B56CF /* LZHomeHeadView.xib in Resources */,
 				491BA2771E7F6E8800E92175 /* LZLoginViewController.xib in Resources */,
 				491BA27C1E7F7BB400E92175 /* LZRegisterViewController.xib in Resources */,
 				21EE182C1E802BAB00FB7D31 /* LZCourseFirstCell.xib in Resources */,
@@ -784,6 +793,7 @@
 				491BA2C81E7FC1E100E92175 /* LZSecondItmesCell.m in Sources */,
 				21EE18301E8036E500FB7D31 /* LZCourseJudgeCell.m in Sources */,
 				491BA1C61E7B791800E92175 /* LZHomeViewController.m in Sources */,
+				49D0F2671E81270F009B56CF /* LZHomeHeadView.m in Sources */,
 				491BA1E21E7B7B6B00E92175 /* HHNavigationViewController.m in Sources */,
 				491BA2B61E7FBA7000E92175 /* SDCollectionViewCell.m in Sources */,
 				491BA2B31E7FBA7000E92175 /* TAAnimatedDotView.m in Sources */,
