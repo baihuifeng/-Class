@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LZHomeThirdCell" id="KGk-i7-Jjw" customClass="LZHomeThirdCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkZ-w7-1fG">
+                        <rect key="frame" x="0.0" y="0.0" width="38" height="40"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.36470588240000001" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="1bF-pr-TjY"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vA1-Rz-nhb">
+                        <rect key="frame" x="38" y="0.0" width="0.5" height="40"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="Awl-40-YVr"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-wd-cOj">
+                        <rect key="frame" x="42" y="0.0" width="270" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="tVX-op-rG6">
+                            <size key="itemSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="IJh-ER-HBY"/>
+                            <outlet property="delegate" destination="-1" id="wjl-yk-22L"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="fkZ-w7-1fG" secondAttribute="bottom" constant="-9" id="1KF-Ur-2Y2"/>
+                    <constraint firstItem="fkZ-w7-1fG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="7J3-2P-mqO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MJd-wd-cOj" secondAttribute="trailing" id="Hd3-7b-0EI"/>
+                    <constraint firstItem="vA1-Rz-nhb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="PoD-4m-9jh"/>
+                    <constraint firstItem="MJd-wd-cOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="WWc-yt-LGp"/>
+                    <constraint firstItem="MJd-wd-cOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="34" id="fWu-tH-T3Z"/>
+                    <constraint firstItem="vA1-Rz-nhb" firstAttribute="leading" secondItem="fkZ-w7-1fG" secondAttribute="trailing" id="gPg-8L-Eqf"/>
+                    <constraint firstItem="fkZ-w7-1fG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="rlG-ym-ZgT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="vA1-Rz-nhb" secondAttribute="bottom" constant="-9" id="sHX-aQ-pDZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MJd-wd-cOj" secondAttribute="bottom" constant="-9" id="tib-ot-Glz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="MJd-wd-cOj" id="WP7-Er-vTD"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="4"/>
+        </tableViewCell>
+    </objects>
+</document>

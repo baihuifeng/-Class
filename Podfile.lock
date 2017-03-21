@@ -1,0 +1,24 @@
+PODS:
+  - RealReachability (1.1.8):
+    - RealReachability/Connection (= 1.1.8)
+    - RealReachability/Ping (= 1.1.8)
+  - RealReachability/Connection (1.1.8)
+  - RealReachability/Ping (1.1.8)
+  - RTRootNavigationController (0.5.22)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+
+DEPENDENCIES:
+  - RealReachability (~> 1.1.8)
+  - RTRootNavigationController (~> 0.5.22)
+  - SDWebImage (~> 3.7.3)
+
+SPEC CHECKSUMS:
+  RealReachability: e6c8a2bbffa316006e8c282efc1ee2567d61a920
+  RTRootNavigationController: cf134c044a8ce14d97fc668847ed4567efc53f91
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+
+PODFILE CHECKSUM: 912d46c4a8eee2388c59afd8792d2245793d6a15
+
+COCOAPODS: 1.2.0.beta.3

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HHTabbarViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 设置窗口的根控制器
+    self.window.rootViewController = [[HHTabbarViewController alloc] init];
+    
     return YES;
 }
 
