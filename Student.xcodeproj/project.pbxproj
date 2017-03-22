@@ -79,6 +79,13 @@
 		49D0F2641E811C31009B56CF /* LZClassesListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2621E811C31009B56CF /* LZClassesListCell.xib */; };
 		49D0F2671E81270F009B56CF /* LZHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2661E81270F009B56CF /* LZHomeHeadView.m */; };
 		49D0F2691E812722009B56CF /* LZHomeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2681E812722009B56CF /* LZHomeHeadView.xib */; };
+		49D0F26E1E820C27009B56CF /* LZTeacherDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F26C1E820C27009B56CF /* LZTeacherDetailViewController.m */; };
+		49D0F26F1E820C27009B56CF /* LZTeacherDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F26D1E820C27009B56CF /* LZTeacherDetailViewController.xib */; };
+		49D0F2741E820CBE009B56CF /* LZDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2721E820CBE009B56CF /* LZDetailCell.m */; };
+		49D0F2751E820CBE009B56CF /* LZDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2731E820CBE009B56CF /* LZDetailCell.xib */; };
+		49D0F27A1E821724009B56CF /* LZHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2781E821724009B56CF /* LZHeadCell.m */; };
+		49D0F27B1E821724009B56CF /* LZHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2791E821724009B56CF /* LZHeadCell.xib */; };
+		49D0F27E1E8220D1009B56CF /* LZDetailCellManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F27D1E8220D1009B56CF /* LZDetailCellManager.m */; };
 		8CCECCB608BFC5A07FAA469B /* libPods-Student.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B6E76FDE9E22696F3E978 /* libPods-Student.a */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +225,17 @@
 		49D0F2651E81270F009B56CF /* LZHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeHeadView.h; sourceTree = "<group>"; };
 		49D0F2661E81270F009B56CF /* LZHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeHeadView.m; sourceTree = "<group>"; };
 		49D0F2681E812722009B56CF /* LZHomeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHomeHeadView.xib; sourceTree = "<group>"; };
+		49D0F26B1E820C27009B56CF /* LZTeacherDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTeacherDetailViewController.h; sourceTree = "<group>"; };
+		49D0F26C1E820C27009B56CF /* LZTeacherDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTeacherDetailViewController.m; sourceTree = "<group>"; };
+		49D0F26D1E820C27009B56CF /* LZTeacherDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZTeacherDetailViewController.xib; sourceTree = "<group>"; };
+		49D0F2711E820CBE009B56CF /* LZDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailCell.h; sourceTree = "<group>"; };
+		49D0F2721E820CBE009B56CF /* LZDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailCell.m; sourceTree = "<group>"; };
+		49D0F2731E820CBE009B56CF /* LZDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZDetailCell.xib; sourceTree = "<group>"; };
+		49D0F2771E821724009B56CF /* LZHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHeadCell.h; sourceTree = "<group>"; };
+		49D0F2781E821724009B56CF /* LZHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHeadCell.m; sourceTree = "<group>"; };
+		49D0F2791E821724009B56CF /* LZHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHeadCell.xib; sourceTree = "<group>"; };
+		49D0F27C1E8220D1009B56CF /* LZDetailCellManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailCellManager.h; sourceTree = "<group>"; };
+		49D0F27D1E8220D1009B56CF /* LZDetailCellManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailCellManager.m; sourceTree = "<group>"; };
 		A5C597EA389BB4CA16AFB72C /* Pods-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student/Pods-Student.release.xcconfig"; sourceTree = "<group>"; };
 		DA3B6E76FDE9E22696F3E978 /* libPods-Student.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Student.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E437E0DEFE33777EB704FF /* Pods-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student/Pods-Student.debug.xcconfig"; sourceTree = "<group>"; };
@@ -419,6 +437,7 @@
 		491BA1B91E7B780200E92175 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				49D0F26A1E820BB0009B56CF /* 老师详情 */,
 				491BA2921E7FB4F600E92175 /* View */,
 				491BA1C31E7B791800E92175 /* LZHomeViewController.h */,
 				491BA1C41E7B791800E92175 /* LZHomeViewController.m */,
@@ -560,6 +579,40 @@
 			path = ClassesView;
 			sourceTree = "<group>";
 		};
+		49D0F26A1E820BB0009B56CF /* 老师详情 */ = {
+			isa = PBXGroup;
+			children = (
+				49D0F2701E820C7C009B56CF /* View */,
+				49D0F26B1E820C27009B56CF /* LZTeacherDetailViewController.h */,
+				49D0F26C1E820C27009B56CF /* LZTeacherDetailViewController.m */,
+				49D0F26D1E820C27009B56CF /* LZTeacherDetailViewController.xib */,
+				49D0F27C1E8220D1009B56CF /* LZDetailCellManager.h */,
+				49D0F27D1E8220D1009B56CF /* LZDetailCellManager.m */,
+			);
+			path = "老师详情";
+			sourceTree = "<group>";
+		};
+		49D0F2701E820C7C009B56CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49D0F2761E821711009B56CF /* view */,
+				49D0F2711E820CBE009B56CF /* LZDetailCell.h */,
+				49D0F2721E820CBE009B56CF /* LZDetailCell.m */,
+				49D0F2731E820CBE009B56CF /* LZDetailCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		49D0F2761E821711009B56CF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				49D0F2771E821724009B56CF /* LZHeadCell.h */,
+				49D0F2781E821724009B56CF /* LZHeadCell.m */,
+				49D0F2791E821724009B56CF /* LZHeadCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		6777F8CDCA9D0AE72E1D4E68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,9 +748,12 @@
 				491BA2C31E7FBE7800E92175 /* 3333@2x.png in Resources */,
 				21EE18261E801E5F00FB7D31 /* LZTeacherListCell.xib in Resources */,
 				491BA2BE1E7FBD2800E92175 /* 1111@3x.png in Resources */,
+				49D0F2751E820CBE009B56CF /* LZDetailCell.xib in Resources */,
 				491BA18F1E7B770F00E92175 /* LaunchScreen.storyboard in Resources */,
 				491BA1D61E7B7ABD00E92175 /* LZMineViewController.xib in Resources */,
 				491BA2821E7F869600E92175 /* LZFoundPassWordViewController.xib in Resources */,
+				49D0F27B1E821724009B56CF /* LZHeadCell.xib in Resources */,
+				49D0F26F1E820C27009B56CF /* LZTeacherDetailViewController.xib in Resources */,
 				491BA18C1E7B770F00E92175 /* Assets.xcassets in Resources */,
 				21EE18311E8036E500FB7D31 /* LZCourseJudgeCell.xib in Resources */,
 				491BA28D1E7F939200E92175 /* LZMineSecondCell.xib in Resources */,
@@ -802,6 +858,7 @@
 				491BA1841E7B770F00E92175 /* AppDelegate.m in Sources */,
 				491BA2A01E7FB7EE00E92175 /* LZHomeThirdCell.m in Sources */,
 				491BA1E51E7B7B6B00E92175 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
+				49D0F27A1E821724009B56CF /* LZHeadCell.m in Sources */,
 				491BA2B71E7FBA7000E92175 /* SDCycleScrollView.m in Sources */,
 				491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */,
 				491BA2961E7FB6CB00E92175 /* LZHomeFirstCell.m in Sources */,
@@ -818,9 +875,12 @@
 				491BA1811E7B770F00E92175 /* main.m in Sources */,
 				491BA1D51E7B7ABD00E92175 /* LZMineViewController.m in Sources */,
 				49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */,
+				49D0F2741E820CBE009B56CF /* LZDetailCell.m in Sources */,
+				49D0F27E1E8220D1009B56CF /* LZDetailCellManager.m in Sources */,
 				491BA29B1E7FB70400E92175 /* LZHomeSecondCell.m in Sources */,
 				491BA2811E7F869600E92175 /* LZFoundPassWordViewController.m in Sources */,
 				491BA1E61E7B7B6B00E92175 /* UIImage+Color.m in Sources */,
+				49D0F26E1E820C27009B56CF /* LZTeacherDetailViewController.m in Sources */,
 				491BA2B41E7FBA7000E92175 /* TADotView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

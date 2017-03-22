@@ -9,6 +9,7 @@
 #import "LZClassesViewController.h"
 #import "LZClassesItmesCell.h"
 #import "LZClassesListCell.h"
+#import "LZTeacherDetailViewController.h"
 
 @interface LZClassesViewController ()
 
@@ -44,10 +45,16 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LZClassesListCell" owner:self options:nil] lastObject];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LZTeacherDetailViewController *detailVc = [[LZTeacherDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVc animated:YES];
+}
+
 
 
 
