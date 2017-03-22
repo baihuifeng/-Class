@@ -63,7 +63,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8i-XS-xyF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8i-XS-xyF">
                                                 <rect key="frame" x="42" y="0.0" width="38" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,7 +75,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.91764705879999997" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="k8i-XS-xyF" secondAttribute="bottom" id="4EE-yd-vOs"/>
                                             <constraint firstItem="fBv-v4-hut" firstAttribute="leading" secondItem="cYy-A5-iR2" secondAttribute="leading" id="9Zb-eW-PXN"/>
@@ -110,7 +110,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.91764705879999997" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Z2I-rl-WQv" firstAttribute="leading" secondItem="4Ns-4d-S7h" secondAttribute="trailing" constant="1" id="46v-Sr-Fx6"/>
                                             <constraint firstAttribute="bottom" secondItem="4Ns-4d-S7h" secondAttribute="bottom" id="5rn-nV-GU2"/>
@@ -154,7 +154,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.91764705879999997" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="hdu-k9-XZU" firstAttribute="leading" secondItem="k9h-sv-4bM" secondAttribute="leading" id="6po-CK-7Td"/>
                                             <constraint firstAttribute="trailing" secondItem="Gm3-Eo-jtB" secondAttribute="trailing" constant="6" id="EQc-P2-EG6"/>
@@ -192,7 +192,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.91764705879999997" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="bvy-h6-Mne" firstAttribute="leading" secondItem="Qjt-RG-isX" secondAttribute="trailing" constant="1" id="N7G-dB-krn"/>
                                             <constraint firstAttribute="bottom" secondItem="bvy-h6-Mne" secondAttribute="bottom" id="XiP-9K-lx0"/>
@@ -259,7 +259,7 @@
                     <constraint firstItem="BBW-9S-rRA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ytL-Xy-KPq"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-235" y="-65.5"/>
+            <point key="canvasLocation" x="-659" y="139"/>
         </tableViewCell>
     </objects>
 </document>
