@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _caseIndexArr = @[@"1000"];
+    _caseIndexArr = @[@"1000",@"1001"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -40,7 +40,7 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailCell" owner:self options:nil] lastObject];
     }
-    cell.caseIndexArr = _caseIndexArr;
+    cell.caseIndex = [_caseIndexArr[indexPath.row] intValue];
     return cell;
 }
 

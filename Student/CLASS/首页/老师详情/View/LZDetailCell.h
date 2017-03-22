@@ -13,4 +13,6 @@
 @property (nonatomic,strong) NSArray *caseIndexArr;
 @property (strong, nonatomic) IBOutlet UITableView *DetailtableView;
 
+@property (assign,nonatomic) int caseIndex;
+
 @end

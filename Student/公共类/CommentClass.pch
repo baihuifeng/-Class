@@ -15,5 +15,6 @@
 #import "GeneralDefine.h"
 #import "LZJumpNextViewController.h"
 #import <UIKit/UIKit.h>
+#import "LZDetailCellManager.h"
 
 #endif /* CommentClass_pch */

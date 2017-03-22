@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213FC0731E825E5600DF7115 /* LZDetailcommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213FC0711E825E5600DF7115 /* LZDetailcommentCell.m */; };
+		213FC0741E825E5600DF7115 /* LZDetailcommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */; };
+		213FC0781E8262F600DF7115 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213FC0761E8262F600DF7115 /* CommentCell.m */; };
+		213FC0791E8262F600DF7115 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0771E8262F600DF7115 /* CommentCell.xib */; };
 		21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE181E1E801E0B00FB7D31 /* LZHomeFourCell.m */; };
 		21EE18211E801E0B00FB7D31 /* LZHomeFourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EE181F1E801E0B00FB7D31 /* LZHomeFourCell.xib */; };
 		21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE18231E801E5F00FB7D31 /* LZTeacherListCell.m */; };
@@ -107,6 +111,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		213FC0701E825E5600DF7115 /* LZDetailcommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailcommentCell.h; sourceTree = "<group>"; };
+		213FC0711E825E5600DF7115 /* LZDetailcommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailcommentCell.m; sourceTree = "<group>"; };
+		213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZDetailcommentCell.xib; sourceTree = "<group>"; };
+		213FC0751E8262F600DF7115 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		213FC0761E8262F600DF7115 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		213FC0771E8262F600DF7115 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		21EE181D1E801E0B00FB7D31 /* LZHomeFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeFourCell.h; sourceTree = "<group>"; };
 		21EE181E1E801E0B00FB7D31 /* LZHomeFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeFourCell.m; sourceTree = "<group>"; };
 		21EE181F1E801E0B00FB7D31 /* LZHomeFourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHomeFourCell.xib; sourceTree = "<group>"; };
@@ -609,6 +619,12 @@
 				49D0F2771E821724009B56CF /* LZHeadCell.h */,
 				49D0F2781E821724009B56CF /* LZHeadCell.m */,
 				49D0F2791E821724009B56CF /* LZHeadCell.xib */,
+				213FC0701E825E5600DF7115 /* LZDetailcommentCell.h */,
+				213FC0711E825E5600DF7115 /* LZDetailcommentCell.m */,
+				213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */,
+				213FC0751E8262F600DF7115 /* CommentCell.h */,
+				213FC0761E8262F600DF7115 /* CommentCell.m */,
+				213FC0771E8262F600DF7115 /* CommentCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -748,7 +764,9 @@
 				491BA2C31E7FBE7800E92175 /* 3333@2x.png in Resources */,
 				21EE18261E801E5F00FB7D31 /* LZTeacherListCell.xib in Resources */,
 				491BA2BE1E7FBD2800E92175 /* 1111@3x.png in Resources */,
+				213FC0791E8262F600DF7115 /* CommentCell.xib in Resources */,
 				49D0F2751E820CBE009B56CF /* LZDetailCell.xib in Resources */,
+				213FC0741E825E5600DF7115 /* LZDetailcommentCell.xib in Resources */,
 				491BA18F1E7B770F00E92175 /* LaunchScreen.storyboard in Resources */,
 				491BA1D61E7B7ABD00E92175 /* LZMineViewController.xib in Resources */,
 				491BA2821E7F869600E92175 /* LZFoundPassWordViewController.xib in Resources */,
@@ -867,6 +885,7 @@
 				491BA1C21E7B78F500E92175 /* LZRootViewController.m in Sources */,
 				21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */,
 				49D0F25E1E811A93009B56CF /* LZClassesItmesCell.m in Sources */,
+				213FC0781E8262F600DF7115 /* CommentCell.m in Sources */,
 				49D0F2631E811C31009B56CF /* LZClassesListCell.m in Sources */,
 				21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */,
 				491BA2911E7FAF2200E92175 /* LZJumpNextViewController.m in Sources */,
@@ -875,6 +894,7 @@
 				491BA1811E7B770F00E92175 /* main.m in Sources */,
 				491BA1D51E7B7ABD00E92175 /* LZMineViewController.m in Sources */,
 				49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */,
+				213FC0731E825E5600DF7115 /* LZDetailcommentCell.m in Sources */,
 				49D0F2741E820CBE009B56CF /* LZDetailCell.m in Sources */,
 				49D0F27E1E8220D1009B56CF /* LZDetailCellManager.m in Sources */,
 				491BA29B1E7FB70400E92175 /* LZHomeSecondCell.m in Sources */,

@@ -8,9 +8,12 @@
 
 #import "LZDetailCellManager.h"
 #import "LZHeadCell.h"
+#import "LZDetailcommentCell.h"
+#import "CommentCell.h"
 
 @implementation LZDetailCellManager
 
+// 1000:详情第一个cell  1001：详情第二个cell  1002：详情第二个cell里的cell
 
 + (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath CellCaseIndex:(int)caseIndex {
     
@@ -20,6 +23,26 @@
             LZHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZHeadCell"];
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHeadCell" owner:self options:nil] lastObject];
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+            break;
+        case 1001:
+        {
+            LZDetailcommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZDetailcommentCell"];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailcommentCell" owner:self options:nil] lastObject];
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+            break;
+        case 1002:
+        {
+            CommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentCell"];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"CommentCell" owner:self options:nil] lastObject];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
@@ -39,6 +62,18 @@
         case 1000:
         {
 
+            return 235;
+        }
+            break;
+        case 1001:
+        {
+            
+            return 235;
+        }
+            break;
+        case 1002:
+        {
+            
             return 235;
         }
             break;

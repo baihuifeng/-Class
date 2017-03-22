@@ -23,6 +23,12 @@
     
 }
 
+- (void)setCaseIndex:(int)caseIndex {
+    _caseIndex = caseIndex;
+    _DetailtableView.delegate = self;
+    _DetailtableView.dataSource = self;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return 1;
@@ -30,12 +36,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [LZDetailCellManager tableView:tableView heightForRowAtIndexPath:indexPath CellCaseIndex:[_caseIndexArr[indexPath.row] intValue]];
+    return [LZDetailCellManager tableView:tableView heightForRowAtIndexPath:indexPath CellCaseIndex:_caseIndex];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return [LZDetailCellManager tableView:tableView cellForRowAtIndexPath:indexPath CellCaseIndex:[_caseIndexArr[indexPath.row] intValue]];
+    return [LZDetailCellManager tableView:tableView cellForRowAtIndexPath:indexPath CellCaseIndex:_caseIndex];
 
 }
 
