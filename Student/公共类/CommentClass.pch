@@ -14,6 +14,6 @@
 
 #import "GeneralDefine.h"
 #import "LZJumpNextViewController.h"
-
+#import <UIKit/UIKit.h>
 
 #endif /* CommentClass_pch */
