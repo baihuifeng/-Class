@@ -69,12 +69,23 @@
 		491BA2BE1E7FBD2800E92175 /* 1111@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2BA1E7FBD2800E92175 /* 1111@3x.png */; };
 		491BA2BF1E7FBD2800E92175 /* 2222@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2BB1E7FBD2800E92175 /* 2222@2x.png */; };
 		491BA2C01E7FBD2800E92175 /* 2222@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2BC1E7FBD2800E92175 /* 2222@3x.png */; };
-		491BA2C31E7FBE7800E92175 /* 3333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2C11E7FBE7800E92175 /* 3333@2x.png */; };
-		491BA2C41E7FBE7800E92175 /* 3333@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2C21E7FBE7800E92175 /* 3333@3x.png */; };
 		491BA2C81E7FC1E100E92175 /* LZSecondItmesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 491BA2C61E7FC1E000E92175 /* LZSecondItmesCell.m */; };
 		491BA2C91E7FC1E100E92175 /* LZSecondItmesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2C71E7FC1E000E92175 /* LZSecondItmesCell.xib */; };
 		491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 491BA2CB1E7FC8C000E92175 /* LZThirdItmesCell.m */; };
 		491BA2CE1E7FC8C000E92175 /* LZThirdItmesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2CC1E7FC8C000E92175 /* LZThirdItmesCell.xib */; };
+		49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE171E83612B0057C02F /* SpecialityCell.m */; };
+		49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE181E83612B0057C02F /* SpecialityCell.xib */; };
+		49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE1C1E8364270057C02F /* TeacherCaseCell.m */; };
+		49AECE1F1E8364270057C02F /* TeacherCaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE1D1E8364270057C02F /* TeacherCaseCell.xib */; };
+		49AECE221E83A3400057C02F /* LZPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE211E83A3400057C02F /* LZPayViewController.m */; };
+		49AECE241E83A3510057C02F /* LZPayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE231E83A3510057C02F /* LZPayViewController.storyboard */; };
+		49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE261E83B8690057C02F /* LZJudgeController.m */; };
+		49AECE2C1E83BD7B0057C02F /* LZMineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE2B1E83BD7B0057C02F /* LZMineDetailViewController.m */; };
+		49AECE301E83BEEC0057C02F /* LZMineTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE2E1E83BEEC0057C02F /* LZMineTeacherViewController.m */; };
+		49AECE311E83BEEC0057C02F /* LZMineTeacherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE2F1E83BEEC0057C02F /* LZMineTeacherViewController.xib */; };
+		49AECE351E83C0F90057C02F /* MineTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE331E83C0F90057C02F /* MineTeacherCell.m */; };
+		49AECE361E83C0F90057C02F /* MineTeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE341E83C0F90057C02F /* MineTeacherCell.xib */; };
+		49AECE391E83C5C00057C02F /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE381E83C5C00057C02F /* SegmentView.m */; };
 		49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2561E811871009B56CF /* LZClassesViewController.m */; };
 		49D0F2591E811871009B56CF /* LZClassesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2571E811871009B56CF /* LZClassesViewController.xib */; };
 		49D0F25E1E811A93009B56CF /* LZClassesItmesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F25C1E811A93009B56CF /* LZClassesItmesCell.m */; };
@@ -215,14 +226,33 @@
 		491BA2BA1E7FBD2800E92175 /* 1111@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1111@3x.png"; sourceTree = "<group>"; };
 		491BA2BB1E7FBD2800E92175 /* 2222@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2222@2x.png"; sourceTree = "<group>"; };
 		491BA2BC1E7FBD2800E92175 /* 2222@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2222@3x.png"; sourceTree = "<group>"; };
-		491BA2C11E7FBE7800E92175 /* 3333@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3333@2x.png"; sourceTree = "<group>"; };
-		491BA2C21E7FBE7800E92175 /* 3333@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3333@3x.png"; sourceTree = "<group>"; };
 		491BA2C51E7FC1E000E92175 /* LZSecondItmesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSecondItmesCell.h; sourceTree = "<group>"; };
 		491BA2C61E7FC1E000E92175 /* LZSecondItmesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSecondItmesCell.m; sourceTree = "<group>"; };
 		491BA2C71E7FC1E000E92175 /* LZSecondItmesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZSecondItmesCell.xib; sourceTree = "<group>"; };
 		491BA2CA1E7FC8C000E92175 /* LZThirdItmesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZThirdItmesCell.h; sourceTree = "<group>"; };
 		491BA2CB1E7FC8C000E92175 /* LZThirdItmesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZThirdItmesCell.m; sourceTree = "<group>"; };
 		491BA2CC1E7FC8C000E92175 /* LZThirdItmesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZThirdItmesCell.xib; sourceTree = "<group>"; };
+		49AECE161E83612B0057C02F /* SpecialityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialityCell.h; sourceTree = "<group>"; };
+		49AECE171E83612B0057C02F /* SpecialityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialityCell.m; sourceTree = "<group>"; };
+		49AECE181E83612B0057C02F /* SpecialityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialityCell.xib; sourceTree = "<group>"; };
+		49AECE1B1E8364270057C02F /* TeacherCaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherCaseCell.h; sourceTree = "<group>"; };
+		49AECE1C1E8364270057C02F /* TeacherCaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherCaseCell.m; sourceTree = "<group>"; };
+		49AECE1D1E8364270057C02F /* TeacherCaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherCaseCell.xib; sourceTree = "<group>"; };
+		49AECE201E83A3400057C02F /* LZPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPayViewController.h; sourceTree = "<group>"; };
+		49AECE211E83A3400057C02F /* LZPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPayViewController.m; sourceTree = "<group>"; };
+		49AECE231E83A3510057C02F /* LZPayViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LZPayViewController.storyboard; sourceTree = "<group>"; };
+		49AECE251E83B8690057C02F /* LZJudgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZJudgeController.h; sourceTree = "<group>"; };
+		49AECE261E83B8690057C02F /* LZJudgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZJudgeController.m; sourceTree = "<group>"; };
+		49AECE2A1E83BD7B0057C02F /* LZMineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMineDetailViewController.h; sourceTree = "<group>"; };
+		49AECE2B1E83BD7B0057C02F /* LZMineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMineDetailViewController.m; sourceTree = "<group>"; };
+		49AECE2D1E83BEEC0057C02F /* LZMineTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMineTeacherViewController.h; sourceTree = "<group>"; };
+		49AECE2E1E83BEEC0057C02F /* LZMineTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMineTeacherViewController.m; sourceTree = "<group>"; };
+		49AECE2F1E83BEEC0057C02F /* LZMineTeacherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZMineTeacherViewController.xib; sourceTree = "<group>"; };
+		49AECE321E83C0F90057C02F /* MineTeacherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTeacherCell.h; sourceTree = "<group>"; };
+		49AECE331E83C0F90057C02F /* MineTeacherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTeacherCell.m; sourceTree = "<group>"; };
+		49AECE341E83C0F90057C02F /* MineTeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTeacherCell.xib; sourceTree = "<group>"; };
+		49AECE371E83C5C00057C02F /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		49AECE381E83C5C00057C02F /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
 		49D0F2551E811871009B56CF /* LZClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassesViewController.h; sourceTree = "<group>"; };
 		49D0F2561E811871009B56CF /* LZClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassesViewController.m; sourceTree = "<group>"; };
 		49D0F2571E811871009B56CF /* LZClassesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassesViewController.xib; sourceTree = "<group>"; };
@@ -371,6 +401,8 @@
 		491BA1B21E7B77A600E92175 /* 公共类 */ = {
 			isa = PBXGroup;
 			children = (
+				49AECE371E83C5C00057C02F /* SegmentView.h */,
+				49AECE381E83C5C00057C02F /* SegmentView.m */,
 				491BA2A21E7FBA7000E92175 /* SDCycleScrollView */,
 				491BA27D1E7F7CBD00E92175 /* CommentClass.pch */,
 			);
@@ -430,6 +462,11 @@
 				491BA1CD1E7B796600E92175 /* LZCourseViewController.h */,
 				491BA1CE1E7B796600E92175 /* LZCourseViewController.m */,
 				491BA1CF1E7B796600E92175 /* LZCourseViewController.xib */,
+				49AECE201E83A3400057C02F /* LZPayViewController.h */,
+				49AECE211E83A3400057C02F /* LZPayViewController.m */,
+				49AECE231E83A3510057C02F /* LZPayViewController.storyboard */,
+				49AECE251E83B8690057C02F /* LZJudgeController.h */,
+				49AECE261E83B8690057C02F /* LZJudgeController.m */,
 			);
 			path = "课程";
 			sourceTree = "<group>";
@@ -466,6 +503,11 @@
 				491BA1D21E7B7ABD00E92175 /* LZMineViewController.h */,
 				491BA1D31E7B7ABD00E92175 /* LZMineViewController.m */,
 				491BA1D41E7B7ABD00E92175 /* LZMineViewController.xib */,
+				49AECE2A1E83BD7B0057C02F /* LZMineDetailViewController.h */,
+				49AECE2B1E83BD7B0057C02F /* LZMineDetailViewController.m */,
+				49AECE2D1E83BEEC0057C02F /* LZMineTeacherViewController.h */,
+				49AECE2E1E83BEEC0057C02F /* LZMineTeacherViewController.m */,
+				49AECE2F1E83BEEC0057C02F /* LZMineTeacherViewController.xib */,
 				491BA2721E7F6E6A00E92175 /* 登录流程 */,
 			);
 			path = "我的";
@@ -496,6 +538,9 @@
 				491BA2891E7F939200E92175 /* LZMineSecondCell.h */,
 				491BA28A1E7F939200E92175 /* LZMineSecondCell.m */,
 				491BA28B1E7F939200E92175 /* LZMineSecondCell.xib */,
+				49AECE321E83C0F90057C02F /* MineTeacherCell.h */,
+				49AECE331E83C0F90057C02F /* MineTeacherCell.m */,
+				49AECE341E83C0F90057C02F /* MineTeacherCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,8 +562,6 @@
 				491BA2BA1E7FBD2800E92175 /* 1111@3x.png */,
 				491BA2BB1E7FBD2800E92175 /* 2222@2x.png */,
 				491BA2BC1E7FBD2800E92175 /* 2222@3x.png */,
-				491BA2C11E7FBE7800E92175 /* 3333@2x.png */,
-				491BA2C21E7FBE7800E92175 /* 3333@3x.png */,
 				491BA2931E7FB6CB00E92175 /* LZHomeFirstCell.h */,
 				491BA2941E7FB6CB00E92175 /* LZHomeFirstCell.m */,
 				491BA2951E7FB6CB00E92175 /* LZHomeFirstCell.xib */,
@@ -625,6 +668,12 @@
 				213FC0751E8262F600DF7115 /* CommentCell.h */,
 				213FC0761E8262F600DF7115 /* CommentCell.m */,
 				213FC0771E8262F600DF7115 /* CommentCell.xib */,
+				49AECE161E83612B0057C02F /* SpecialityCell.h */,
+				49AECE171E83612B0057C02F /* SpecialityCell.m */,
+				49AECE181E83612B0057C02F /* SpecialityCell.xib */,
+				49AECE1B1E8364270057C02F /* TeacherCaseCell.h */,
+				49AECE1C1E8364270057C02F /* TeacherCaseCell.m */,
+				49AECE1D1E8364270057C02F /* TeacherCaseCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -754,22 +803,24 @@
 				491BA2771E7F6E8800E92175 /* LZLoginViewController.xib in Resources */,
 				491BA27C1E7F7BB400E92175 /* LZRegisterViewController.xib in Resources */,
 				21EE182C1E802BAB00FB7D31 /* LZCourseFirstCell.xib in Resources */,
+				49AECE361E83C0F90057C02F /* MineTeacherCell.xib in Resources */,
 				491BA1CC1E7B793400E92175 /* LZSTeacherViewController.xib in Resources */,
 				491BA2BF1E7FBD2800E92175 /* 2222@2x.png in Resources */,
 				491BA1D11E7B796600E92175 /* LZCourseViewController.xib in Resources */,
 				491BA2971E7FB6CB00E92175 /* LZHomeFirstCell.xib in Resources */,
-				491BA2C41E7FBE7800E92175 /* 3333@3x.png in Resources */,
 				491BA2A11E7FB7EE00E92175 /* LZHomeThirdCell.xib in Resources */,
 				49D0F2641E811C31009B56CF /* LZClassesListCell.xib in Resources */,
-				491BA2C31E7FBE7800E92175 /* 3333@2x.png in Resources */,
 				21EE18261E801E5F00FB7D31 /* LZTeacherListCell.xib in Resources */,
+				49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */,
 				491BA2BE1E7FBD2800E92175 /* 1111@3x.png in Resources */,
 				213FC0791E8262F600DF7115 /* CommentCell.xib in Resources */,
 				49D0F2751E820CBE009B56CF /* LZDetailCell.xib in Resources */,
 				213FC0741E825E5600DF7115 /* LZDetailcommentCell.xib in Resources */,
 				491BA18F1E7B770F00E92175 /* LaunchScreen.storyboard in Resources */,
+				49AECE311E83BEEC0057C02F /* LZMineTeacherViewController.xib in Resources */,
 				491BA1D61E7B7ABD00E92175 /* LZMineViewController.xib in Resources */,
 				491BA2821E7F869600E92175 /* LZFoundPassWordViewController.xib in Resources */,
+				49AECE1F1E8364270057C02F /* TeacherCaseCell.xib in Resources */,
 				49D0F27B1E821724009B56CF /* LZHeadCell.xib in Resources */,
 				49D0F26F1E820C27009B56CF /* LZTeacherDetailViewController.xib in Resources */,
 				491BA18C1E7B770F00E92175 /* Assets.xcassets in Resources */,
@@ -779,6 +830,7 @@
 				49D0F25F1E811A93009B56CF /* LZClassesItmesCell.xib in Resources */,
 				491BA2C01E7FBD2800E92175 /* 2222@3x.png in Resources */,
 				491BA2BD1E7FBD2800E92175 /* 1111@2x.png in Resources */,
+				49AECE241E83A3510057C02F /* LZPayViewController.storyboard in Resources */,
 				491BA2CE1E7FC8C000E92175 /* LZThirdItmesCell.xib in Resources */,
 				491BA2881E7F8F6700E92175 /* LZMineFirstCell.xib in Resources */,
 				491BA18A1E7B770F00E92175 /* Main.storyboard in Resources */,
@@ -867,8 +919,10 @@
 				491BA2C81E7FC1E100E92175 /* LZSecondItmesCell.m in Sources */,
 				21EE18301E8036E500FB7D31 /* LZCourseJudgeCell.m in Sources */,
 				491BA1C61E7B791800E92175 /* LZHomeViewController.m in Sources */,
+				49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */,
 				49D0F2671E81270F009B56CF /* LZHomeHeadView.m in Sources */,
 				491BA1E21E7B7B6B00E92175 /* HHNavigationViewController.m in Sources */,
+				49AECE301E83BEEC0057C02F /* LZMineTeacherViewController.m in Sources */,
 				491BA2B61E7FBA7000E92175 /* SDCollectionViewCell.m in Sources */,
 				491BA2B31E7FBA7000E92175 /* TAAnimatedDotView.m in Sources */,
 				491BA1CB1E7B793400E92175 /* LZSTeacherViewController.m in Sources */,
@@ -877,9 +931,11 @@
 				491BA2A01E7FB7EE00E92175 /* LZHomeThirdCell.m in Sources */,
 				491BA1E51E7B7B6B00E92175 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
 				49D0F27A1E821724009B56CF /* LZHeadCell.m in Sources */,
+				49AECE391E83C5C00057C02F /* SegmentView.m in Sources */,
 				491BA2B71E7FBA7000E92175 /* SDCycleScrollView.m in Sources */,
 				491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */,
 				491BA2961E7FB6CB00E92175 /* LZHomeFirstCell.m in Sources */,
+				49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */,
 				491BA2761E7F6E8800E92175 /* LZLoginViewController.m in Sources */,
 				491BA1E41E7B7B6B00E92175 /* HHTabbarViewController.m in Sources */,
 				491BA1C21E7B78F500E92175 /* LZRootViewController.m in Sources */,
@@ -887,12 +943,15 @@
 				49D0F25E1E811A93009B56CF /* LZClassesItmesCell.m in Sources */,
 				213FC0781E8262F600DF7115 /* CommentCell.m in Sources */,
 				49D0F2631E811C31009B56CF /* LZClassesListCell.m in Sources */,
+				49AECE221E83A3400057C02F /* LZPayViewController.m in Sources */,
 				21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */,
 				491BA2911E7FAF2200E92175 /* LZJumpNextViewController.m in Sources */,
 				491BA2B81E7FBA7000E92175 /* UIView+SDExtension.m in Sources */,
+				49AECE2C1E83BD7B0057C02F /* LZMineDetailViewController.m in Sources */,
 				491BA2B51E7FBA7000E92175 /* TAPageControl.m in Sources */,
 				491BA1811E7B770F00E92175 /* main.m in Sources */,
 				491BA1D51E7B7ABD00E92175 /* LZMineViewController.m in Sources */,
+				49AECE351E83C0F90057C02F /* MineTeacherCell.m in Sources */,
 				49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */,
 				213FC0731E825E5600DF7115 /* LZDetailcommentCell.m in Sources */,
 				49D0F2741E820CBE009B56CF /* LZDetailCell.m in Sources */,
@@ -900,6 +959,7 @@
 				491BA29B1E7FB70400E92175 /* LZHomeSecondCell.m in Sources */,
 				491BA2811E7F869600E92175 /* LZFoundPassWordViewController.m in Sources */,
 				491BA1E61E7B7B6B00E92175 /* UIImage+Color.m in Sources */,
+				49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */,
 				49D0F26E1E820C27009B56CF /* LZTeacherDetailViewController.m in Sources */,
 				491BA2B41E7FBA7000E92175 /* TADotView.m in Sources */,
 			);

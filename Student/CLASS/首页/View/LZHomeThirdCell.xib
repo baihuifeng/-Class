@@ -16,25 +16,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkZ-w7-1fG">
-                        <rect key="frame" x="0.0" y="0.0" width="38" height="40"/>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.36470588240000001" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redianIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fkZ-w7-1fG">
+                        <rect key="frame" x="0.0" y="0.0" width="54" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="38" id="1bF-pr-TjY"/>
+                            <constraint firstAttribute="width" constant="54" id="1bF-pr-TjY"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vA1-Rz-nhb">
-                        <rect key="frame" x="38" y="0.0" width="0.5" height="40"/>
+                        <rect key="frame" x="53.5" y="0.0" width="0.5" height="40"/>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="0.5" id="Awl-40-YVr"/>
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-wd-cOj">
-                        <rect key="frame" x="42" y="0.0" width="270" height="40"/>
+                        <rect key="frame" x="62" y="0.0" width="250" height="40"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="tVX-op-rG6">
                             <size key="itemSize" width="0.0" height="0.0"/>
@@ -54,7 +54,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="MJd-wd-cOj" secondAttribute="trailing" id="Hd3-7b-0EI"/>
                     <constraint firstItem="vA1-Rz-nhb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="PoD-4m-9jh"/>
                     <constraint firstItem="MJd-wd-cOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="WWc-yt-LGp"/>
-                    <constraint firstItem="MJd-wd-cOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="34" id="fWu-tH-T3Z"/>
+                    <constraint firstItem="MJd-wd-cOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="54" id="fWu-tH-T3Z"/>
                     <constraint firstItem="vA1-Rz-nhb" firstAttribute="leading" secondItem="fkZ-w7-1fG" secondAttribute="trailing" id="gPg-8L-Eqf"/>
                     <constraint firstItem="fkZ-w7-1fG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="rlG-ym-ZgT"/>
                     <constraint firstAttribute="bottomMargin" secondItem="vA1-Rz-nhb" secondAttribute="bottom" constant="-9" id="sHX-aQ-pDZ"/>
@@ -67,4 +67,7 @@
             <point key="canvasLocation" x="31" y="4"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="redianIcon" width="31" height="37"/>
+    </resources>
 </document>

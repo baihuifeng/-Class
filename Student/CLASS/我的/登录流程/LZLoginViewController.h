@@ -10,4 +10,5 @@
 
 @interface LZLoginViewController : LZRootViewController
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
 @end

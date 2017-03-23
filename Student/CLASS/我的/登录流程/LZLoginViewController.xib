@@ -20,12 +20,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3G-eN-s28">
-                    <rect key="frame" x="0.0" y="176" width="320" height="104"/>
+                    <rect key="frame" x="0.0" y="188" width="320" height="104"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfC-D4-vgM">
                             <rect key="frame" x="35" y="1" width="250" height="40"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DqR-kd-J2O">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nameIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DqR-kd-J2O">
                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <userDefinedRuntimeAttributes>
@@ -61,7 +61,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFS-0d-Kll">
                             <rect key="frame" x="35" y="63" width="250" height="40"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OqE-fa-fFo">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="passwordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="OqE-fa-fFo">
                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <userDefinedRuntimeAttributes>
@@ -75,7 +75,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入密码\验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7p-wB-Mnz">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7p-wB-Mnz">
                                     <rect key="frame" x="53" y="0.0" width="197" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <nil key="textColor"/>
@@ -104,7 +104,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbh-IQ-Qex">
-                    <rect key="frame" x="213" y="294" width="66" height="12"/>
+                    <rect key="frame" x="213" y="306" width="66" height="12"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="66" id="fWT-CS-Oja"/>
                         <constraint firstAttribute="height" constant="12" id="olW-bt-tQh"/>
@@ -115,7 +115,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br2-jh-9vY">
-                    <rect key="frame" x="35" y="323" width="250" height="40"/>
+                    <rect key="frame" x="35" y="335" width="250" height="40"/>
                     <color key="backgroundColor" red="0.13725490200000001" green="0.80392156859999997" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="F3S-sr-SHA"/>
@@ -132,7 +132,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-64-bWs">
-                    <rect key="frame" x="40" y="378" width="240" height="12"/>
+                    <rect key="frame" x="40" y="390" width="240" height="12"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97V-4j-yiB">
                             <rect key="frame" x="119.5" y="0.0" width="0.5" height="12"/>
@@ -168,20 +168,46 @@
                         <constraint firstAttribute="height" constant="12" id="bXj-LX-O6q"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LZLogin" translatesAutoresizingMaskIntoConstraints="NO" id="3Ah-yS-L9x">
+                    <rect key="frame" x="78" y="57" width="165" height="78"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="DTS-6u-vrv"/>
+                        <constraint firstAttribute="height" constant="78" id="yYD-rF-2NS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为　成　长　 助　力　,　让　梦　想　启　航" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMN-Lv-1Z7">
+                    <rect key="frame" x="66" y="137" width="183" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="ZSV-2o-isI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="s3G-eN-s28" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2Ad-bn-Kyd"/>
                 <constraint firstItem="4cT-64-bWs" firstAttribute="top" secondItem="br2-jh-9vY" secondAttribute="bottom" constant="15" id="6Zu-5v-YNR"/>
+                <constraint firstItem="s3G-eN-s28" firstAttribute="top" secondItem="3Ah-yS-L9x" secondAttribute="bottom" constant="53" id="7xi-D2-Nxg"/>
                 <constraint firstItem="br2-jh-9vY" firstAttribute="top" secondItem="Fbh-IQ-Qex" secondAttribute="bottom" constant="17" id="Cab-ke-gz3"/>
-                <constraint firstItem="s3G-eN-s28" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="176" id="GYZ-uy-uUJ"/>
                 <constraint firstItem="Fbh-IQ-Qex" firstAttribute="top" secondItem="s3G-eN-s28" secondAttribute="bottom" constant="14" id="KPu-7y-5HZ"/>
                 <constraint firstAttribute="trailing" secondItem="s3G-eN-s28" secondAttribute="trailing" id="Su4-pR-F11"/>
+                <constraint firstItem="3Ah-yS-L9x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U4t-Ra-93q"/>
+                <constraint firstAttribute="trailing" secondItem="wMN-Lv-1Z7" secondAttribute="trailing" constant="71" id="d6U-d1-6Lh"/>
                 <constraint firstItem="br2-jh-9vY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dPk-KG-DPg"/>
                 <constraint firstItem="Fbh-IQ-Qex" firstAttribute="trailing" secondItem="vFS-0d-Kll" secondAttribute="trailing" constant="-6" id="gBa-z4-dE2"/>
                 <constraint firstItem="4cT-64-bWs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hMa-i4-CY3"/>
                 <constraint firstItem="s3G-eN-s28" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hYj-LJ-t10"/>
+                <constraint firstItem="wMN-Lv-1Z7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="66" id="lBD-v2-Pqe"/>
+                <constraint firstItem="wMN-Lv-1Z7" firstAttribute="top" secondItem="3Ah-yS-L9x" secondAttribute="bottom" constant="2" id="quY-pI-EJm"/>
             </constraints>
-            <point key="canvasLocation" x="-345" y="-151"/>
+            <point key="canvasLocation" x="-479" y="-129"/>
         </view>
     </objects>
+    <resources>
+        <image name="LZLogin" width="165" height="77"/>
+        <image name="nameIcon" width="18" height="18"/>
+        <image name="passwordIcon" width="14" height="18"/>
+    </resources>
 </document>

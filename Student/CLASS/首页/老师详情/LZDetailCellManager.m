@@ -10,6 +10,8 @@
 #import "LZHeadCell.h"
 #import "LZDetailcommentCell.h"
 #import "CommentCell.h"
+#import "SpecialityCell.h"
+#import "TeacherCaseCell.h"
 
 @implementation LZDetailCellManager
 
@@ -34,6 +36,7 @@
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailcommentCell" owner:self options:nil] lastObject];
             }
+            cell.caseIndex = 1001;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
@@ -43,6 +46,37 @@
             CommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentCell"];
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"CommentCell" owner:self options:nil] lastObject];
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+            break;
+        case 1003:
+        {
+            LZDetailcommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZDetailcommentCell"];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailcommentCell" owner:self options:nil] lastObject];
+            }
+            cell.caseIndex = 1003;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+            break;
+        case 1004: //
+        {
+            SpecialityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpecialityCell"];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"SpecialityCell" owner:self options:nil] lastObject];
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+            break;
+        case 1005: //
+        {
+            TeacherCaseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TeacherCaseCell"];
+            if (!cell) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"TeacherCaseCell" owner:self options:nil] lastObject];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
@@ -75,6 +109,24 @@
         {
             
             return 235;
+        }
+            break;
+        case 1003:
+        {
+            
+            return 235;
+        }
+            break;
+        case 1004:
+        {
+            
+            return 30;
+        }
+            break;
+        case 1005:
+        {
+            
+            return 60;
         }
             break;
             

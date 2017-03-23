@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,21 +19,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woM-19-A0l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="woM-19-A0l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="0rT-kF-oc5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="woM-19-A0l" secondAttribute="bottom" constant="-8" id="9vU-vr-BPF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="woM-19-A0l" secondAttribute="trailing" constant="-8" id="O9p-a9-Q0z"/>
-                    <constraint firstItem="woM-19-A0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="o37-yj-xQK"/>
-                </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="woM-19-A0l" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="SIe-Fc-ZQb"/>
+                <constraint firstItem="woM-19-A0l" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="pIN-Tg-t1i"/>
+                <constraint firstAttribute="bottom" secondItem="woM-19-A0l" secondAttribute="bottom" id="q0O-NQ-cAQ"/>
+                <constraint firstAttribute="trailing" secondItem="woM-19-A0l" secondAttribute="trailing" id="tsr-at-wxv"/>
+            </constraints>
             <connections>
                 <outlet property="headView" destination="woM-19-A0l" id="bYB-Mq-fcb"/>
             </connections>
-            <point key="canvasLocation" x="-426" y="12"/>
+            <point key="canvasLocation" x="48" y="-17"/>
         </tableViewCell>
     </objects>
 </document>

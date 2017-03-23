@@ -45,7 +45,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        return 190*kScreen_Width/320;
+        return (kScreen_Width/320)*190;
     } else if (indexPath.section == 1) {
         return 87;
     } else if (indexPath.section == 2) {
@@ -90,6 +90,19 @@
 
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    if (section == 2) {
+        return 5;
+    }
+    return 0;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 2) {
+        return 5;
+    }
+    return 0;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

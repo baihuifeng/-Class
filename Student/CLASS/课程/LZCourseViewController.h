@@ -11,4 +11,7 @@
 @interface LZCourseViewController : LZRootViewController <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *courseListTableView;
 
+@property (strong, nonatomic) IBOutlet UIView *chooseView;
+
+
 @end

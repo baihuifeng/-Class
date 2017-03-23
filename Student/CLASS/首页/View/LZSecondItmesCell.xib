@@ -18,15 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="64" height="86"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BvA-vB-jxd">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuxue" translatesAutoresizingMaskIntoConstraints="NO" id="BvA-vB-jxd">
                         <rect key="frame" x="8" y="8" width="49" height="49"/>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.36470588240000001" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="49" id="N8F-RL-HlY"/>
                             <constraint firstAttribute="height" constant="49" id="SdY-nG-YKx"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语文" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzT-km-bPb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数学" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzT-km-bPb">
                         <rect key="frame" x="0.0" y="67" width="64" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="vlD-jk-Uik"/>
@@ -46,4 +45,7 @@
             </constraints>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="shuxue" width="49" height="49"/>
+    </resources>
 </document>

@@ -9,13 +9,15 @@
 #import "LZMineViewController.h"
 #import "LZMineFirstCell.h"
 #import "LZMineSecondCell.h"
+#import "LZMineDetailViewController.h"
+#import "LZMineTeacherViewController.h"
 
 @interface LZMineViewController ()
 
 @property (nonatomic,strong) NSArray *secondArr;
-
+@property (nonatomic,strong) NSArray *secondImgArr;
 @property (nonatomic,strong) NSArray *thirdArr;
-
+@property (nonatomic,strong) NSArray *thirdImgArr;
 @end
 
 @implementation LZMineViewController
@@ -24,7 +26,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _secondArr = @[@"我的老师",@"学习意向",@"学习档案",@"分享给好友",@"投诉建议",@"客户电话",@"推荐奖励规则介绍",@"老师招募"];
+    
+    _secondImgArr = @[@"Mine_teacher",@"Mine_yixian",@"Mine_dangan",@"Mine_fenxiang",@"Mine_jianyi",@"Mine_kefu",@"Mine_tuijian",@"Mine_zhaomu"];
+    
     _thirdArr = @[@"设置"];
+    _thirdImgArr = @[@"Mine_shezhi"];
     _listTableView.tableFooterView = [[UIView alloc] init];
 }
 
@@ -80,6 +86,7 @@
         }
 
         cell.textLabel.text = indexPath.section == 2 ? _secondArr[indexPath.row] : _thirdArr[indexPath.row];
+        cell.imageView.image = indexPath.section == 2 ? [UIImage imageNamed:_secondImgArr[indexPath.row]] : [UIImage imageNamed:_thirdImgArr[indexPath.row]];
         cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.textColor = UICOLOR_RGB_Alpha(0x6a6a6a, 1);
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -100,6 +107,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+        LZMineDetailViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZMineDetailViewController"];
+        [self.navigationController pushViewController:wvc animated:YES];
+    } else if (indexPath.section == 2){
+        LZMineTeacherViewController *teacherVc = [[LZMineTeacherViewController alloc] init];
+        [self.navigationController pushViewController:teacherVc animated:YES];
+    } else {
         [LZJumpNextViewController presentNextViewController:0 Url:@"" title:@"登录"];
     }
     
