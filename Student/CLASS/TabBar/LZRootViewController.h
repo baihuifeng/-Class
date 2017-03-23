@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZRootViewController : UIViewController
+@interface LZRootViewController : UIViewController <selectedDelegate>
 
 @end

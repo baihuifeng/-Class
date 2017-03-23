@@ -15,42 +15,50 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q66-d4-ouJ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeHeadBack" translatesAutoresizingMaskIntoConstraints="NO" id="u4q-TE-6SV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q66-d4-ouJ">
                     <rect key="frame" x="0.0" y="20" width="73" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="73" id="PSH-7D-tQX"/>
                         <constraint firstAttribute="height" constant="44" id="bso-tc-scm"/>
                     </constraints>
-                    <state key="normal" title="地区"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="地区" image="HomeDingweiIcon">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4A-qE-HiO">
                     <rect key="frame" x="74" y="20" width="195" height="44"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tPd-bC-y1K">
-                            <rect key="frame" x="0.0" y="2" width="195" height="40"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeSearchBackIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tPd-bC-y1K">
+                            <rect key="frame" x="0.0" y="7" width="195" height="30"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hi7-m1-P06">
-                            <rect key="frame" x="8" y="2" width="13" height="40"/>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeSearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hi7-m1-P06">
+                            <rect key="frame" x="8" y="7" width="13" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="13" id="NlA-vX-AmA"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入科目/年级/特点" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKW-RH-9uR">
-                            <rect key="frame" x="29" y="2" width="158" height="40"/>
+                            <rect key="frame" x="29" y="7" width="158" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="hi7-m1-P06" firstAttribute="bottom" secondItem="tPd-bC-y1K" secondAttribute="bottom" id="0EN-Ec-xgg"/>
-                        <constraint firstAttribute="bottom" secondItem="tPd-bC-y1K" secondAttribute="bottom" constant="2" id="0EY-oY-VcR"/>
+                        <constraint firstAttribute="bottom" secondItem="tPd-bC-y1K" secondAttribute="bottom" constant="7" id="0EY-oY-VcR"/>
                         <constraint firstItem="hi7-m1-P06" firstAttribute="top" secondItem="tPd-bC-y1K" secondAttribute="top" id="Lv9-xE-nnK"/>
                         <constraint firstItem="tPd-bC-y1K" firstAttribute="leading" secondItem="hi7-m1-P06" secondAttribute="trailing" constant="-21" id="NV3-WP-Zbk"/>
                         <constraint firstItem="tPd-bC-y1K" firstAttribute="leading" secondItem="n4A-qE-HiO" secondAttribute="leading" id="PjA-ee-a0D"/>
                         <constraint firstItem="EKW-RH-9uR" firstAttribute="leading" secondItem="n4A-qE-HiO" secondAttribute="leading" constant="29" id="S4x-kg-bcK"/>
-                        <constraint firstItem="tPd-bC-y1K" firstAttribute="top" secondItem="n4A-qE-HiO" secondAttribute="top" constant="2" id="T1g-zz-36E"/>
+                        <constraint firstItem="tPd-bC-y1K" firstAttribute="top" secondItem="n4A-qE-HiO" secondAttribute="top" constant="7" id="T1g-zz-36E"/>
                         <constraint firstAttribute="height" constant="44" id="V7v-IZ-2v2"/>
                         <constraint firstItem="EKW-RH-9uR" firstAttribute="top" secondItem="tPd-bC-y1K" secondAttribute="top" id="W6G-A5-uII"/>
                         <constraint firstAttribute="trailing" secondItem="EKW-RH-9uR" secondAttribute="trailing" constant="8" id="aHs-RH-aRE"/>
@@ -58,27 +66,38 @@
                         <constraint firstAttribute="trailing" secondItem="tPd-bC-y1K" secondAttribute="trailing" id="wja-Gd-zIV"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-1b-eB5">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-1b-eB5">
                     <rect key="frame" x="274" y="23" width="46" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="YuC-qe-Hcf"/>
                         <constraint firstAttribute="width" constant="46" id="oNE-A0-ITj"/>
                     </constraints>
-                    <state key="normal" title="消息"/>
+                    <state key="normal" image="HomeXiaoXiIcon"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="u4q-TE-6SV" secondAttribute="bottom" id="2p2-Ds-AE4"/>
                 <constraint firstAttribute="bottom" secondItem="n4A-qE-HiO" secondAttribute="bottom" id="4RN-0H-XUj"/>
                 <constraint firstItem="n4A-qE-HiO" firstAttribute="leading" secondItem="Q66-d4-ouJ" secondAttribute="trailing" constant="1" id="4cM-K2-zLo"/>
+                <constraint firstItem="u4q-TE-6SV" firstAttribute="leading" secondItem="EhQ-UZ-muT" secondAttribute="leading" id="SNb-aR-g7a"/>
                 <constraint firstAttribute="bottom" secondItem="Q66-d4-ouJ" secondAttribute="bottom" id="Zl1-yY-aOr"/>
+                <constraint firstAttribute="trailing" secondItem="u4q-TE-6SV" secondAttribute="trailing" id="agu-Hg-xxT"/>
                 <constraint firstAttribute="bottom" secondItem="vFG-1b-eB5" secondAttribute="bottom" constant="1" id="cVi-Lz-Y3u"/>
                 <constraint firstItem="vFG-1b-eB5" firstAttribute="leading" secondItem="n4A-qE-HiO" secondAttribute="trailing" constant="5" id="dy0-ZP-nLK"/>
+                <constraint firstItem="u4q-TE-6SV" firstAttribute="top" secondItem="EhQ-UZ-muT" secondAttribute="top" id="goV-Py-YlD"/>
                 <constraint firstItem="Q66-d4-ouJ" firstAttribute="leading" secondItem="EhQ-UZ-muT" secondAttribute="leading" id="nXI-ra-bwc"/>
                 <constraint firstAttribute="trailing" secondItem="vFG-1b-eB5" secondAttribute="trailing" id="tnJ-0D-rZa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-63" y="59"/>
+            <point key="canvasLocation" x="-362" y="-117"/>
         </view>
     </objects>
+    <resources>
+        <image name="HomeDingweiIcon" width="17" height="21"/>
+        <image name="HomeHeadBack" width="375" height="84"/>
+        <image name="HomeSearchBackIcon" width="244" height="30"/>
+        <image name="HomeSearchIcon" width="15" height="15"/>
+        <image name="HomeXiaoXiIcon" width="22" height="18"/>
+    </resources>
 </document>

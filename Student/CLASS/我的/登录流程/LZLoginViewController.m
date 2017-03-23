@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = UICOLOR_RGB_Alpha(0xFFFFFF, 1);
+    _topHeight.constant = kScreen_Width/320*65;
+    [self.view layoutIfNeeded];
     
 }
 - (IBAction)registBtn:(UIButton *)sender {

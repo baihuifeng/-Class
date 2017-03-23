@@ -11,4 +11,6 @@
 @interface LZDetailcommentCell : UITableViewCell <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *commentTable;
 
+@property (assign,nonatomic) int caseIndex;
+
 @end

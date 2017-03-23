@@ -84,7 +84,7 @@
         //设置导航子控制器按钮的加载样式
         UINavigationItem *vcBtnItem= [viewController navigationItem];
         
-        vcBtnItem.leftBarButtonItem = [UIBarButtonItem initWithNormalImage:@"back_button" target:self isLeftButton:YES action:@selector(back)];
+        vcBtnItem.leftBarButtonItem = [UIBarButtonItem initWithNormalImage:@"backIcon" target:self isLeftButton:YES action:@selector(back)];
         
         
     }

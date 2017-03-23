@@ -43,13 +43,13 @@
     [super viewDidLoad];
     
     // 添加子控制器
-    [self setupChildVc:[LZHomeViewController new] title:@"首页" image:@"tabbar_one" selectedImage:@"tabbar_one_selected"];
+    [self setupChildVc:[LZHomeViewController new] title:@"首页" image:@"tab_Home" selectedImage:@"tab_Home_ed"];
 //
-    [self setupChildVc:[LZSTeacherViewController new] title:@"老师" image:@"tabbar_one" selectedImage:@"tabbar_one_selected"];
+    [self setupChildVc:[LZSTeacherViewController new] title:@"老师" image:@"tab_jieyi" selectedImage:@"tab_jie_yied"];
 //
-    [self setupChildVc:[LZCourseViewController new] title:@"课程" image:@"tabbar_one" selectedImage:@"tabbar_three_selected"];
+    [self setupChildVc:[LZCourseViewController new] title:@"课程" image:@"tab_kebiao" selectedImage:@"tab_kebiao _ed"];
     
-     [self setupChildVc:[LZMineViewController new] title:@"我的" image:@"tabbar_one" selectedImage:@"tabbar_four_selected"];
+     [self setupChildVc:[LZMineViewController new] title:@"我的" image:@"tab_mine" selectedImage:@"tab_mine_ed"];
     
 //    // 更换tabBar
      [self setValue:[[HHTababr alloc] init] forKey:@"tabBar"];

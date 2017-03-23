@@ -9,6 +9,8 @@
 #import "LZCourseViewController.h"
 #import "LZCourseFirstCell.h"
 #import "LZCourseJudgeCell.h"
+#import "LZPayViewController.h"
+
 
 @interface LZCourseViewController ()
 
@@ -21,6 +23,28 @@
     // Do any additional setup after loading the view from its nib.
     
     _courseListTableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
+    
+    SegmentView *segment = [[SegmentView alloc] initWithItmes:@[@"未上课",@"待支付",@"待评价",@"已完成"] WithFrame:CGRectMake(0, 0, kScreen_Width, 39) LabelType:radiuLabelTypeBottom];
+    segment.delegate = self;
+    segment.backgroundColor = [UIColor redColor];    //    self.navigationItem.titleView = segment;
+//    segment.defaultColor = [UIColor colorWithHexString:@"0X333333"];
+//    segment.selectedColor = [UIColor colorWithHexString:@"0Xff6600"];
+//    segment.isShowLine = NO;
+    segment.selectIndex = 0;
+    segment.lineHeight = 20;
+    segment.radiuLabelType = radiuLabelTypeBottom;
+    segment.radiuView.isRadius = YES;
+    segment.radiuView.radiusHeight = 2;
+//    segment.lineColor = [UIColor colorWithHexString:@"0Xeeeeee"];
+//    segment.radiuView.radiusColor = [UIColor colorWithHexString:@"0Xff6600"];
+    [self.chooseView addSubview:segment];
+    
+}
+
+- (void)index:(NSInteger)index {
+    
+
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -36,7 +60,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section % 2) {
-        return 154;
+        return 152;
     } else {
         return 70;
     }
@@ -64,6 +88,23 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
     return 10;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section % 2) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+        LZPayViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZPayViewController"];
+        [self.navigationController pushViewController:wvc animated:YES];
+    
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+        LZPayViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZJudgeController"];
+        [self.navigationController pushViewController:wvc animated:YES];
+    }
+    
+
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
