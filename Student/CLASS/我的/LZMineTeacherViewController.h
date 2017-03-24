@@ -11,4 +11,5 @@
 @interface LZMineTeacherViewController : LZRootViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *mineTeacherList;
+@property (weak, nonatomic) IBOutlet UIView *mineSegment;
 @end

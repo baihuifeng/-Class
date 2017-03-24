@@ -10,6 +10,7 @@
 #import "LZClassesItmesCell.h"
 #import "LZClassesListCell.h"
 #import "LZTeacherDetailViewController.h"
+#import "LZDetailStandardView.h"
 
 @interface LZClassesViewController ()
 
@@ -51,8 +52,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LZTeacherDetailViewController *detailVc = [[LZTeacherDetailViewController alloc] init];
-    [self.navigationController pushViewController:detailVc animated:YES];
+//    LZTeacherDetailViewController *detailVc = [[LZTeacherDetailViewController alloc] init];
+//    [self.navigationController pushViewController:detailVc animated:YES];
+    
+    LZDetailStandardView *vc = [[LZDetailStandardView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height)];
+    vc.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height);
+    [self.navigationController.view addSubview:vc];
 }
 
 

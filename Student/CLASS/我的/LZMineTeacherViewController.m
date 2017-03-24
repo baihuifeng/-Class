@@ -19,9 +19,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"我的老师";
+    SegmentView *segment = [[SegmentView alloc] initWithItmes:@[@"未上课",@"待支付",@"待评价",@"已完成"] WithFrame:CGRectMake(0, 0, kScreen_Width, 39) LabelType:radiuLabelTypeBottom];
+    segment.delegate = self;
+    segment.backgroundColor = [UIColor redColor];
+    segment.selectIndex = 0;
+    segment.lineHeight = 20;
+    segment.radiuLabelType = radiuLabelTypeBottom;
+    segment.radiuView.isRadius = YES;
+    segment.radiuView.radiusHeight = 2;
+    
+    [self.mineSegment addSubview:segment];
+    
+    
+    
 }
 
-
+- (void)index:(NSInteger)index {
+    
+    
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return 10;
