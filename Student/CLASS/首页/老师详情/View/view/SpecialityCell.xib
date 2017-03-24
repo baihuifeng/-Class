@@ -33,7 +33,10 @@
                     <constraint firstAttribute="topMargin" secondItem="kH3-NE-awr" secondAttribute="top" id="uaj-2n-DKm"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="characteristics" destination="kH3-NE-awr" id="fFH-4X-0bf"/>
+            </connections>
+            <point key="canvasLocation" x="-397" y="-182"/>
         </tableViewCell>
     </objects>
 </document>

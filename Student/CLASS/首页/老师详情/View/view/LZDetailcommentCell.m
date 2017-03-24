@@ -30,8 +30,13 @@
     } else {
         if (section == 0) {
             return 1;
-        } else {
+        } else if (section == 1) {
             return 2;
+        } else if (section == 2) {
+            return 2;
+        } else {
+            
+            return 1;
         }
         
     }
@@ -43,7 +48,7 @@
     if (_caseIndex == 1001) {
         return 1;
     } else {
-        return 2;
+        return 4;
     }
 }
 

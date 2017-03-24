@@ -23,4 +23,8 @@
 + (CGFloat)sizeStudentCommentHeightDetailModel:(LZDetailModel *)model; //计算学生评论内容的高度
 + (CGFloat)sizeTeacherCommentHeightDetailModel:(LZDetailModel *)model; //计算学生评论内容的高度
 
+#pragma -mark "自我介绍的高度"
++ (CGFloat)sizeCharacteristicsHeightDetailModel:(LZDetailModel *)model;
+
+
 @end

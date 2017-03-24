@@ -73,6 +73,7 @@
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"SpecialityCell" owner:self options:nil] lastObject];
             }
+            cell.model = model;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
@@ -125,7 +126,7 @@
         case 1004:
         {
             
-            return 30;
+            return [LZDetailCellManager sizeCharacteristicsHeightDetailModel:model];
         }
             break;
         case 1005:
@@ -148,7 +149,7 @@
 + (CGFloat)sizeCommentHeightDetailModel:(LZDetailModel *)model {
     
     
-    return 90+[LZDetailCellManager sizeStudentCommentHeightDetailModel:model]+[LZDetailCellManager sizeTeacherCommentHeightDetailModel:model];
+    return 100+[LZDetailCellManager sizeStudentCommentHeightDetailModel:model]+[LZDetailCellManager sizeTeacherCommentHeightDetailModel:model];
 
 }
 + (CGFloat)sizeStudentCommentHeightDetailModel:(LZDetailModel *)model {
@@ -160,6 +161,11 @@
     
     return [NSString stringSizeWithString:model.lastComments.feedback maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height;
 }
+#pragma -mark "自我介绍的高度"
++ (CGFloat)sizeCharacteristicsHeightDetailModel:(LZDetailModel *)model {
+    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 26;
+}
+
 
 
 

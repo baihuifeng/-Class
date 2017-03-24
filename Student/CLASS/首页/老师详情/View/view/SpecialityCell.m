@@ -15,6 +15,11 @@
     // Initialization code
 }
 
+- (void)setModel:(LZDetailModel *)model {
+    _model = model;
+    _characteristics.text = model.characteristics;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
