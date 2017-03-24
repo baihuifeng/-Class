@@ -21,5 +21,7 @@
 
 @property (strong,nonatomic) LZDetailModel *model;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *commentBackViewH;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *commentH;
 
 @end

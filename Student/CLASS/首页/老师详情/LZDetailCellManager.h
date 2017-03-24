@@ -17,4 +17,10 @@
 
 + (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath CellCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model;
 
+
+#pragma -mark "评论的高度"
++ (CGFloat)sizeCommentHeightDetailModel:(LZDetailModel *)model;
++ (CGFloat)sizeStudentCommentHeightDetailModel:(LZDetailModel *)model; //计算学生评论内容的高度
++ (CGFloat)sizeTeacherCommentHeightDetailModel:(LZDetailModel *)model; //计算学生评论内容的高度
+
 @end

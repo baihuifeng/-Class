@@ -24,6 +24,10 @@
     _comment.text = model.lastComments.comment;
     _feedback.text = model.lastComments.feedback;
     
+    _commentH.constant = [LZDetailCellManager sizeStudentCommentHeightDetailModel:model];
+    _commentBackViewH.constant = [LZDetailCellManager sizeStudentCommentHeightDetailModel:model]+56;
+    
+    [self layoutIfNeeded];
     
     
     

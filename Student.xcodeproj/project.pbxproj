@@ -93,6 +93,7 @@
 		49AECE391E83C5C00057C02F /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE381E83C5C00057C02F /* SegmentView.m */; };
 		49AECE3E1E84F73F0057C02F /* File.json in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE3D1E84F73F0057C02F /* File.json */; };
 		49AECE421E84F8100057C02F /* LZDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE411E84F8100057C02F /* LZDetailModel.m */; };
+		49AECF171E850C300057C02F /* NSString+stringSizeCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECF161E850C300057C02F /* NSString+stringSizeCalculate.m */; };
 		49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2561E811871009B56CF /* LZClassesViewController.m */; };
 		49D0F2591E811871009B56CF /* LZClassesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2571E811871009B56CF /* LZClassesViewController.xib */; };
 		49D0F25E1E811A93009B56CF /* LZClassesItmesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F25C1E811A93009B56CF /* LZClassesItmesCell.m */; };
@@ -271,6 +272,8 @@
 		49AECE3D1E84F73F0057C02F /* File.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = File.json; sourceTree = "<group>"; };
 		49AECE401E84F8100057C02F /* LZDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailModel.h; sourceTree = "<group>"; };
 		49AECE411E84F8100057C02F /* LZDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailModel.m; sourceTree = "<group>"; };
+		49AECF151E850C300057C02F /* NSString+stringSizeCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+stringSizeCalculate.h"; sourceTree = "<group>"; };
+		49AECF161E850C300057C02F /* NSString+stringSizeCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+stringSizeCalculate.m"; sourceTree = "<group>"; };
 		49D0F2551E811871009B56CF /* LZClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassesViewController.h; sourceTree = "<group>"; };
 		49D0F2561E811871009B56CF /* LZClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassesViewController.m; sourceTree = "<group>"; };
 		49D0F2571E811871009B56CF /* LZClassesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassesViewController.xib; sourceTree = "<group>"; };
@@ -386,9 +389,9 @@
 		491BA17E1E7B770F00E92175 /* Student */ = {
 			isa = PBXGroup;
 			children = (
+				49AECEDE1E850B110057C02F /* 三方类 */,
 				491BA28E1E7FAEA500E92175 /* 跳转页面 */,
 				491BA1B21E7B77A600E92175 /* 公共类 */,
-				491BA1B31E7B77A600E92175 /* 三方库 */,
 				491BA1B41E7B77A600E92175 /* 网络请求 */,
 				491BA1B51E7B77A600E92175 /* CLASS */,
 				491BA1821E7B770F00E92175 /* AppDelegate.h */,
@@ -441,13 +444,6 @@
 				21B2E92E1E841ECA00CB8F37 /* LZDetailBackView.m */,
 			);
 			path = "公共类";
-			sourceTree = "<group>";
-		};
-		491BA1B31E7B77A600E92175 /* 三方库 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "三方库";
 			sourceTree = "<group>";
 		};
 		491BA1B41E7B77A600E92175 /* 网络请求 */ = {
@@ -660,6 +656,15 @@
 				49AECE411E84F8100057C02F /* LZDetailModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		49AECEDE1E850B110057C02F /* 三方类 */ = {
+			isa = PBXGroup;
+			children = (
+				49AECF151E850C300057C02F /* NSString+stringSizeCalculate.h */,
+				49AECF161E850C300057C02F /* NSString+stringSizeCalculate.m */,
+			);
+			path = "三方类";
 			sourceTree = "<group>";
 		};
 		49D0F25A1E811A70009B56CF /* ClassesView */ = {
@@ -987,6 +992,7 @@
 				491BA2B71E7FBA7000E92175 /* SDCycleScrollView.m in Sources */,
 				491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */,
 				491BA2961E7FB6CB00E92175 /* LZHomeFirstCell.m in Sources */,
+				49AECF171E850C300057C02F /* NSString+stringSizeCalculate.m in Sources */,
 				49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */,
 				491BA2761E7F6E8800E92175 /* LZLoginViewController.m in Sources */,
 				491BA1E41E7B7B6B00E92175 /* HHTabbarViewController.m in Sources */,
@@ -1163,7 +1169,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1178,7 +1184,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;

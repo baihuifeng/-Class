@@ -107,13 +107,13 @@
         case 1001:
         {
             
-            return 235;
+            return [LZDetailCellManager sizeCommentHeightDetailModel:model];
         }
             break;
         case 1002:
         {
             
-            return 235;
+            return [LZDetailCellManager sizeCommentHeightDetailModel:model];
         }
             break;
         case 1003:
@@ -142,5 +142,25 @@
     
 
 }
+
+#pragma -mark "评论的高度"
+
++ (CGFloat)sizeCommentHeightDetailModel:(LZDetailModel *)model {
+    
+    
+    return 150+[LZDetailCellManager sizeStudentCommentHeightDetailModel:model]+[LZDetailCellManager sizeTeacherCommentHeightDetailModel:model];
+
+}
++ (CGFloat)sizeStudentCommentHeightDetailModel:(LZDetailModel *)model {
+
+    return [NSString stringSizeWithString:model.lastComments.comment maxSize:CGSizeMake(kScreen_Width-47, CGFLOAT_MAX) wordFont:14].height;
+}
+
++ (CGFloat)sizeTeacherCommentHeightDetailModel:(LZDetailModel *)model {
+    
+    return [NSString stringSizeWithString:model.lastComments.feedback maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height;
+}
+
+
 
 @end

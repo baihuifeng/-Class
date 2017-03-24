@@ -18,5 +18,6 @@
 #import "LZDetailCellManager.h"
 #import "SegmentView.h"
 #import "MJExtension.h"
+#import "NSString+stringSizeCalculate.h"
 
 #endif /* CommentClass_pch */
