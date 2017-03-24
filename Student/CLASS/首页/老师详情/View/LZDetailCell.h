@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZDetailModel.h"
 
 @interface LZDetailCell : UITableViewCell <UITableViewDelegate,UITableViewDataSource>
 
@@ -14,5 +15,9 @@
 @property (strong, nonatomic) IBOutlet UITableView *DetailtableView;
 
 @property (assign,nonatomic) int caseIndex;
+
+- (void)setCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model;
+
+@property (nonatomic,strong) LZDetailModel *model;
 
 @end

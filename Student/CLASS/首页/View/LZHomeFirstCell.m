@@ -15,9 +15,10 @@
     [super awakeFromNib];
     // Initialization code
     SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreen_Width, (kScreen_Width/320)*190) delegate:self placeholderImage:[UIImage imageNamed:@"HomeFirstB"]];
+    scrollView.backgroundColor = [UIColor redColor];
     scrollView.showPageControl = YES;
     scrollView.delegate = self;
-    scrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+    scrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
 //    scrollView.imageURLStringsGroup = @[@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png",@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png",@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png"];
     scrollView.currentPageDotImage = [UIImage imageNamed:@"2222"];
     scrollView.pageDotImage = [UIImage imageNamed:@"1111"];

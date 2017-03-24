@@ -29,6 +29,15 @@
     _DetailtableView.dataSource = self;
 }
 
+- (void)setCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model {
+    _caseIndex = caseIndex;
+    _model = model;
+    _DetailtableView.delegate = self;
+    _DetailtableView.dataSource = self;
+    [_DetailtableView reloadData];
+
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return 1;
@@ -36,12 +45,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [LZDetailCellManager tableView:tableView heightForRowAtIndexPath:indexPath CellCaseIndex:_caseIndex];
+    return [LZDetailCellManager tableView:tableView heightForRowAtIndexPath:indexPath CellCaseIndex:_caseIndex detailModel:_model];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return [LZDetailCellManager tableView:tableView cellForRowAtIndexPath:indexPath CellCaseIndex:_caseIndex];
+    return [LZDetailCellManager tableView:tableView cellForRowAtIndexPath:indexPath CellCaseIndex:_caseIndex detailModel:_model];
 
 }
 

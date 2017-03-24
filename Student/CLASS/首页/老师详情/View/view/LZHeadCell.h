@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZDetailModel.h"
 
 @interface LZHeadCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *nickName;
+@property (strong, nonatomic) IBOutlet UILabel *priceDescribe;
+
+@property (strong ,nonatomic) LZDetailModel *model;
 
 @end

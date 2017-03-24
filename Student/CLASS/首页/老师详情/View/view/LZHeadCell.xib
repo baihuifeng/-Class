@@ -259,7 +259,11 @@
                     <constraint firstItem="BBW-9S-rRA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ytL-Xy-KPq"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-659" y="139"/>
+            <connections>
+                <outlet property="nickName" destination="00H-BL-k6o" id="nrg-Q3-yMv"/>
+                <outlet property="priceDescribe" destination="G2s-BH-kur" id="jKJ-KP-mE9"/>
+            </connections>
+            <point key="canvasLocation" x="-791" y="-151"/>
         </tableViewCell>
     </objects>
 </document>

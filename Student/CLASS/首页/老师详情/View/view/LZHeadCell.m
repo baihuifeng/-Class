@@ -14,6 +14,12 @@
     [super awakeFromNib];
     // Initialization code
 }
+
+- (void)setModel:(LZDetailModel *)model {
+    _model = model;
+    _nickName.text = model.nickName;
+    _priceDescribe.text = model.priceDescribe;
+}
         
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

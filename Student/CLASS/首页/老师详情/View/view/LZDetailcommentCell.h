@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZDetailModel.h"
 
 @interface LZDetailcommentCell : UITableViewCell <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *commentTable;
 
 @property (assign,nonatomic) int caseIndex;
+@property (nonatomic,strong) LZDetailModel *model;
+
+- (void)setCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model;
 
 @end

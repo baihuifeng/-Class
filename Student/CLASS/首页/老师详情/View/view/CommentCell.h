@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZDetailModel.h"
 
 @interface CommentCell : UITableViewCell
+
+@property (strong, nonatomic) IBOutlet UIImageView *customImgUrl;
+@property (strong, nonatomic) IBOutlet UILabel *customNickName;
+@property (strong, nonatomic) IBOutlet UILabel *commentsTime;
+@property (strong, nonatomic) IBOutlet UILabel *customGrade;
+@property (strong, nonatomic) IBOutlet UILabel *learnTime;
+@property (strong, nonatomic) IBOutlet UILabel *comment;
+@property (strong, nonatomic) IBOutlet UILabel *feedback;
+
+@property (strong,nonatomic) LZDetailModel *model;
+
 
 @end

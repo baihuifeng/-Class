@@ -15,6 +15,20 @@
     // Initialization code
 }
 
+- (void)setModel:(LZDetailModel *)model {
+//    _model = model;
+//    _customNickName.text = model.lastComments.customNickName;
+//    _customGrade.text = model.lastComments.customNickName;
+//    _commentsTime.text = model.lastComments.commentsTime;
+//    _learnTime.text = [NSString stringWithFormat:@"%@课时",model.lastComments.learnTime];
+//    _comment.text = model.lastComments.comment;
+//    _feedback.text = model.lastComments.feedback;
+    
+    
+    
+    
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

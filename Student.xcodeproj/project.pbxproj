@@ -91,6 +91,8 @@
 		49AECE351E83C0F90057C02F /* MineTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE331E83C0F90057C02F /* MineTeacherCell.m */; };
 		49AECE361E83C0F90057C02F /* MineTeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE341E83C0F90057C02F /* MineTeacherCell.xib */; };
 		49AECE391E83C5C00057C02F /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE381E83C5C00057C02F /* SegmentView.m */; };
+		49AECE3E1E84F73F0057C02F /* File.json in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE3D1E84F73F0057C02F /* File.json */; };
+		49AECE421E84F8100057C02F /* LZDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE411E84F8100057C02F /* LZDetailModel.m */; };
 		49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F2561E811871009B56CF /* LZClassesViewController.m */; };
 		49D0F2591E811871009B56CF /* LZClassesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49D0F2571E811871009B56CF /* LZClassesViewController.xib */; };
 		49D0F25E1E811A93009B56CF /* LZClassesItmesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D0F25C1E811A93009B56CF /* LZClassesItmesCell.m */; };
@@ -266,6 +268,9 @@
 		49AECE341E83C0F90057C02F /* MineTeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTeacherCell.xib; sourceTree = "<group>"; };
 		49AECE371E83C5C00057C02F /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
 		49AECE381E83C5C00057C02F /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
+		49AECE3D1E84F73F0057C02F /* File.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = File.json; sourceTree = "<group>"; };
+		49AECE401E84F8100057C02F /* LZDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailModel.h; sourceTree = "<group>"; };
+		49AECE411E84F8100057C02F /* LZDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailModel.m; sourceTree = "<group>"; };
 		49D0F2551E811871009B56CF /* LZClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassesViewController.h; sourceTree = "<group>"; };
 		49D0F2561E811871009B56CF /* LZClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassesViewController.m; sourceTree = "<group>"; };
 		49D0F2571E811871009B56CF /* LZClassesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassesViewController.xib; sourceTree = "<group>"; };
@@ -358,6 +363,7 @@
 		491BA1731E7B770E00E92175 = {
 			isa = PBXGroup;
 			children = (
+				49AECE3D1E84F73F0057C02F /* File.json */,
 				491BA17E1E7B770F00E92175 /* Student */,
 				491BA1981E7B771000E92175 /* StudentTests */,
 				491BA1A31E7B771000E92175 /* StudentUITests */,
@@ -647,6 +653,15 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
+		49AECE3F1E84F7E30057C02F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				49AECE401E84F8100057C02F /* LZDetailModel.h */,
+				49AECE411E84F8100057C02F /* LZDetailModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		49D0F25A1E811A70009B56CF /* ClassesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +678,7 @@
 		49D0F26A1E820BB0009B56CF /* 老师详情 */ = {
 			isa = PBXGroup;
 			children = (
+				49AECE3F1E84F7E30057C02F /* model */,
 				49D0F2701E820C7C009B56CF /* View */,
 				49D0F26B1E820C27009B56CF /* LZTeacherDetailViewController.h */,
 				49D0F26C1E820C27009B56CF /* LZTeacherDetailViewController.m */,
@@ -828,6 +844,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B2E93A1E84234B00CB8F37 /* LZStansardCell.xib in Resources */,
+				49AECE3E1E84F73F0057C02F /* File.json in Resources */,
 				491BA29C1E7FB70400E92175 /* LZHomeSecondCell.xib in Resources */,
 				49D0F2691E812722009B56CF /* LZHomeHeadView.xib in Resources */,
 				491BA2771E7F6E8800E92175 /* LZLoginViewController.xib in Resources */,
@@ -966,6 +983,7 @@
 				49D0F27A1E821724009B56CF /* LZHeadCell.m in Sources */,
 				49AECE391E83C5C00057C02F /* SegmentView.m in Sources */,
 				21B2E9391E84234B00CB8F37 /* LZStansardCell.m in Sources */,
+				49AECE421E84F8100057C02F /* LZDetailModel.m in Sources */,
 				491BA2B71E7FBA7000E92175 /* SDCycleScrollView.m in Sources */,
 				491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */,
 				491BA2961E7FB6CB00E92175 /* LZHomeFirstCell.m in Sources */,
@@ -1145,7 +1163,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1160,7 +1178,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;

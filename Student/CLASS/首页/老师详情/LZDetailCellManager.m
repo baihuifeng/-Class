@@ -17,7 +17,7 @@
 
 // 1000:详情第一个cell  1001：详情第二个cell  1002：详情第二个cell里的cell
 
-+ (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath CellCaseIndex:(int)caseIndex {
++ (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath CellCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model{
     
     switch (caseIndex) {
         case 1000:
@@ -27,6 +27,7 @@
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHeadCell" owner:self options:nil] lastObject];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.model = model;
             return cell;
         }
             break;
@@ -36,8 +37,10 @@
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailcommentCell" owner:self options:nil] lastObject];
             }
-            cell.caseIndex = 1001;
+
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+            [cell setCaseIndex:1001 detailModel:model];
             return cell;
         }
             break;
@@ -90,7 +93,7 @@
     
 }
 
-+ (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath CellCaseIndex:(int)caseIndex {
++ (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath CellCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model{
     
     switch (caseIndex) {
         case 1000:

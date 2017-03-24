@@ -17,5 +17,6 @@
 #import <UIKit/UIKit.h>
 #import "LZDetailCellManager.h"
 #import "SegmentView.h"
+#import "MJExtension.h"
 
 #endif /* CommentClass_pch */
