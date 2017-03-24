@@ -148,7 +148,7 @@
 + (CGFloat)sizeCommentHeightDetailModel:(LZDetailModel *)model {
     
     
-    return 150+[LZDetailCellManager sizeStudentCommentHeightDetailModel:model]+[LZDetailCellManager sizeTeacherCommentHeightDetailModel:model];
+    return 90+[LZDetailCellManager sizeStudentCommentHeightDetailModel:model]+[LZDetailCellManager sizeTeacherCommentHeightDetailModel:model];
 
 }
 + (CGFloat)sizeStudentCommentHeightDetailModel:(LZDetailModel *)model {
