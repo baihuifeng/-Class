@@ -9,6 +9,7 @@
 #import "LZTeacherDetailViewController.h"
 #import "LZDetailCell.h"
 #import "LZDetailCellManager.h"
+#import "LZDetailStandardView.h"
 
 @interface LZTeacherDetailViewController ()
 
@@ -42,6 +43,11 @@
     }
     cell.caseIndex = [_caseIndexArr[indexPath.row] intValue];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    
 }
 
 

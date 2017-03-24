@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LZMineTeacherViewController">
             <connections>
+                <outlet property="mineSegment" destination="thg-JK-Lwj" id="eyj-oq-v8B"/>
                 <outlet property="mineTeacherList" destination="dFv-HY-Rxa" id="OHi-4v-Uwd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,7 +32,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="YC6-ET-EID" secondAttribute="bottom" id="AF1-rc-JW0"/>
                         <constraint firstItem="YC6-ET-EID" firstAttribute="leading" secondItem="thg-JK-Lwj" secondAttribute="leading" id="RMb-eW-ccI"/>
@@ -40,7 +41,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dFv-HY-Rxa">
-                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <rect key="frame" x="0.0" y="45" width="375" height="622"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Nf0-5U-DAz"/>
@@ -52,13 +53,13 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="dFv-HY-Rxa" secondAttribute="trailing" id="3EM-8v-mkQ"/>
                 <constraint firstItem="dFv-HY-Rxa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Spf-UX-P19"/>
-                <constraint firstItem="dFv-HY-Rxa" firstAttribute="top" secondItem="thg-JK-Lwj" secondAttribute="bottom" constant="-5" id="TD9-zj-hAw"/>
+                <constraint firstItem="dFv-HY-Rxa" firstAttribute="top" secondItem="thg-JK-Lwj" secondAttribute="bottom" id="TD9-zj-hAw"/>
                 <constraint firstAttribute="trailing" secondItem="thg-JK-Lwj" secondAttribute="trailing" id="Yv4-Ok-29o"/>
                 <constraint firstItem="thg-JK-Lwj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="cfW-EE-7PD"/>
                 <constraint firstAttribute="bottom" secondItem="dFv-HY-Rxa" secondAttribute="bottom" id="rgV-bB-rrv"/>
                 <constraint firstItem="thg-JK-Lwj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sRm-Dp-KWz"/>
             </constraints>
-            <point key="canvasLocation" x="-511" y="-637"/>
+            <point key="canvasLocation" x="-623.5" y="-742.5"/>
         </view>
     </objects>
 </document>

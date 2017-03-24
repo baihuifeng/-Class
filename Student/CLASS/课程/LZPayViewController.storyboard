@@ -492,6 +492,9 @@
                             <outlet property="delegate" destination="QXD-Rd-b15" id="4dj-gr-kJg"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="mineInfoTableView" destination="Xzt-CI-V3u" id="SOG-3L-RVG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daI-yV-xed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

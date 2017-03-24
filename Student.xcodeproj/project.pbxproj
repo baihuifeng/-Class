@@ -11,6 +11,11 @@
 		213FC0741E825E5600DF7115 /* LZDetailcommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */; };
 		213FC0781E8262F600DF7115 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213FC0761E8262F600DF7115 /* CommentCell.m */; };
 		213FC0791E8262F600DF7115 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0771E8262F600DF7115 /* CommentCell.xib */; };
+		21B2E92F1E841ECA00CB8F37 /* LZDetailBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E1E841ECA00CB8F37 /* LZDetailBackView.m */; };
+		21B2E9331E841FB500CB8F37 /* LZDetailStandardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E9321E841FB500CB8F37 /* LZDetailStandardView.m */; };
+		21B2E9351E841FD900CB8F37 /* LZDetailStandardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E9341E841FD900CB8F37 /* LZDetailStandardView.xib */; };
+		21B2E9391E84234B00CB8F37 /* LZStansardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E9371E84234B00CB8F37 /* LZStansardCell.m */; };
+		21B2E93A1E84234B00CB8F37 /* LZStansardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */; };
 		21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE181E1E801E0B00FB7D31 /* LZHomeFourCell.m */; };
 		21EE18211E801E0B00FB7D31 /* LZHomeFourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EE181F1E801E0B00FB7D31 /* LZHomeFourCell.xib */; };
 		21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE18231E801E5F00FB7D31 /* LZTeacherListCell.m */; };
@@ -128,6 +133,14 @@
 		213FC0751E8262F600DF7115 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
 		213FC0761E8262F600DF7115 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
 		213FC0771E8262F600DF7115 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		21B2E92D1E841ECA00CB8F37 /* LZDetailBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailBackView.h; sourceTree = "<group>"; };
+		21B2E92E1E841ECA00CB8F37 /* LZDetailBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailBackView.m; sourceTree = "<group>"; };
+		21B2E9311E841FB500CB8F37 /* LZDetailStandardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailStandardView.h; sourceTree = "<group>"; };
+		21B2E9321E841FB500CB8F37 /* LZDetailStandardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailStandardView.m; sourceTree = "<group>"; };
+		21B2E9341E841FD900CB8F37 /* LZDetailStandardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZDetailStandardView.xib; sourceTree = "<group>"; };
+		21B2E9361E84234B00CB8F37 /* LZStansardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStansardCell.h; sourceTree = "<group>"; };
+		21B2E9371E84234B00CB8F37 /* LZStansardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStansardCell.m; sourceTree = "<group>"; };
+		21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZStansardCell.xib; sourceTree = "<group>"; };
 		21EE181D1E801E0B00FB7D31 /* LZHomeFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeFourCell.h; sourceTree = "<group>"; };
 		21EE181E1E801E0B00FB7D31 /* LZHomeFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeFourCell.m; sourceTree = "<group>"; };
 		21EE181F1E801E0B00FB7D31 /* LZHomeFourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHomeFourCell.xib; sourceTree = "<group>"; };
@@ -307,6 +320,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21B2E9301E841F7300CB8F37 /* 弹层 */ = {
+			isa = PBXGroup;
+			children = (
+				21B2E9311E841FB500CB8F37 /* LZDetailStandardView.h */,
+				21B2E9321E841FB500CB8F37 /* LZDetailStandardView.m */,
+				21B2E9341E841FD900CB8F37 /* LZDetailStandardView.xib */,
+				21B2E9361E84234B00CB8F37 /* LZStansardCell.h */,
+				21B2E9371E84234B00CB8F37 /* LZStansardCell.m */,
+				21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */,
+			);
+			path = "弹层";
+			sourceTree = "<group>";
+		};
 		21EE18271E802B0100FB7D31 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +431,8 @@
 				49AECE381E83C5C00057C02F /* SegmentView.m */,
 				491BA2A21E7FBA7000E92175 /* SDCycleScrollView */,
 				491BA27D1E7F7CBD00E92175 /* CommentClass.pch */,
+				21B2E92D1E841ECA00CB8F37 /* LZDetailBackView.h */,
+				21B2E92E1E841ECA00CB8F37 /* LZDetailBackView.m */,
 			);
 			path = "公共类";
 			sourceTree = "<group>";
@@ -648,6 +676,7 @@
 		49D0F2701E820C7C009B56CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21B2E9301E841F7300CB8F37 /* 弹层 */,
 				49D0F2761E821711009B56CF /* view */,
 				49D0F2711E820CBE009B56CF /* LZDetailCell.h */,
 				49D0F2721E820CBE009B56CF /* LZDetailCell.m */,
@@ -798,12 +827,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B2E93A1E84234B00CB8F37 /* LZStansardCell.xib in Resources */,
 				491BA29C1E7FB70400E92175 /* LZHomeSecondCell.xib in Resources */,
 				49D0F2691E812722009B56CF /* LZHomeHeadView.xib in Resources */,
 				491BA2771E7F6E8800E92175 /* LZLoginViewController.xib in Resources */,
 				491BA27C1E7F7BB400E92175 /* LZRegisterViewController.xib in Resources */,
 				21EE182C1E802BAB00FB7D31 /* LZCourseFirstCell.xib in Resources */,
 				49AECE361E83C0F90057C02F /* MineTeacherCell.xib in Resources */,
+				21B2E9351E841FD900CB8F37 /* LZDetailStandardView.xib in Resources */,
 				491BA1CC1E7B793400E92175 /* LZSTeacherViewController.xib in Resources */,
 				491BA2BF1E7FBD2800E92175 /* 2222@2x.png in Resources */,
 				491BA1D11E7B796600E92175 /* LZCourseViewController.xib in Resources */,
@@ -909,12 +940,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B2E9331E841FB500CB8F37 /* LZDetailStandardView.m in Sources */,
 				491BA1D01E7B796600E92175 /* LZCourseViewController.m in Sources */,
 				491BA2B21E7FBA7000E92175 /* TAAbstractDotView.m in Sources */,
 				491BA27B1E7F7BB400E92175 /* LZRegisterViewController.m in Sources */,
 				491BA28C1E7F939200E92175 /* LZMineSecondCell.m in Sources */,
 				491BA2871E7F8F6700E92175 /* LZMineFirstCell.m in Sources */,
 				21EE182B1E802BAB00FB7D31 /* LZCourseFirstCell.m in Sources */,
+				21B2E92F1E841ECA00CB8F37 /* LZDetailBackView.m in Sources */,
 				491BA1E31E7B7B6B00E92175 /* HHTababr.m in Sources */,
 				491BA2C81E7FC1E100E92175 /* LZSecondItmesCell.m in Sources */,
 				21EE18301E8036E500FB7D31 /* LZCourseJudgeCell.m in Sources */,
@@ -932,6 +965,7 @@
 				491BA1E51E7B7B6B00E92175 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
 				49D0F27A1E821724009B56CF /* LZHeadCell.m in Sources */,
 				49AECE391E83C5C00057C02F /* SegmentView.m in Sources */,
+				21B2E9391E84234B00CB8F37 /* LZStansardCell.m in Sources */,
 				491BA2B71E7FBA7000E92175 /* SDCycleScrollView.m in Sources */,
 				491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */,
 				491BA2961E7FB6CB00E92175 /* LZHomeFirstCell.m in Sources */,
