@@ -16,12 +16,6 @@
 
 }
 
-- (void)setCaseIndex:(int)caseIndex {
-
-    
-    
-
-}
 
 - (void)setCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model {
     _caseIndex = caseIndex;

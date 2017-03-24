@@ -51,6 +51,7 @@
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"CommentCell" owner:self options:nil] lastObject];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.model = model;
             return cell;
         }
             break;
@@ -60,8 +61,9 @@
             if (!cell) {
                 cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailcommentCell" owner:self options:nil] lastObject];
             }
-            cell.caseIndex = 1003;
+//            cell.caseIndex = 1003;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            [cell setCaseIndex:1003 detailModel:model];
             return cell;
         }
             break;
