@@ -7,7 +7,11 @@
 //
 
 #import "LZRootViewController.h"
+#import "JYCountButton.h"
 
 @interface LZFoundPassWordViewController : LZRootViewController
+@property (weak, nonatomic) IBOutlet UITextField *teleText;
+@property (weak, nonatomic) IBOutlet UITextField *codeText;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end

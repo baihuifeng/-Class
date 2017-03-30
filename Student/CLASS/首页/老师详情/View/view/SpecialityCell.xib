@@ -21,22 +21,37 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH3-NE-awr">
                         <rect key="frame" x="12" y="8" width="300" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-t0-DLi">
+                        <rect key="frame" x="12" y="34" width="296" height="0.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="Yf0-Te-NMD"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="kH3-NE-awr" secondAttribute="trailing" id="1Hk-lg-kPS"/>
+                    <constraint firstItem="aM0-t0-DLi" firstAttribute="top" secondItem="kH3-NE-awr" secondAttribute="bottom" constant="5" id="CvC-Jg-vHX"/>
                     <constraint firstAttribute="bottomMargin" secondItem="kH3-NE-awr" secondAttribute="bottom" constant="6" id="KLY-1f-QcS"/>
                     <constraint firstItem="kH3-NE-awr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="eb7-Yf-IOY"/>
                     <constraint firstAttribute="topMargin" secondItem="kH3-NE-awr" secondAttribute="top" id="uaj-2n-DKm"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aM0-t0-DLi" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="12" id="Aj2-53-87q"/>
+                <constraint firstAttribute="trailing" secondItem="aM0-t0-DLi" secondAttribute="trailing" constant="12" id="Wva-7x-5H5"/>
+            </constraints>
             <connections>
                 <outlet property="characteristics" destination="kH3-NE-awr" id="fFH-4X-0bf"/>
+                <outlet property="lineBackView" destination="aM0-t0-DLi" id="a2J-P4-JGT"/>
             </connections>
-            <point key="canvasLocation" x="-397" y="-182"/>
+            <point key="canvasLocation" x="-581" y="-182"/>
         </tableViewCell>
     </objects>
 </document>

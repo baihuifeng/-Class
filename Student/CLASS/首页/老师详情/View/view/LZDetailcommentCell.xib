@@ -20,14 +20,55 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amG-c0-2Rq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
-                        <color key="backgroundColor" red="1" green="0.52941176469999995" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetailPingLunIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ejj-Yy-dco">
+                                <rect key="frame" x="1" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="bS1-2w-mjs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学生评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-P6-igk">
+                                <rect key="frame" x="41" y="0.0" width="117" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="vLR-4b-25w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-Jc-Alc">
+                                <rect key="frame" x="209" y="0.0" width="111" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="pNw-WD-SLZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-12" maxY="0.0"/>
+                                <state key="normal" title="更多" image="LeftIcon">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="counBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nlF-4B-1Ci"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="dFe-3Z-p53"/>
+                            <constraint firstAttribute="bottom" secondItem="bgi-P6-igk" secondAttribute="bottom" id="2se-Ru-biG"/>
+                            <constraint firstItem="bgi-P6-igk" firstAttribute="leading" secondItem="Ejj-Yy-dco" secondAttribute="trailing" id="BVf-Dc-QhR"/>
+                            <constraint firstItem="Ejj-Yy-dco" firstAttribute="leading" secondItem="amG-c0-2Rq" secondAttribute="leading" constant="1" id="JcH-DX-qIV"/>
+                            <constraint firstItem="vuC-Jc-Alc" firstAttribute="top" secondItem="amG-c0-2Rq" secondAttribute="top" id="Yga-xi-nca"/>
+                            <constraint firstAttribute="trailing" secondItem="vuC-Jc-Alc" secondAttribute="trailing" id="c0k-j5-mYr"/>
+                            <constraint firstAttribute="height" constant="40" id="dFe-3Z-p53"/>
+                            <constraint firstItem="Ejj-Yy-dco" firstAttribute="top" secondItem="amG-c0-2Rq" secondAttribute="top" id="g3f-x7-Ex6"/>
+                            <constraint firstItem="bgi-P6-igk" firstAttribute="top" secondItem="amG-c0-2Rq" secondAttribute="top" id="jzG-7c-CMp"/>
+                            <constraint firstAttribute="bottom" secondItem="vuC-Jc-Alc" secondAttribute="bottom" id="quM-Fb-f0q"/>
+                            <constraint firstAttribute="bottom" secondItem="Ejj-Yy-dco" secondAttribute="bottom" id="x7C-MD-PiZ"/>
                         </constraints>
                     </view>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-rg-vCL">
-                        <rect key="frame" x="0.0" y="24" width="320" height="198"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-rg-vCL">
+                        <rect key="frame" x="0.0" y="40" width="320" height="182"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="-1" id="uNG-7v-xyA"/>
@@ -47,8 +88,15 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentTable" destination="2Cv-rg-vCL" id="vWL-ga-IOs"/>
+                <outlet property="headContent" destination="bgi-P6-igk" id="GO2-GL-UDa"/>
+                <outlet property="headCount" destination="vuC-Jc-Alc" id="qQ4-LE-BLQ"/>
+                <outlet property="headImg" destination="Ejj-Yy-dco" id="3fK-kS-ct2"/>
             </connections>
-            <point key="canvasLocation" x="-46" y="34"/>
+            <point key="canvasLocation" x="-29" y="-54"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="DetailPingLunIcon" width="15" height="14"/>
+        <image name="LeftIcon" width="7" height="11"/>
+    </resources>
 </document>

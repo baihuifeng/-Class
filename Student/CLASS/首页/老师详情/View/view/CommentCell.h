@@ -23,5 +23,6 @@
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *commentBackViewH;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *commentH;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *feedViewH;
 
 @end

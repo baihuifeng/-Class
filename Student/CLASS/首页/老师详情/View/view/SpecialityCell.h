@@ -13,5 +13,7 @@
 
 @property (nonatomic,strong) LZDetailModel *model;
 @property (strong, nonatomic) IBOutlet UILabel *characteristics;
-
+@property (assign,nonatomic) int caseIndex;
+- (void)setModel:(LZDetailModel *)model caseIndex:(int)caseIndex;
+@property (weak, nonatomic) IBOutlet UIView *lineBackView;
 @end

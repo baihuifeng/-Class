@@ -25,8 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _caseIndexArr = @[@"1000",@"1001",@"1003"];
-    
+    _caseIndexArr = @[@"1000",@"1001",@"1003",@"1008"];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"File"ofType:@"json"];
     
     //根据文件路径读取数据
@@ -47,12 +47,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return _caseIndexArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return [LZDetailCellManager tableView:tableView heightForRowAtIndexPath:indexPath CellCaseIndex:[_caseIndexArr[indexPath.row] intValue] detailModel:_model];
+    return [LZDetailCellManager tableView:tableView heightForRowAtIndexPath:indexPath CellCaseIndex:[_caseIndexArr[indexPath.section] intValue] detailModel:_model];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,7 +67,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailCell" owner:self options:nil] lastObject];
     }
 //    cell.caseIndex = [_caseIndexArr[indexPath.row] intValue];
-    [cell setCaseIndex:[_caseIndexArr[indexPath.row] intValue] detailModel:_model];
+    [cell setCaseIndex:[_caseIndexArr[indexPath.section] intValue] detailModel:_model];
     return cell;
 }
 
@@ -71,6 +76,25 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+
+    return 10;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+    
+}
+
+- (IBAction)backBtn:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 

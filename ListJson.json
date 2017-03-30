@@ -1,0 +1,25 @@
+{
+    "status": 0,
+    "msg": "success",
+    "data": [
+             {
+             "userID": "15",
+             "imgUrl": "http://{{host}}/infoHeaderImgs/a.jpg",
+             "title": "高中历史老师",
+             "price": "200",
+             "tagsInfo": [
+                          "小升初",
+                          "英语",
+                          "口语",
+                          "重点中学"
+                          ],
+             "isExclusive": "1",
+             "satisfaction": "5",
+             "certificationTags": [
+                                   1,
+                                   2,
+                                   3
+                                   ]
+             }
+             ]
+}

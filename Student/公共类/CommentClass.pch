@@ -19,5 +19,11 @@
 #import "SegmentView.h"
 #import "MJExtension.h"
 #import "NSString+stringSizeCalculate.h"
+#import "HHTabbarViewController.h"
+#import "MBProgressHUD.h"
+#import "Tool.h"
+#import "NSStringVerify.h"
+#import "CommentFile.h"
+#import "NSString+Check.h"
 
 #endif /* CommentClass_pch */

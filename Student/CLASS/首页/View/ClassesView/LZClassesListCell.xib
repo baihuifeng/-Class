@@ -118,6 +118,12 @@
                     <constraint firstAttribute="trailingMargin" secondItem="C35-mK-Fgc" secondAttribute="trailing" id="zmx-P1-mCd"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="isExclusive" destination="Hzl-w6-RnS" id="ao2-0x-vAv"/>
+                <outlet property="price" destination="hW6-xE-di7" id="l5S-Gn-8K8"/>
+                <outlet property="title" destination="XeG-4j-Yuk" id="Ovg-dr-ykJ"/>
+            </connections>
+            <point key="canvasLocation" x="-187" y="-159"/>
         </tableViewCell>
     </objects>
 </document>

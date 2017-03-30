@@ -9,6 +9,11 @@
 #import "LZDetailModel.h"
 
 @implementation LZDetailModel
++(NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"commentTags":@"CommentTagsModel"};
+}
+
 
 
 @end
@@ -18,6 +23,11 @@
 @end
 @implementation SuccessfulCaseModel
 
++(NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"caseInfos":@"ContentModel"};
+}
+
 
 @end
 @implementation ContentModel
@@ -25,7 +35,10 @@
 
 @end
 @implementation EducationExperiencesModel
-
++(NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"experienceInfos":@"ContentModel"};
+}
 
 @end
 

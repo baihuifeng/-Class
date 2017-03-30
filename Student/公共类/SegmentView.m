@@ -57,8 +57,7 @@
             [lineMutableArr addObject:view];
         }
         _lineArr = lineMutableArr;
-        
-        
+
         
         
         self.radiuView = [[LeftLabelView alloc] initWithRadiuLabelType:_radiuLabelType WithFrame:CGRectMake(CGRectGetMinX(_backgroundLabel.frame), CGRectGetMinY(_backgroundLabel.frame), self.frame.size.width/(int)itmesArr.count, self.frame.size.height)];

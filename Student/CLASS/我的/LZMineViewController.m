@@ -11,6 +11,9 @@
 #import "LZMineSecondCell.h"
 #import "LZMineDetailViewController.h"
 #import "LZMineTeacherViewController.h"
+#import "LZYJViewController.h"
+#import "LZMineYXViewController.h"
+#import "LZDAViewController.h"
 
 @interface LZMineViewController ()
 
@@ -111,8 +114,21 @@
         LZMineDetailViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZMineDetailViewController"];
         [self.navigationController pushViewController:wvc animated:YES];
     } else if (indexPath.section == 2){
-        LZMineTeacherViewController *teacherVc = [[LZMineTeacherViewController alloc] init];
-        [self.navigationController pushViewController:teacherVc animated:YES];
+        
+        if (indexPath.row == 1) {
+            LZMineYXViewController *yxVc = [[LZMineYXViewController alloc] init];
+            [self.navigationController pushViewController:yxVc animated:YES];
+        } else if (indexPath.row == 4) {
+            LZYJViewController *jyVc = [[LZYJViewController alloc] init];
+            [self.navigationController pushViewController:jyVc animated:YES];
+        } else if (indexPath.row == 2) {
+            LZDAViewController *daVc = [[LZDAViewController alloc] init];
+            [self.navigationController pushViewController:daVc animated:YES];
+        }  else {//
+            LZMineTeacherViewController *teacherVc = [[LZMineTeacherViewController alloc] init];
+            [self.navigationController pushViewController:teacherVc animated:YES];
+        }
+
     } else {
         [LZJumpNextViewController presentNextViewController:0 Url:@"" title:@"登录"];
     }

@@ -78,7 +78,7 @@
                 <constraint firstItem="rY8-oV-sSO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xhl-Wy-9EE"/>
                 <constraint firstItem="rY8-oV-sSO" firstAttribute="top" secondItem="qrd-hD-cgv" secondAttribute="bottom" constant="1" id="g7l-Ft-g0Q"/>
             </constraints>
-            <point key="canvasLocation" x="-323" y="11"/>
+            <point key="canvasLocation" x="-86" y="77"/>
         </view>
     </objects>
 </document>

@@ -28,6 +28,11 @@
 - (IBAction)foundBtn:(UIButton *)sender {
     [LZJumpNextViewController presentNextViewController:2 Url:@"" title:@"找回密码"];
 }
+- (IBAction)codeVc:(UIButton *)sender {
+    [LZJumpNextViewController presentNextViewController:4 Url:@"" title:@"验证码登录"];
+}
+
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -37,6 +42,25 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
 }
+
+- (IBAction)logBtn:(UIButton *)sender {
+    [Tool showHUDAddedTo:self.view animated:YES];
+    [Tool hideHUDForView:self.view animated:YES];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+//    if (!_teleText.text.length) {
+//        SWToast(@"请输入手机号码");
+//        return;
+//    }
+//    if (!_password.text.length) {
+//        SWToast(@"请输入密码");
+//        return;
+//    }
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

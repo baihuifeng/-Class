@@ -49,7 +49,7 @@
     } else if (indexPath.section == 1) {
         return 87;
     } else if (indexPath.section == 2) {
-        return 40;
+        return 50;
     } else {
         return 570;
     }

@@ -16,5 +16,11 @@
 @property (nonatomic,strong) LZDetailModel *model;
 
 - (void)setCaseIndex:(int)caseIndex detailModel:(LZDetailModel *)model;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
+@property (weak, nonatomic) IBOutlet UILabel *headContent;
 
+@property (weak, nonatomic) IBOutlet UIButton *headCount;
+
+///回调
+@property (nonatomic, copy) void (^filterResultBlock)();
 @end

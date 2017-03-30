@@ -11,8 +11,12 @@
 #import "LZClassesListCell.h"
 #import "LZTeacherDetailViewController.h"
 #import "LZDetailStandardView.h"
+#import "LZTeacherListModel.h"
 
 @interface LZClassesViewController ()
+
+@property (nonatomic,strong) NSMutableArray *dataArr;
+
 
 @end
 
@@ -23,6 +27,26 @@
     // Do any additional setup after loading the view from its nib.
     
     [_chooseCollection registerClass:[LZClassesItmesCell class] forCellWithReuseIdentifier:@"LZClassesItmesCell"];
+    
+    _dataArr = [[NSMutableArray alloc] init];
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ListJson"ofType:@"json"];
+    
+    //根据文件路径读取数据
+    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+    
+    
+    //格式化成json数据
+    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+    
+    //    NSLog(@"-----%@",dic);
+    
+//    _model = [LZDetailModel mj_objectWithKeyValues:dic];
+    [_dataArr addObject:[ListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
+    
+    
+    [_classesListTableView reloadData];
+    
+    
 }
 
 
@@ -31,7 +55,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return _dataArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,18 +70,14 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LZClassesListCell" owner:self options:nil] lastObject];
     }
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     LZTeacherDetailViewController *detailVc = [[LZTeacherDetailViewController alloc] init];
     [self.navigationController pushViewController:detailVc animated:YES];
-    
-//    LZDetailStandardView *vc = [[LZDetailStandardView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height)];
-//    vc.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height);
-//    [self.navigationController.view addSubview:vc];
 }
 
 

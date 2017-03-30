@@ -11,4 +11,10 @@
 @interface LZLoginViewController : LZRootViewController
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
+
+@property (weak, nonatomic) IBOutlet UITextField *teleText;
+
+@property (weak, nonatomic) IBOutlet UITextField *password;
+
+
 @end
