@@ -24,15 +24,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goI-M4-c44">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-KR-l5h">
-                            <rect key="frame" x="160" y="0.0" width="1" height="124"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LZClassesIocn" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-KR-l5h">
+                            <rect key="frame" x="160" y="0.0" width="0.5" height="124"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="1" id="afj-Us-L9B"/>
+                                <constraint firstAttribute="width" constant="0.5" id="afj-Us-L9B"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开课倒计时" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejx-kV-O2m">
-                            <rect key="frame" x="15" y="56" width="82" height="13"/>
+                            <rect key="frame" x="15" y="56" width="81.5" height="13"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -137,4 +137,7 @@
             <point key="canvasLocation" x="-473" y="-260"/>
         </view>
     </objects>
+    <resources>
+        <image name="LZClassesIocn" width="1" height="1"/>
+    </resources>
 </document>

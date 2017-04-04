@@ -14,16 +14,21 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreen_Width, (kScreen_Width/320)*190) delegate:self placeholderImage:[UIImage imageNamed:@"HomeFirstB"]];
-    scrollView.backgroundColor = [UIColor redColor];
+
+    
+}
+
+- (void)setIndex:(int)index {
+    _index = index;
+    SDCycleScrollView *scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreen_Width, 190) delegate:self placeholderImage:[UIImage imageNamed:@"0000000"]];
+//    scrollView.backgroundColor = [UIColor redCo
     scrollView.showPageControl = YES;
     scrollView.delegate = self;
     scrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
-//    scrollView.imageURLStringsGroup = @[@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png",@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png",@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png"];
+    //    scrollView.imageURLStringsGroup = @[@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png",@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png",@"http://image1.jyall.com/v1/tfs/T1ytATBTYv1R4cSCrK.png"];
     scrollView.currentPageDotImage = [UIImage imageNamed:@"2222"];
     scrollView.pageDotImage = [UIImage imageNamed:@"1111"];
     [_headView addSubview:scrollView];
-    
 }
 
 /** 点击图片回调 */

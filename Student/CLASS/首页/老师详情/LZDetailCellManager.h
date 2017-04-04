@@ -29,6 +29,7 @@
 
 #pragma -mark "自我介绍的高度"
 + (CGFloat)sizeCharacteristicsHeightDetailModel:(LZDetailModel *)model;
++ (CGFloat)sizeCharacteristicsCellHeightDetailModel:(LZDetailModel *)model;
 
 #pragma -mark "成功案例"
 + (CGFloat)sizeSuccessfulCaseCaseInfosDetailmodel:(LZDetailModel *)model IndexPath:(NSIndexPath *)indexPath;

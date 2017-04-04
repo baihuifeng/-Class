@@ -271,6 +271,7 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="txW-1T-hhT">
                                                     <rect key="frame" x="297" y="8" width="45" height="45"/>
+                                                    <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="JAU-lr-Vk4"/>
                                                     </constraints>
@@ -493,7 +494,13 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="cellPhone" destination="7uL-8V-w5K" id="IcM-6Q-Gar"/>
+                        <outlet property="gradeName" destination="NUD-1M-YVD" id="54a-P6-4SS"/>
+                        <outlet property="headImg" destination="txW-1T-hhT" id="r8t-ZQ-Mo9"/>
                         <outlet property="mineInfoTableView" destination="Xzt-CI-V3u" id="SOG-3L-RVG"/>
+                        <outlet property="name" destination="Wjw-iH-G0E" id="Jye-58-FT6"/>
+                        <outlet property="regionName" destination="HV6-O8-MXN" id="Wzf-rG-uWX"/>
+                        <outlet property="sex" destination="49g-VY-TXe" id="PFZ-ar-mbX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daI-yV-xed" userLabel="First Responder" sceneMemberID="firstResponder"/>

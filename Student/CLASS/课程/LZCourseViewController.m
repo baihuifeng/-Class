@@ -10,9 +10,13 @@
 #import "LZCourseFirstCell.h"
 #import "LZCourseJudgeCell.h"
 #import "LZPayViewController.h"
+#import "LZCourseModel.h"
 
 
 @interface LZCourseViewController ()
+@property (nonatomic,strong) NSMutableArray *dataArr;
+
+@property (assign,nonatomic) NSInteger indexSelect;
 
 @end
 
@@ -35,17 +39,42 @@
 
     [self.chooseView addSubview:segment];
     
+    
+    _dataArr = [[NSMutableArray alloc] init];
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"OrderFile"ofType:@"json"];
+    
+    //根据文件路径读取数据
+    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+    
+    
+    //格式化成json数据
+    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+    
+        [_dataArr addObjectsFromArray:[LZCourseModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
+    
+    [_courseListTableView reloadData];
+    
+    
+    
+    
 }
 
 - (void)index:(NSInteger)index {
+    
+    _indexSelect = index;
+    
+    [_courseListTableView reloadData];
     
 
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (_indexSelect == 2) {
+        return 20;
+    }
     
-    return 10;
+    return _dataArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,29 +84,33 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section % 2) {
-        return 152;
-    } else {
+    if (_indexSelect == 2) {
         return 70;
     }
+    
+    return [LZCourseFirstCell tabViewCellHeight:_dataArr[indexPath.section]];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section % 2) {
-        LZCourseFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZCourseFirstCell"];
-        if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"LZCourseFirstCell" owner:self options:nil] lastObject];
-        }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    } else {
+    
+    if (_indexSelect == 2) {
         LZCourseJudgeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZCourseJudgeCell"];
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZCourseJudgeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
+    } else {
+        LZCourseFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZCourseFirstCell"];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"LZCourseFirstCell" owner:self options:nil] lastObject];
+        }
+//        cell.model = _dataArr[indexPath.section];
+        [cell setModel:_dataArr[indexPath.section] index:_indexSelect];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    
     }
 }
 

@@ -1,0 +1,43 @@
+{
+    "status": 0,
+    "msg": "success",
+    "data": [
+             {
+             "teacherName": "董老师",
+             "teacherHeadImgUrl": "http://{{host}}/infoHeaderImgs/a.jpg",
+             "teachSkill": "奥数-三年级",
+             "teacherCellPhone": "18501407013",
+             "address": "保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302",
+             "price": "150",
+             "unit": "课时",
+             "status": "0"
+             },             {
+             "teacherName": "董老师",
+             "teacherHeadImgUrl": "http://{{host}}/infoHeaderImgs/a.jpg",
+             "teachSkill": "奥数-三年级",
+             "teacherCellPhone": "18501407013",
+             "address": "保定市北市区机关宿舍3-3-302",
+             "price": "150",
+             "unit": "课时",
+             "status": "1"
+             },             {
+             "teacherName": "董老师",
+             "teacherHeadImgUrl": "http://{{host}}/infoHeaderImgs/a.jpg",
+             "teachSkill": "奥数-三年级",
+             "teacherCellPhone": "18501407013",
+             "address": "保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302保定市北市区机关宿舍3-3-302",
+             "price": "150",
+             "unit": "课时",
+             "status": "0"
+             },             {
+             "teacherName": "董老师",
+             "teacherHeadImgUrl": "http://{{host}}/infoHeaderImgs/a.jpg",
+             "teachSkill": "奥数-三年级",
+             "teacherCellPhone": "18501407013",
+             "address": "保定市北市区机关宿舍3-3-302",
+             "price": "150",
+             "unit": "课时",
+             "status": "1"
+             }
+             ]
+}

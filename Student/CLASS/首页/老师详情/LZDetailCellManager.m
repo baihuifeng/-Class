@@ -222,7 +222,7 @@
         case 1003:
         { //
             
-            return [LZDetailCellManager sizeCommentHeightDetailModel:model] +[LZDetailCellManager sizeCharacteristicsHeightDetailModel:model] + [LZDetailCellManager sizeSuccessfulCaseCaseInfosDetailmodel:model] + [LZDetailCellManager sizeEducationExperiencesDetailmodel:model] +[LZDetailCellManager sizeCollegeDetailmodel:model]-100+[LZDetailCellManager tableView:tableView heightForHeaderInSection:indexPath.section detailModel:model];
+            return  [LZDetailCellManager sizeCharacteristicsCellHeightDetailModel:model] + [LZDetailCellManager sizeSuccessfulCaseCaseInfosDetailmodel:model] +[LZDetailCellManager sizeEducationExperiencesDetailmodel:model] +[LZDetailCellManager sizeCollegeDetailmodelCellHeight:model];
         }
             break;
         case 1004:
@@ -379,12 +379,16 @@
 }
 #pragma -mark "自我介绍的高度"
 + (CGFloat)sizeCharacteristicsHeightDetailModel:(LZDetailModel *)model {
-    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 30;
+    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:14].height + 30;
+}
+
++ (CGFloat)sizeCharacteristicsCellHeightDetailModel:(LZDetailModel *)model {
+    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:14].height + 70;
 }
 #pragma -mark "成功案例"
 + (CGFloat)sizeSuccessfulCaseCaseInfosDetailmodel:(LZDetailModel *)model IndexPath:(NSIndexPath *)indexPath{
     ContentModel *contentModel = model.successfulCase.caseInfos[indexPath.row];
-    return [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:12].height + 40;
+    return [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:12].height + 45;
 }
 
 + (CGFloat)sizeSuccessfulCaseCaseInfosDetailmodel:(LZDetailModel *)model {
@@ -394,11 +398,11 @@
     for (int i = 0; i<model.successfulCase.caseInfos.count; i++) {
      
         ContentModel *contentModel = model.successfulCase.caseInfos[i];
-        f += [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:12].height + 40;
+        f += [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:12].height + 45;
         
     }
     
-    return f;
+    return f+40;
     
 }
 
@@ -406,7 +410,7 @@
 
 + (CGFloat)sizeEducationExperiencesDetailmodel:(LZDetailModel *)model IndexPath:(NSIndexPath *)indexPath {
     ContentModel *contentModel = model.educationExperiences.experienceInfos[indexPath.row];
-    return [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-60, CGFLOAT_MAX) wordFont:12].height + 77;
+    return [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-50, CGFLOAT_MAX) wordFont:12].height + 80;
 
 }
 
@@ -417,7 +421,7 @@
     for (int i = 0; i<model.educationExperiences.experienceInfos.count; i++) {
         
         ContentModel *contentModel = model.educationExperiences.experienceInfos[i];
-        f += [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-60, CGFLOAT_MAX) wordFont:12].height+77;
+        f += [NSString stringSizeWithString:contentModel.content maxSize:CGSizeMake(kScreen_Width-60, CGFLOAT_MAX) wordFont:12].height+80;
         
     }
     
@@ -429,6 +433,9 @@
 #pragma -mark "毕业学校"
 + (CGFloat)sizeCollegeDetailmodel:(LZDetailModel *)model{
     return [NSString stringSizeWithString:model.college maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 26;
+}
++ (CGFloat)sizeCollegeDetailmodelCellHeight:(LZDetailModel *)model{
+    return [NSString stringSizeWithString:model.college maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 26+40;
 }
 #pragma -mark "授课信息"
 

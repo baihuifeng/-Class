@@ -7,9 +7,20 @@
 //
 
 #import "LZMineDetailViewController.h"
+#import "LZMineDetailModel.h"
 
 @interface LZMineDetailViewController ()
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *gradeName;
+
+@property (weak, nonatomic) IBOutlet UILabel *sex;
+@property (weak, nonatomic) IBOutlet UILabel *cellPhone;
+@property (weak, nonatomic) IBOutlet UILabel *regionName;
+
+@property (nonatomic,strong) LZMineDetailModel *model;
 @end
 
 @implementation LZMineDetailViewController
@@ -19,6 +30,35 @@
     
 
     _mineInfoTableView.tableFooterView = [[UIView alloc] init];
+    
+    
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"MineFile"ofType:@"json"];
+    
+    //根据文件路径读取数据
+    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+    
+    
+    //格式化成json数据
+    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+    _model = [LZMineDetailModel mj_objectWithKeyValues:dic[@"data"]];
+    
+    self.name.text = _model.name;
+    self.gradeName.text = _model.gradeName;
+    self.cellPhone.text = _model.cellPhone;
+    self.sex.text = _model.sex;
+    self.regionName.text = _model.regionName;
+    
+    
+
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 1) {
+        return 10;
+    }
+    
+    return 0;
 }
 
 - (void)didReceiveMemoryWarning {

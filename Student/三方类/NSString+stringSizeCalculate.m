@@ -18,7 +18,7 @@
         return CGSizeZero;
     }
     
-    fontSize = fontSize + 1.0;
+    fontSize = fontSize;
     
     CGSize needSize = [string boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:NULL].size;
     

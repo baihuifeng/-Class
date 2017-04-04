@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212268C71E8E2E15002685F9 /* MineFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 212268C61E8E2E15002685F9 /* MineFile.json */; };
+		212268D01E8E30BE002685F9 /* LZMineDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 212268CF1E8E30BE002685F9 /* LZMineDetailModel.m */; };
+		212268D21E8E4438002685F9 /* OrderFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 212268D11E8E4438002685F9 /* OrderFile.json */; };
 		212D9DBB1E88AEEC00286DD7 /* LZYJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212D9DB91E88AEEC00286DD7 /* LZYJViewController.m */; };
 		212D9DBC1E88AEEC00286DD7 /* LZYJViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212D9DBA1E88AEEC00286DD7 /* LZYJViewController.xib */; };
 		212D9DBE1E88B10E00286DD7 /* QIAOTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 212D9DBD1E88B10E00286DD7 /* QIAOTextView.m */; };
@@ -35,11 +38,19 @@
 		216073A21E8BA299008B3839 /* NSStringVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 216073A11E8BA299008B3839 /* NSStringVerify.m */; };
 		216073A51E8BA737008B3839 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 216073A41E8BA737008B3839 /* NSString+Check.m */; };
 		216073A91E8BAE78008B3839 /* JYCountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 216073A81E8BAE78008B3839 /* JYCountButton.m */; };
+		21B12E151E8F8F2C000EB1D9 /* LZCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B12E141E8F8F2C000EB1D9 /* LZCourseModel.m */; };
 		21B2E92F1E841ECA00CB8F37 /* LZDetailBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E1E841ECA00CB8F37 /* LZDetailBackView.m */; };
 		21B2E9331E841FB500CB8F37 /* LZDetailStandardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E9321E841FB500CB8F37 /* LZDetailStandardView.m */; };
 		21B2E9351E841FD900CB8F37 /* LZDetailStandardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E9341E841FD900CB8F37 /* LZDetailStandardView.xib */; };
 		21B2E9391E84234B00CB8F37 /* LZStansardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E9371E84234B00CB8F37 /* LZStansardCell.m */; };
 		21B2E93A1E84234B00CB8F37 /* LZStansardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */; };
+		21E860821E8C9BA9004A0AC9 /* LZClassListHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E860811E8C9BA9004A0AC9 /* LZClassListHeadView.m */; };
+		21E860841E8C9BD1004A0AC9 /* LZClassListHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E860831E8C9BD1004A0AC9 /* LZClassListHeadView.xib */; };
+		21E860871E8CAF4C004A0AC9 /* LZClassItmeListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E860861E8CAF4C004A0AC9 /* LZClassItmeListView.m */; };
+		21E860891E8CAF61004A0AC9 /* LZClassItmeListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E860881E8CAF61004A0AC9 /* LZClassItmeListView.xib */; };
+		21E860901E8CD00E004A0AC9 /* PullBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E8608B1E8CD00E004A0AC9 /* PullBackView.m */; };
+		21E860911E8CD00E004A0AC9 /* PullModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E8608D1E8CD00E004A0AC9 /* PullModel.m */; };
+		21E860921E8CD00E004A0AC9 /* PullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E8608F1E8CD00E004A0AC9 /* PullView.m */; };
 		21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE181E1E801E0B00FB7D31 /* LZHomeFourCell.m */; };
 		21EE18211E801E0B00FB7D31 /* LZHomeFourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EE181F1E801E0B00FB7D31 /* LZHomeFourCell.xib */; };
 		21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE18231E801E5F00FB7D31 /* LZTeacherListCell.m */; };
@@ -160,6 +171,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212268C61E8E2E15002685F9 /* MineFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MineFile.json; sourceTree = "<group>"; };
+		212268CE1E8E30BE002685F9 /* LZMineDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMineDetailModel.h; sourceTree = "<group>"; };
+		212268CF1E8E30BE002685F9 /* LZMineDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMineDetailModel.m; sourceTree = "<group>"; };
+		212268D11E8E4438002685F9 /* OrderFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrderFile.json; sourceTree = "<group>"; };
 		212D9DB81E88AEEC00286DD7 /* LZYJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYJViewController.h; sourceTree = "<group>"; };
 		212D9DB91E88AEEC00286DD7 /* LZYJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYJViewController.m; sourceTree = "<group>"; };
 		212D9DBA1E88AEEC00286DD7 /* LZYJViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZYJViewController.xib; sourceTree = "<group>"; };
@@ -206,6 +221,8 @@
 		216073A61E8BA75A008B3839 /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
 		216073A71E8BAE78008B3839 /* JYCountButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCountButton.h; sourceTree = "<group>"; };
 		216073A81E8BAE78008B3839 /* JYCountButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCountButton.m; sourceTree = "<group>"; };
+		21B12E131E8F8F2C000EB1D9 /* LZCourseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCourseModel.h; sourceTree = "<group>"; };
+		21B12E141E8F8F2C000EB1D9 /* LZCourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCourseModel.m; sourceTree = "<group>"; };
 		21B2E92D1E841ECA00CB8F37 /* LZDetailBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailBackView.h; sourceTree = "<group>"; };
 		21B2E92E1E841ECA00CB8F37 /* LZDetailBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailBackView.m; sourceTree = "<group>"; };
 		21B2E9311E841FB500CB8F37 /* LZDetailStandardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailStandardView.h; sourceTree = "<group>"; };
@@ -214,6 +231,18 @@
 		21B2E9361E84234B00CB8F37 /* LZStansardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStansardCell.h; sourceTree = "<group>"; };
 		21B2E9371E84234B00CB8F37 /* LZStansardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStansardCell.m; sourceTree = "<group>"; };
 		21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZStansardCell.xib; sourceTree = "<group>"; };
+		21E860801E8C9BA9004A0AC9 /* LZClassListHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassListHeadView.h; sourceTree = "<group>"; };
+		21E860811E8C9BA9004A0AC9 /* LZClassListHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassListHeadView.m; sourceTree = "<group>"; };
+		21E860831E8C9BD1004A0AC9 /* LZClassListHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassListHeadView.xib; sourceTree = "<group>"; };
+		21E860851E8CAF4C004A0AC9 /* LZClassItmeListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassItmeListView.h; sourceTree = "<group>"; };
+		21E860861E8CAF4C004A0AC9 /* LZClassItmeListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassItmeListView.m; sourceTree = "<group>"; };
+		21E860881E8CAF61004A0AC9 /* LZClassItmeListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassItmeListView.xib; sourceTree = "<group>"; };
+		21E8608A1E8CD00E004A0AC9 /* PullBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullBackView.h; sourceTree = "<group>"; };
+		21E8608B1E8CD00E004A0AC9 /* PullBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullBackView.m; sourceTree = "<group>"; };
+		21E8608C1E8CD00E004A0AC9 /* PullModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullModel.h; sourceTree = "<group>"; };
+		21E8608D1E8CD00E004A0AC9 /* PullModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullModel.m; sourceTree = "<group>"; };
+		21E8608E1E8CD00E004A0AC9 /* PullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullView.h; sourceTree = "<group>"; };
+		21E8608F1E8CD00E004A0AC9 /* PullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullView.m; sourceTree = "<group>"; };
 		21EE181D1E801E0B00FB7D31 /* LZHomeFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHomeFourCell.h; sourceTree = "<group>"; };
 		21EE181E1E801E0B00FB7D31 /* LZHomeFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHomeFourCell.m; sourceTree = "<group>"; };
 		21EE181F1E801E0B00FB7D31 /* LZHomeFourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHomeFourCell.xib; sourceTree = "<group>"; };
@@ -407,6 +436,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212268CC1E8E3074002685F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21B12E131E8F8F2C000EB1D9 /* LZCourseModel.h */,
+				21B12E141E8F8F2C000EB1D9 /* LZCourseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		212268CD1E8E30A2002685F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				212268CE1E8E30BE002685F9 /* LZMineDetailModel.h */,
+				212268CF1E8E30BE002685F9 /* LZMineDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		212D9DB71E88AEC200286DD7 /* 投诉建议 */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +572,8 @@
 			children = (
 				212D9DF01E89114800286DD7 /* ListJson.json */,
 				49AECE3D1E84F73F0057C02F /* File.json */,
+				212268C61E8E2E15002685F9 /* MineFile.json */,
+				212268D11E8E4438002685F9 /* OrderFile.json */,
 				491BA17E1E7B770F00E92175 /* Student */,
 				491BA1981E7B771000E92175 /* StudentTests */,
 				491BA1A31E7B771000E92175 /* StudentUITests */,
@@ -655,6 +704,7 @@
 		491BA1B71E7B780200E92175 /* 课程 */ = {
 			isa = PBXGroup;
 			children = (
+				212268CC1E8E3074002685F9 /* Model */,
 				21EE18271E802B0100FB7D31 /* View */,
 				491BA1CD1E7B796600E92175 /* LZCourseViewController.h */,
 				491BA1CE1E7B796600E92175 /* LZCourseViewController.m */,
@@ -698,6 +748,7 @@
 		491BA1BA1E7B780200E92175 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				212268CD1E8E30A2002685F9 /* Model */,
 				212D9DCC1E88BC6300286DD7 /* 学习档案 */,
 				212D9DC01E88B42D00286DD7 /* 学习意向 */,
 				212D9DB71E88AEC200286DD7 /* 投诉建议 */,
@@ -827,6 +878,18 @@
 		4947DA1E1E8C962A00DE0410 /* LZClassView */ = {
 			isa = PBXGroup;
 			children = (
+				21E8608A1E8CD00E004A0AC9 /* PullBackView.h */,
+				21E8608B1E8CD00E004A0AC9 /* PullBackView.m */,
+				21E8608C1E8CD00E004A0AC9 /* PullModel.h */,
+				21E8608D1E8CD00E004A0AC9 /* PullModel.m */,
+				21E8608E1E8CD00E004A0AC9 /* PullView.h */,
+				21E8608F1E8CD00E004A0AC9 /* PullView.m */,
+				21E860851E8CAF4C004A0AC9 /* LZClassItmeListView.h */,
+				21E860861E8CAF4C004A0AC9 /* LZClassItmeListView.m */,
+				21E860881E8CAF61004A0AC9 /* LZClassItmeListView.xib */,
+				21E860801E8C9BA9004A0AC9 /* LZClassListHeadView.h */,
+				21E860811E8C9BA9004A0AC9 /* LZClassListHeadView.m */,
+				21E860831E8C9BD1004A0AC9 /* LZClassListHeadView.xib */,
 			);
 			path = LZClassView;
 			sourceTree = "<group>";
@@ -1045,6 +1108,9 @@
 				491BA29C1E7FB70400E92175 /* LZHomeSecondCell.xib in Resources */,
 				49D0F2691E812722009B56CF /* LZHomeHeadView.xib in Resources */,
 				491BA2771E7F6E8800E92175 /* LZLoginViewController.xib in Resources */,
+				21E860841E8C9BD1004A0AC9 /* LZClassListHeadView.xib in Resources */,
+				212268D21E8E4438002685F9 /* OrderFile.json in Resources */,
+				212268C71E8E2E15002685F9 /* MineFile.json in Resources */,
 				491BA27C1E7F7BB400E92175 /* LZRegisterViewController.xib in Resources */,
 				21EE182C1E802BAB00FB7D31 /* LZCourseFirstCell.xib in Resources */,
 				212D9DBC1E88AEEC00286DD7 /* LZYJViewController.xib in Resources */,
@@ -1078,6 +1144,7 @@
 				491BA18C1E7B770F00E92175 /* Assets.xcassets in Resources */,
 				21EE18311E8036E500FB7D31 /* LZCourseJudgeCell.xib in Resources */,
 				491BA28D1E7F939200E92175 /* LZMineSecondCell.xib in Resources */,
+				21E860891E8CAF61004A0AC9 /* LZClassItmeListView.xib in Resources */,
 				212D9DCB1E88B4B700286DD7 /* LZMineYXCell.xib in Resources */,
 				212D9DF11E89114800286DD7 /* ListJson.json in Resources */,
 				49D0F2591E811871009B56CF /* LZClassesViewController.xib in Resources */,
@@ -1200,10 +1267,12 @@
 				2160739F1E8B9383008B3839 /* Tool.m in Sources */,
 				2160739B1E8B8B53008B3839 /* LZCodeLoginViewController.m in Sources */,
 				212D9DD61E88BF6000286DD7 /* LZDABackCellCell.m in Sources */,
+				21E860901E8CD00E004A0AC9 /* PullBackView.m in Sources */,
 				21FE2DD11E86D2210050F4C9 /* LZGradesWithRegionTableViewCell.m in Sources */,
 				491BA2961E7FB6CB00E92175 /* LZHomeFirstCell.m in Sources */,
 				212D9DF51E89126E00286DD7 /* LZTeacherListModel.m in Sources */,
 				212D9DBE1E88B10E00286DD7 /* QIAOTextView.m in Sources */,
+				21E860871E8CAF4C004A0AC9 /* LZClassItmeListView.m in Sources */,
 				49AECF171E850C300057C02F /* NSString+stringSizeCalculate.m in Sources */,
 				49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */,
 				491BA2761E7F6E8800E92175 /* LZLoginViewController.m in Sources */,
@@ -1214,11 +1283,15 @@
 				21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */,
 				49D0F25E1E811A93009B56CF /* LZClassesItmesCell.m in Sources */,
 				213FC0781E8262F600DF7115 /* CommentCell.m in Sources */,
+				21E860821E8C9BA9004A0AC9 /* LZClassListHeadView.m in Sources */,
 				49D0F2631E811C31009B56CF /* LZClassesListCell.m in Sources */,
 				21FE2DD51E8770F20050F4C9 /* LZDetaiCellHeadView.m in Sources */,
+				21B12E151E8F8F2C000EB1D9 /* LZCourseModel.m in Sources */,
 				49AECE221E83A3400057C02F /* LZPayViewController.m in Sources */,
+				21E860921E8CD00E004A0AC9 /* PullView.m in Sources */,
 				21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */,
 				491BA2911E7FAF2200E92175 /* LZJumpNextViewController.m in Sources */,
+				212268D01E8E30BE002685F9 /* LZMineDetailModel.m in Sources */,
 				491BA2B81E7FBA7000E92175 /* UIView+SDExtension.m in Sources */,
 				216073A51E8BA737008B3839 /* NSString+Check.m in Sources */,
 				212D9DBB1E88AEEC00286DD7 /* LZYJViewController.m in Sources */,
@@ -1231,6 +1304,7 @@
 				212D9DCA1E88B4B700286DD7 /* LZMineYXCell.m in Sources */,
 				49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */,
 				21FE2DCC1E86C1D70050F4C9 /* LZExperienceInfosCell.m in Sources */,
+				21E860911E8CD00E004A0AC9 /* PullModel.m in Sources */,
 				213FC0731E825E5600DF7115 /* LZDetailcommentCell.m in Sources */,
 				49D0F2741E820CBE009B56CF /* LZDetailCell.m in Sources */,
 				212D9DDA1E88DE2900286DD7 /* LZMineCellManager.m in Sources */,
@@ -1391,7 +1465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1406,7 +1480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;

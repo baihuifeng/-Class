@@ -1,0 +1,15 @@
+{
+    "status": 0,
+    "msg": "success",
+    "data": {
+        "name": "追忆似水流年",
+        "gradeName": "小学五年级",
+        "sex": "男",
+        "age": "18",
+        "cellPhone": "18500401234",
+        "regionCode": "130602",
+        "regionName": "竞秀区",
+        "address": "复兴西路建民街69号水榭花城西侧",
+        "headImgUrl": "http://{{host}}/infoHeaderImgs/a.jpg"
+    }
+}

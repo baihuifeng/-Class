@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LZMineFirstCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 
 @end

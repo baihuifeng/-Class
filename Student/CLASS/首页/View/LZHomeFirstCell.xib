@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,17 +24,17 @@
                         <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="woM-19-A0l" secondAttribute="bottom" constant="-9" id="0qN-al-PYc"/>
+                    <constraint firstItem="woM-19-A0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="GFK-Gc-vJC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="woM-19-A0l" secondAttribute="trailing" constant="-8" id="Vz4-S3-Wdw"/>
+                    <constraint firstItem="woM-19-A0l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="joa-32-LXV"/>
+                </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstItem="woM-19-A0l" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="SIe-Fc-ZQb"/>
-                <constraint firstItem="woM-19-A0l" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="pIN-Tg-t1i"/>
-                <constraint firstAttribute="bottom" secondItem="woM-19-A0l" secondAttribute="bottom" id="q0O-NQ-cAQ"/>
-                <constraint firstAttribute="trailing" secondItem="woM-19-A0l" secondAttribute="trailing" id="tsr-at-wxv"/>
-            </constraints>
             <connections>
                 <outlet property="headView" destination="woM-19-A0l" id="bYB-Mq-fcb"/>
             </connections>
-            <point key="canvasLocation" x="48" y="-17"/>
+            <point key="canvasLocation" x="-275" y="-2"/>
         </tableViewCell>
     </objects>
 </document>
