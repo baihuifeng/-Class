@@ -8,6 +8,7 @@
 
 #import "LZMineDetailViewController.h"
 #import "LZMineDetailModel.h"
+#import "LQXSwitch.h"
 
 @interface LZMineDetailViewController ()
 
@@ -20,6 +21,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellPhone;
 @property (weak, nonatomic) IBOutlet UILabel *regionName;
 
+@property (strong, nonatomic) IBOutlet UITableViewCell *sexcell;
+
+@property (strong,nonatomic) LQXSwitch *swit;
+
+
+
 @property (nonatomic,strong) LZMineDetailModel *model;
 @end
 
@@ -30,6 +37,8 @@
     
 
     _mineInfoTableView.tableFooterView = [[UIView alloc] init];
+    
+    [_sexcell.contentView addSubview:self.swit];
     
     
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"MineFile"ofType:@"json"];
@@ -50,6 +59,28 @@
     
     
 
+    
+}
+
+//性别开关
+- (LQXSwitch *)swit
+{
+    if (!_swit) {
+        _swit = [[LQXSwitch alloc] initWithFrame:CGRectMake(kScreen_Width-85, 12.5, 50, 25) onColor:UICOLOR_RGB_Alpha(0x00cccc, 1)offColor:UICOLOR_RGB_Alpha(0xff6666, 1) font:JYSetFont ballSize:23];
+        
+        _swit.on = [_model.sex isEqualToString:@"0"];
+        
+        _swit.onText = @"男";
+        _swit.offText = @"女";
+        [_swit addTarget:self action:@selector(switchSex:) forControlEvents:UIControlEventValueChanged];
+    }
+    NSLog(@"－1：女");
+    
+    return _swit;
+}
+
+- (void)switchSex:(LQXSwitch *)Isswitch {
+    
     
 }
 

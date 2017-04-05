@@ -44,7 +44,7 @@
         for (int i= 0; i<5; i++) {
             UIButton *scroeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             [scroeBtn setTintColor:[UIColor clearColor]];
-            scroeBtn.frame = CGRectMake(0.5+(i*12.5)+(i*5), 7, 12.5, 12.5);
+            scroeBtn.frame = CGRectMake(0.5+(i*12.5)+(i*5), 0.5, 12.5, 12.5);
             [scroeBtn setImage:[UIImage imageNamed:@"Nomark"] forState:UIControlStateNormal];//
             [scroeBtn setImage:[UIImage imageNamed:@"xiaolianicon"] forState:UIControlStateSelected];
             scroeBtn.tag = 101+i;

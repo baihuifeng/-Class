@@ -32,6 +32,9 @@
             [_stateBtn setTitle:@"老师已同意等待上课" forState:UIControlStateNormal];
             [_stateBtn setTitleColor:UICOLOR_RGB_Alpha(0x23cd77, 1.0) forState:UIControlStateNormal];
         }
+        _stateBtn.layer.cornerRadius = 0;
+        _stateBtn.layer.borderWidth = 0;
+        _stateBtn.layer.borderColor =UICOLOR_RGB_Alpha(0xF5A623, 1.0).CGColor;
     } else if (index == 1) {
         
         [_stateBtn setTitle:[NSString stringWithFormat:@" 去支付：%@ ",model.price] forState:UIControlStateNormal];
