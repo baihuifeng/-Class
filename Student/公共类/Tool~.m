@@ -110,7 +110,7 @@
 +(void)showLoadingOnWindowCustomFrame:(CGRect)frame{
     [Tool instance].indicatorView.frame = frame;
     [[UIApplication sharedApplication].delegate.window addSubview:[Tool instance].indicatorView];
-    [[Tool instance].indicatorView startAnimating]; 
+    [[Tool instance].indicatorView startAnimating];
 }
 
 +(void)showLoadingOnWindow{
