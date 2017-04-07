@@ -20,4 +20,11 @@
     return self;
 }
 
+
+- (void)setAddressStr:(NSString *)addressStr {
+    _addressStr = addressStr;
+    [_addressBtn setTitle:addressStr forState:UIControlStateNormal];
+
+}
+
 @end

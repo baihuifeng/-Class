@@ -29,6 +29,7 @@
     
     LZHomeHeadView *headView = [[LZHomeHeadView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 64)];
     headView.frame = CGRectMake(0, 0, kScreen_Width, 64);
+    headView.addressStr = @"111111111111";
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:headView];

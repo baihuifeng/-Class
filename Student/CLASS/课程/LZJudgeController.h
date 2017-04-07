@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LZJudgeController : UITableViewController
+@property (strong, nonatomic) IBOutlet UIView *markView;
+@property (strong, nonatomic) IBOutlet UITableView *markTableView;
 
 @end

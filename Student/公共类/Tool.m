@@ -104,19 +104,19 @@
 +(void)showLoadingOnView:(UIView *)view{
     [Tool instance].indicatorView.frame = view.bounds;
     [view addSubview:[Tool instance].indicatorView];
-    [[Tool instance].indicatorView startAnimating];
+    [[Tool instance].indicatorView startAnimating]; 
 }
 
 +(void)showLoadingOnWindowCustomFrame:(CGRect)frame{
     [Tool instance].indicatorView.frame = frame;
     [[UIApplication sharedApplication].delegate.window addSubview:[Tool instance].indicatorView];
-    [[Tool instance].indicatorView startAnimating];
+    [[Tool instance].indicatorView startAnimating]; 
 }
 
 +(void)showLoadingOnWindow{
     [Tool instance].indicatorView.frame = [UIScreen mainScreen].bounds;
     [[UIApplication sharedApplication].delegate.window addSubview:[Tool instance].indicatorView];
-    [[Tool instance].indicatorView startAnimating];
+    [[Tool instance].indicatorView startAnimating];                                     
 }
 
 

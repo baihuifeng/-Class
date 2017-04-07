@@ -10,4 +10,7 @@
 
 @interface LZHomeHeadView : UIView
 
+@property (copy,nonatomic) NSString *addressStr;
+@property (strong, nonatomic) IBOutlet UIButton *addressBtn;
+
 @end

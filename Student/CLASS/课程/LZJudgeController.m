@@ -10,6 +10,10 @@
 
 @interface LZJudgeController ()
 
+@property (nonatomic,strong) UIView *backMarkView;
+@property (nonatomic,strong) NSArray *markArr;
+@property (nonatomic,copy) NSString *markScoreStr;
+
 @end
 
 @implementation LZJudgeController
@@ -22,6 +26,73 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    [_markView addSubview:[self viewMarkWithScore:_markScoreStr]];
+    
+    
+    
+    
+    
+}
+
+- (UIView *)viewMarkWithScore:(NSString *)scoreStr {
+    
+    if (!_backMarkView) {
+        _backMarkView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _markView.frame.size.width, _markView.frame.size.height)];
+        NSMutableArray *markMutableArr = [[NSMutableArray alloc] init];
+        for (int i= 0; i<5; i++) {
+            UIButton *scroeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [scroeBtn setTintColor:[UIColor clearColor]];
+            scroeBtn.frame = CGRectMake(0.5+(i*12.5)+(i*5), 7, 12.5, 12.5);
+            [scroeBtn setImage:[UIImage imageNamed:@"Nomark"] forState:UIControlStateNormal];//
+            [scroeBtn setImage:[UIImage imageNamed:@"xiaolianicon"] forState:UIControlStateSelected];
+            scroeBtn.tag = 101+i;
+            [scroeBtn addTarget:self action:@selector(maekscore:) forControlEvents:UIControlEventTouchUpInside];
+            [_backMarkView addSubview:scroeBtn];
+            [markMutableArr addObject:scroeBtn];
+        }
+        
+        _markArr = markMutableArr;
+    }
+    
+    for (int i= 0; i<[scoreStr intValue]-1; i++) {
+        
+        UIButton *markSender = _markArr[i];
+        
+        markSender.selected = YES;
+        
+    }
+    return _backMarkView;
+    
+}
+
+- (void)maekscore:(UIButton *)sender {
+    
+    _markScoreStr = [NSString stringWithFormat:@"%d",(int)sender.tag-100];
+
+    for (int i= 0; i<sender.tag-100; i++) {
+        
+        UIButton *markSender = _markArr[i];
+        
+        markSender.selected = YES;
+        
+    }
+    
+    NSLog(@"%d",(int)sender.tag-100);
+    
+    for (int i = (int)sender.tag-100; i<_markArr.count; i++) {
+        UIButton *markSender = _markArr[i];
+        
+        markSender.selected = NO;
+    }
+     
+    
+    
+
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

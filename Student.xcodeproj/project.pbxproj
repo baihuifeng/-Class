@@ -119,6 +119,19 @@
 		491BA2C91E7FC1E100E92175 /* LZSecondItmesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2C71E7FC1E000E92175 /* LZSecondItmesCell.xib */; };
 		491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 491BA2CB1E7FC8C000E92175 /* LZThirdItmesCell.m */; };
 		491BA2CE1E7FC8C000E92175 /* LZThirdItmesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491BA2CC1E7FC8C000E92175 /* LZThirdItmesCell.xib */; };
+		492F56B11E9624C600E667BD /* LZMinePurseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56AF1E9624C600E667BD /* LZMinePurseViewController.m */; };
+		492F56B21E9624C600E667BD /* LZMinePurseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F56B01E9624C600E667BD /* LZMinePurseViewController.xib */; };
+		492F56B71E96254700E667BD /* LZMinePurseFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56B51E96254700E667BD /* LZMinePurseFirstCell.m */; };
+		492F56B81E96254700E667BD /* LZMinePurseFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F56B61E96254700E667BD /* LZMinePurseFirstCell.xib */; };
+		492F56BC1E9625C300E667BD /* LZMinePurseSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56BA1E9625C300E667BD /* LZMinePurseSecondCell.m */; };
+		492F56BD1E9625C300E667BD /* LZMinePurseSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F56BB1E9625C300E667BD /* LZMinePurseSecondCell.xib */; };
+		492F56C11E962C9D00E667BD /* LZProfitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56BF1E962C9D00E667BD /* LZProfitDetailViewController.m */; };
+		492F56C21E962C9D00E667BD /* LZProfitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F56C01E962C9D00E667BD /* LZProfitDetailViewController.xib */; };
+		492F56C61E962D2900E667BD /* LZPayDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56C41E962D2900E667BD /* LZPayDetailCell.m */; };
+		492F56C71E962D2900E667BD /* LZPayDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F56C51E962D2900E667BD /* LZPayDetailCell.xib */; };
+		492F56CF1E96321500E667BD /* LZBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56CE1E96321500E667BD /* LZBalanceViewController.m */; };
+		492F56D21E97654F00E667BD /* LZBalancePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56D11E97654F00E667BD /* LZBalancePayViewController.m */; };
+		494432A81E948417006AA971 /* LQXSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 494432A71E948417006AA971 /* LQXSwitch.m */; };
 		49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE171E83612B0057C02F /* SpecialityCell.m */; };
 		49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE181E83612B0057C02F /* SpecialityCell.xib */; };
 		49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE1C1E8364270057C02F /* TeacherCaseCell.m */; };
@@ -356,6 +369,27 @@
 		491BA2CA1E7FC8C000E92175 /* LZThirdItmesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZThirdItmesCell.h; sourceTree = "<group>"; };
 		491BA2CB1E7FC8C000E92175 /* LZThirdItmesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZThirdItmesCell.m; sourceTree = "<group>"; };
 		491BA2CC1E7FC8C000E92175 /* LZThirdItmesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZThirdItmesCell.xib; sourceTree = "<group>"; };
+		492F56AE1E9624C600E667BD /* LZMinePurseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMinePurseViewController.h; sourceTree = "<group>"; };
+		492F56AF1E9624C600E667BD /* LZMinePurseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMinePurseViewController.m; sourceTree = "<group>"; };
+		492F56B01E9624C600E667BD /* LZMinePurseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZMinePurseViewController.xib; sourceTree = "<group>"; };
+		492F56B41E96254700E667BD /* LZMinePurseFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMinePurseFirstCell.h; sourceTree = "<group>"; };
+		492F56B51E96254700E667BD /* LZMinePurseFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMinePurseFirstCell.m; sourceTree = "<group>"; };
+		492F56B61E96254700E667BD /* LZMinePurseFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZMinePurseFirstCell.xib; sourceTree = "<group>"; };
+		492F56B91E9625C300E667BD /* LZMinePurseSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMinePurseSecondCell.h; sourceTree = "<group>"; };
+		492F56BA1E9625C300E667BD /* LZMinePurseSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMinePurseSecondCell.m; sourceTree = "<group>"; };
+		492F56BB1E9625C300E667BD /* LZMinePurseSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZMinePurseSecondCell.xib; sourceTree = "<group>"; };
+		492F56BE1E962C9D00E667BD /* LZProfitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZProfitDetailViewController.h; sourceTree = "<group>"; };
+		492F56BF1E962C9D00E667BD /* LZProfitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZProfitDetailViewController.m; sourceTree = "<group>"; };
+		492F56C01E962C9D00E667BD /* LZProfitDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZProfitDetailViewController.xib; sourceTree = "<group>"; };
+		492F56C31E962D2900E667BD /* LZPayDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPayDetailCell.h; sourceTree = "<group>"; };
+		492F56C41E962D2900E667BD /* LZPayDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPayDetailCell.m; sourceTree = "<group>"; };
+		492F56C51E962D2900E667BD /* LZPayDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZPayDetailCell.xib; sourceTree = "<group>"; };
+		492F56CD1E96321500E667BD /* LZBalanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBalanceViewController.h; sourceTree = "<group>"; };
+		492F56CE1E96321500E667BD /* LZBalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBalanceViewController.m; sourceTree = "<group>"; };
+		492F56D01E97654F00E667BD /* LZBalancePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBalancePayViewController.h; sourceTree = "<group>"; };
+		492F56D11E97654F00E667BD /* LZBalancePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBalancePayViewController.m; sourceTree = "<group>"; };
+		494432A61E948417006AA971 /* LQXSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQXSwitch.h; sourceTree = "<group>"; };
+		494432A71E948417006AA971 /* LQXSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQXSwitch.m; sourceTree = "<group>"; };
 		49AECE161E83612B0057C02F /* SpecialityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialityCell.h; sourceTree = "<group>"; };
 		49AECE171E83612B0057C02F /* SpecialityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialityCell.m; sourceTree = "<group>"; };
 		49AECE181E83612B0057C02F /* SpecialityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialityCell.xib; sourceTree = "<group>"; };
@@ -643,6 +677,8 @@
 		491BA1B21E7B77A600E92175 /* 公共类 */ = {
 			isa = PBXGroup;
 			children = (
+				494432A61E948417006AA971 /* LQXSwitch.h */,
+				494432A71E948417006AA971 /* LQXSwitch.m */,
 				216073A71E8BAE78008B3839 /* JYCountButton.h */,
 				216073A81E8BAE78008B3839 /* JYCountButton.m */,
 				216073A61E8BA75A008B3839 /* NSString+Check.h */,
@@ -748,6 +784,7 @@
 		491BA1BA1E7B780200E92175 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				492F56AD1E9622C900E667BD /* 我的钱包 */,
 				212268CD1E8E30A2002685F9 /* Model */,
 				212D9DCC1E88BC6300286DD7 /* 学习档案 */,
 				212D9DC01E88B42D00286DD7 /* 学习意向 */,
@@ -873,6 +910,40 @@
 				491BA2AB1E7FBA7000E92175 /* TAPageControl.m */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		492F56AD1E9622C900E667BD /* 我的钱包 */ = {
+			isa = PBXGroup;
+			children = (
+				492F56B31E96251A00E667BD /* View */,
+				492F56AE1E9624C600E667BD /* LZMinePurseViewController.h */,
+				492F56AF1E9624C600E667BD /* LZMinePurseViewController.m */,
+				492F56B01E9624C600E667BD /* LZMinePurseViewController.xib */,
+				492F56BE1E962C9D00E667BD /* LZProfitDetailViewController.h */,
+				492F56BF1E962C9D00E667BD /* LZProfitDetailViewController.m */,
+				492F56C01E962C9D00E667BD /* LZProfitDetailViewController.xib */,
+				492F56CD1E96321500E667BD /* LZBalanceViewController.h */,
+				492F56CE1E96321500E667BD /* LZBalanceViewController.m */,
+				492F56D01E97654F00E667BD /* LZBalancePayViewController.h */,
+				492F56D11E97654F00E667BD /* LZBalancePayViewController.m */,
+			);
+			path = "我的钱包";
+			sourceTree = "<group>";
+		};
+		492F56B31E96251A00E667BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				492F56B41E96254700E667BD /* LZMinePurseFirstCell.h */,
+				492F56B51E96254700E667BD /* LZMinePurseFirstCell.m */,
+				492F56B61E96254700E667BD /* LZMinePurseFirstCell.xib */,
+				492F56B91E9625C300E667BD /* LZMinePurseSecondCell.h */,
+				492F56BA1E9625C300E667BD /* LZMinePurseSecondCell.m */,
+				492F56BB1E9625C300E667BD /* LZMinePurseSecondCell.xib */,
+				492F56C31E962D2900E667BD /* LZPayDetailCell.h */,
+				492F56C41E962D2900E667BD /* LZPayDetailCell.m */,
+				492F56C51E962D2900E667BD /* LZPayDetailCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4947DA1E1E8C962A00DE0410 /* LZClassView */ = {
@@ -1114,6 +1185,7 @@
 				491BA27C1E7F7BB400E92175 /* LZRegisterViewController.xib in Resources */,
 				21EE182C1E802BAB00FB7D31 /* LZCourseFirstCell.xib in Resources */,
 				212D9DBC1E88AEEC00286DD7 /* LZYJViewController.xib in Resources */,
+				492F56B81E96254700E667BD /* LZMinePurseFirstCell.xib in Resources */,
 				49AECE361E83C0F90057C02F /* MineTeacherCell.xib in Resources */,
 				21B2E9351E841FD900CB8F37 /* LZDetailStandardView.xib in Resources */,
 				491BA1CC1E7B793400E92175 /* LZSTeacherViewController.xib in Resources */,
@@ -1123,6 +1195,7 @@
 				491BA2971E7FB6CB00E92175 /* LZHomeFirstCell.xib in Resources */,
 				2160739C1E8B8B53008B3839 /* LZCodeLoginViewController.xib in Resources */,
 				212D9DDF1E88E0C600286DD7 /* LZDAContentCell.xib in Resources */,
+				492F56C71E962D2900E667BD /* LZPayDetailCell.xib in Resources */,
 				491BA2A11E7FB7EE00E92175 /* LZHomeThirdCell.xib in Resources */,
 				49D0F2641E811C31009B56CF /* LZClassesListCell.xib in Resources */,
 				212D9DEF1E8906C500286DD7 /* LZReviewViewController.xib in Resources */,
@@ -1144,6 +1217,8 @@
 				491BA18C1E7B770F00E92175 /* Assets.xcassets in Resources */,
 				21EE18311E8036E500FB7D31 /* LZCourseJudgeCell.xib in Resources */,
 				491BA28D1E7F939200E92175 /* LZMineSecondCell.xib in Resources */,
+				492F56C21E962C9D00E667BD /* LZProfitDetailViewController.xib in Resources */,
+				492F56B21E9624C600E667BD /* LZMinePurseViewController.xib in Resources */,
 				21E860891E8CAF61004A0AC9 /* LZClassItmeListView.xib in Resources */,
 				212D9DCB1E88B4B700286DD7 /* LZMineYXCell.xib in Resources */,
 				212D9DF11E89114800286DD7 /* ListJson.json in Resources */,
@@ -1161,6 +1236,7 @@
 				491BA2C91E7FC1E100E92175 /* LZSecondItmesCell.xib in Resources */,
 				21EE18211E801E0B00FB7D31 /* LZHomeFourCell.xib in Resources */,
 				491BA1C71E7B791800E92175 /* LZHomeViewController.xib in Resources */,
+				492F56BD1E9625C300E667BD /* LZMinePurseSecondCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,6 +1314,7 @@
 				491BA2B21E7FBA7000E92175 /* TAAbstractDotView.m in Sources */,
 				491BA27B1E7F7BB400E92175 /* LZRegisterViewController.m in Sources */,
 				491BA28C1E7F939200E92175 /* LZMineSecondCell.m in Sources */,
+				494432A81E948417006AA971 /* LQXSwitch.m in Sources */,
 				491BA2871E7F8F6700E92175 /* LZMineFirstCell.m in Sources */,
 				21EE182B1E802BAB00FB7D31 /* LZCourseFirstCell.m in Sources */,
 				21B2E92F1E841ECA00CB8F37 /* LZDetailBackView.m in Sources */,
@@ -1261,6 +1338,7 @@
 				212D9DDE1E88E0C600286DD7 /* LZDAContentCell.m in Sources */,
 				49AECE391E83C5C00057C02F /* SegmentView.m in Sources */,
 				21B2E9391E84234B00CB8F37 /* LZStansardCell.m in Sources */,
+				492F56B11E9624C600E667BD /* LZMinePurseViewController.m in Sources */,
 				49AECE421E84F8100057C02F /* LZDetailModel.m in Sources */,
 				491BA2B71E7FBA7000E92175 /* SDCycleScrollView.m in Sources */,
 				491BA2CD1E7FC8C000E92175 /* LZThirdItmesCell.m in Sources */,
@@ -1274,10 +1352,12 @@
 				212D9DBE1E88B10E00286DD7 /* QIAOTextView.m in Sources */,
 				21E860871E8CAF4C004A0AC9 /* LZClassItmeListView.m in Sources */,
 				49AECF171E850C300057C02F /* NSString+stringSizeCalculate.m in Sources */,
+				492F56CF1E96321500E667BD /* LZBalanceViewController.m in Sources */,
 				49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */,
 				491BA2761E7F6E8800E92175 /* LZLoginViewController.m in Sources */,
 				212D9DEE1E8906C500286DD7 /* LZReviewViewController.m in Sources */,
 				491BA1E41E7B7B6B00E92175 /* HHTabbarViewController.m in Sources */,
+				492F56D21E97654F00E667BD /* LZBalancePayViewController.m in Sources */,
 				212D9DD01E88BC7B00286DD7 /* LZDAViewController.m in Sources */,
 				491BA1C21E7B78F500E92175 /* LZRootViewController.m in Sources */,
 				21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */,
@@ -1292,6 +1372,8 @@
 				21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */,
 				491BA2911E7FAF2200E92175 /* LZJumpNextViewController.m in Sources */,
 				212268D01E8E30BE002685F9 /* LZMineDetailModel.m in Sources */,
+				492F56C61E962D2900E667BD /* LZPayDetailCell.m in Sources */,
+				492F56C11E962C9D00E667BD /* LZProfitDetailViewController.m in Sources */,
 				491BA2B81E7FBA7000E92175 /* UIView+SDExtension.m in Sources */,
 				216073A51E8BA737008B3839 /* NSString+Check.m in Sources */,
 				212D9DBB1E88AEEC00286DD7 /* LZYJViewController.m in Sources */,
@@ -1307,6 +1389,7 @@
 				21E860911E8CD00E004A0AC9 /* PullModel.m in Sources */,
 				213FC0731E825E5600DF7115 /* LZDetailcommentCell.m in Sources */,
 				49D0F2741E820CBE009B56CF /* LZDetailCell.m in Sources */,
+				492F56BC1E9625C300E667BD /* LZMinePurseSecondCell.m in Sources */,
 				212D9DDA1E88DE2900286DD7 /* LZMineCellManager.m in Sources */,
 				49D0F27E1E8220D1009B56CF /* LZDetailCellManager.m in Sources */,
 				491BA29B1E7FB70400E92175 /* LZHomeSecondCell.m in Sources */,
@@ -1316,6 +1399,7 @@
 				49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */,
 				49D0F26E1E820C27009B56CF /* LZTeacherDetailViewController.m in Sources */,
 				491BA2B41E7FBA7000E92175 /* TADotView.m in Sources */,
+				492F56B71E96254700E667BD /* LZMinePurseFirstCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1465,7 +1549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1480,7 +1564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
