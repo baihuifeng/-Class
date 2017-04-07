@@ -509,6 +509,172 @@
             </objects>
             <point key="canvasLocation" x="-407" y="577"/>
         </scene>
+        <!--提现-->
+        <scene sceneID="dmV-vF-siA">
+            <objects>
+                <tableViewController storyboardIdentifier="LZBalancePayViewController" title="提现" id="goD-iV-jJF" customClass="LZBalancePayViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" id="thI-Lr-bhH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="RK5-sL-Dk1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="B9Y-yk-E68">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B9Y-yk-E68" id="yVv-Oz-ztO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开户行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i63-Ar-p5d">
+                                                    <rect key="frame" x="13" y="0.0" width="46" height="52"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请填写开户行" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1T7-Cb-ZSB">
+                                                    <rect key="frame" x="275" y="0.0" width="90" height="51"/>
+                                                    <color key="textColor" red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i63-Ar-p5d" firstAttribute="leading" secondItem="yVv-Oz-ztO" secondAttribute="leadingMargin" constant="5" id="FQn-f2-bQ6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1T7-Cb-ZSB" secondAttribute="bottom" constant="-7.5" id="Puf-hm-juk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1T7-Cb-ZSB" secondAttribute="trailing" constant="2" id="TPG-I5-uHI"/>
+                                                <constraint firstItem="i63-Ar-p5d" firstAttribute="top" secondItem="yVv-Oz-ztO" secondAttribute="topMargin" constant="-8" id="m70-HB-9pd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="i63-Ar-p5d" secondAttribute="bottom" constant="-8.5" id="t19-l9-TtE"/>
+                                                <constraint firstItem="1T7-Cb-ZSB" firstAttribute="top" secondItem="yVv-Oz-ztO" secondAttribute="topMargin" constant="-8" id="z0b-YW-lyC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0iK-en-BiO">
+                                        <rect key="frame" x="0.0" y="52" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0iK-en-BiO" id="lnw-LM-pwE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开户人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvt-ry-YFu">
+                                                    <rect key="frame" x="13" y="0.0" width="46" height="52"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请填写开户人姓名" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNl-L8-Qor">
+                                                    <rect key="frame" x="246.5" y="0.0" width="118.5" height="51"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xNl-L8-Qor" firstAttribute="top" secondItem="lnw-LM-pwE" secondAttribute="topMargin" constant="-8" id="3qU-ZO-1fy"/>
+                                                <constraint firstItem="Bvt-ry-YFu" firstAttribute="leading" secondItem="lnw-LM-pwE" secondAttribute="leadingMargin" constant="5" id="5zJ-JI-b6a"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bvt-ry-YFu" secondAttribute="bottom" constant="-8.5" id="Tna-p7-gqr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xNl-L8-Qor" secondAttribute="trailing" constant="2" id="eFk-qD-WRD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xNl-L8-Qor" secondAttribute="bottom" constant="-7.5" id="lSo-Q9-EgW"/>
+                                                <constraint firstItem="Bvt-ry-YFu" firstAttribute="top" secondItem="lnw-LM-pwE" secondAttribute="topMargin" constant="-8" id="pfe-V9-X6F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aZr-0c-gss">
+                                        <rect key="frame" x="0.0" y="104" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aZr-0c-gss" id="oLV-fi-BcV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行卡号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYW-Ta-8tz">
+                                                    <rect key="frame" x="13" y="0.0" width="61.5" height="52"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请填写银行卡号码" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-Ih-0Bo">
+                                                    <rect key="frame" x="246.5" y="0.0" width="118.5" height="51"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EYW-Ta-8tz" firstAttribute="leading" secondItem="oLV-fi-BcV" secondAttribute="leadingMargin" constant="5" id="CtJ-ew-NHd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PbQ-Ih-0Bo" secondAttribute="trailing" constant="2" id="NnL-2J-Yxf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PbQ-Ih-0Bo" secondAttribute="bottom" constant="-7.5" id="QJP-h2-hjR"/>
+                                                <constraint firstItem="PbQ-Ih-0Bo" firstAttribute="top" secondItem="oLV-fi-BcV" secondAttribute="topMargin" constant="-8" id="TFH-5v-gap"/>
+                                                <constraint firstItem="EYW-Ta-8tz" firstAttribute="top" secondItem="oLV-fi-BcV" secondAttribute="topMargin" constant="-8" id="TNS-gy-6bA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EYW-Ta-8tz" secondAttribute="bottom" constant="-8.5" id="clv-de-S1N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vmb-Z8-ko5">
+                                        <rect key="frame" x="0.0" y="156" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vmb-Z8-ko5" id="5Wy-bO-DxC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提现金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-44-sjb">
+                                                    <rect key="frame" x="13" y="0.0" width="61.5" height="52"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请填写提现金额" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLC-44-Hyl">
+                                                    <rect key="frame" x="261" y="0.0" width="104" height="51"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fRR-44-sjb" firstAttribute="top" secondItem="5Wy-bO-DxC" secondAttribute="topMargin" constant="-8" id="1OV-cb-Yo1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TLC-44-Hyl" secondAttribute="trailing" constant="2" id="3rs-1r-zOn"/>
+                                                <constraint firstItem="TLC-44-Hyl" firstAttribute="top" secondItem="5Wy-bO-DxC" secondAttribute="topMargin" constant="-8" id="6tD-Vl-y0x"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fRR-44-sjb" secondAttribute="bottom" constant="-8.5" id="Osd-lA-sFO"/>
+                                                <constraint firstItem="fRR-44-sjb" firstAttribute="leading" secondItem="5Wy-bO-DxC" secondAttribute="leadingMargin" constant="5" id="mpQ-xn-kE9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TLC-44-Hyl" secondAttribute="bottom" constant="-7.5" id="n46-Fo-VwY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="goD-iV-jJF" id="CIZ-CG-Bok"/>
+                            <outlet property="delegate" destination="goD-iV-jJF" id="Hs7-0j-K1f"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSv-Pe-lXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.19999999999999" y="1254.4227886056972"/>
+        </scene>
         <!--余额提现-->
         <scene sceneID="QJh-cU-7bF">
             <objects>

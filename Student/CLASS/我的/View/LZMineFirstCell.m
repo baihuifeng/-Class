@@ -23,6 +23,15 @@
     
     
     _backHeadImg.transform = CGAffineTransformScale(_headImg.transform, 10, 10);
+    
+    UIBlurEffect *beffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    UIVisualEffectView *view = [[UIVisualEffectView alloc] initWithEffect:beffect];
+    view.alpha = 0.7;
+    view.frame = CGRectMake(0, 0, kScreen_Width, 160);
+    
+    [self.backView addSubview:view];
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

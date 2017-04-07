@@ -10,10 +10,11 @@
 #import "LZMinePurseFirstCell.h"
 #import "LZMinePurseSecondCell.h"
 #import "LZProfitDetailViewController.h"
-#import "LZBalanceViewController.h"
+#import "LZBalancePayViewController.h"
 
 @interface LZMinePurseViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray *titleArr;
+@property (nonatomic,strong) NSArray *imgArr;
 
 @end
 
@@ -24,7 +25,8 @@
     // Do any additional setup after loading the view from its nib.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     _payTableView.tableFooterView = [[UIView alloc] init];
-    _titleArr = @[@"我的押金",@"提现",@"我的押金"];
+    _titleArr = @[@"明细",@"提现",@"押金"];
+    _imgArr = @[@"mingxi_icon",@"tixian_icon",@"yajing_icon"];
 }
 
 
@@ -43,7 +45,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 156;
+        return 170;
     } else if (indexPath.section == 1) {
         return 60;
     }
@@ -74,7 +76,7 @@
         }
         
         cell.textLabel.text = _titleArr[indexPath.row];
-//        cell.imageView.image =  [UIImage imageNamed:_secondImgArr[indexPath.section-2][indexPath.row]];
+        cell.imageView.image =  [UIImage imageNamed:_imgArr[indexPath.row]];
         cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.textColor = UICOLOR_RGB_Alpha(0x6a6a6a, 1);
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -84,12 +86,25 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 1) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
-        LZBalanceViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZBalanceViewController"];
-        [self.navigationController pushViewController:wvc animated:YES];
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+//        LZBalancePayViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZBalancePayViewController"];
+//        [self.navigationController pushViewController:wvc animated:YES];
+    } else if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            LZProfitDetailViewController *payvc = [[LZProfitDetailViewController alloc] init];
+            payvc.title = @"收益明细";
+            [self.navigationController pushViewController:payvc animated:YES];
+        } else if (indexPath.row == 1) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+            LZBalancePayViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZBalancePayViewController"];
+            [self.navigationController pushViewController:wvc animated:YES];
+        }
     }
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -103,12 +118,6 @@
 - (IBAction)back:(UIButton *)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-- (IBAction)detail:(UIButton *)sender {
-    LZProfitDetailViewController *payvc = [[LZProfitDetailViewController alloc] init];
-    [self.navigationController pushViewController:payvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,5 +25,6 @@
 #import "NSStringVerify.h"
 #import "CommentFile.h"
 #import "NSString+Check.h"
+#import "UILabel+YBAttributeTextTapAction.h"
 
 #endif /* CommentClass_pch */

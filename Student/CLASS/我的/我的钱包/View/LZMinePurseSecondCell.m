@@ -7,12 +7,21 @@
 //
 
 #import "LZMinePurseSecondCell.h"
+#import "LZProfitDetailViewController.h"
 
 @implementation LZMinePurseSecondCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+- (IBAction)mingxi:(UIButton *)sender {
+    
+    HHTabbarViewController *tabar = (HHTabbarViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    LZProfitDetailViewController *payvc = [[LZProfitDetailViewController alloc] init];
+    payvc.title = @"收益明细";
+    [(UINavigationController *)tabar.selectedViewController pushViewController:payvc animated:YES];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

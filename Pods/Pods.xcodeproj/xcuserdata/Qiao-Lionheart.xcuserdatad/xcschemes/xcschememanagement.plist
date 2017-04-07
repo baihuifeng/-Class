@@ -6,78 +6,58 @@
 	<dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-Student.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>RTRootNavigationController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>RealReachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
+		</dict>
+		<key>YBAttributeTextTapAction.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04DB220F3CA113F2D6190B33531CC199</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>175B076ED45EB1A3E40F58BA14036467</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>222150F040A37E20A0147C66564B05D1</key>
+		<key>1ACEABAE8E0D9F5EE3ECCB7438771BFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>539E982561BA7EBFA827B0326E1774CA</key>
+		<key>6D64A0E837F9BB6C03BEA35A45FFCA9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5636256BA6A8292A33D2B4957D51826E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6A2CBC24F6849CF59657FE8E31A36F93</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8CCC5D8A9C5F6E5A3C1F68024010FF5C</key>
+		<key>91FF54231066172712B25AAD7E353535</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2DA88D5D43886A20890E62686CECB0A</key>
+		<key>C6AC9EF7BAA77CD9E698CA8A2672697B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF079D4C3CCEBE95AB96E23B61551548</key>
+		<key>D9170503907B7749BBBC5A20E5945C6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

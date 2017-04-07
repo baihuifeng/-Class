@@ -41,25 +41,12 @@
                         <action selector="back:" destination="-1" eventType="touchUpInside" id="C9q-gd-Q53"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILI-Cv-2Jt">
-                    <rect key="frame" x="331" y="20" width="44" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="44" id="gDk-Xc-CWX"/>
-                        <constraint firstAttribute="height" constant="44" id="lg7-C4-wCQ"/>
-                    </constraints>
-                    <state key="normal" image="backIcon"/>
-                    <connections>
-                        <action selector="detail:" destination="-1" eventType="touchUpInside" id="UjS-ZZ-RX4"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="3aH-0l-06x" secondAttribute="bottom" id="BGt-J4-77z"/>
                 <constraint firstAttribute="trailing" secondItem="3aH-0l-06x" secondAttribute="trailing" id="G8b-4V-AOE"/>
-                <constraint firstItem="ILI-Cv-2Jt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Qhe-NX-XhC"/>
                 <constraint firstItem="3aH-0l-06x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uow-eh-4Z5"/>
-                <constraint firstAttribute="trailing" secondItem="ILI-Cv-2Jt" secondAttribute="trailing" id="erp-Ui-Lac"/>
                 <constraint firstItem="B5F-1M-4s9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="gwe-MD-pVI"/>
                 <constraint firstItem="3aH-0l-06x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tWq-ao-Try"/>
                 <constraint firstItem="B5F-1M-4s9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uDd-G4-yQz"/>

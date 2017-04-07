@@ -13,14 +13,21 @@
 - (id)initWithItmes:(NSArray *)itmesArr WithFrame:(CGRect)frame LabelType:(radiuLabelType)radiuLabelType{
     if (self = [super init]) {
         
-        if (frame.size.width < (int)itmesArr.count*85) {
-            CGRect framF = frame;
-            framF.size.width = (int)itmesArr.count *85;
-            self.frame = framF;
-            frame = framF;
-        } else {
+        
+        if (radiuLabelType == radiuLabelTypeBottom) {
             self.frame = frame;
+        } else {
+            if (frame.size.width < (int)itmesArr.count*85) {
+                CGRect framF = frame;
+                framF.size.width = (int)itmesArr.count *85;
+                self.frame = framF;
+                frame = framF;
+            } else {
+                self.frame = frame;
+            }
         }
+        
+
         _radiuLabelType = radiuLabelType;
         _backgroundLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         _backgroundLabel.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0f];

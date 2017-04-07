@@ -28,7 +28,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return 80;
+    return 50;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -42,8 +42,17 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LZPayDetailCell" owner:self options:nil] lastObject];
     }
+    if (indexPath.section %2) {
+        cell.backView.alpha = 0.5;
+    } else {
+        cell.backView.alpha = 1;
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

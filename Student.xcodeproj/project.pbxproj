@@ -130,6 +130,7 @@
 		492F56C61E962D2900E667BD /* LZPayDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56C41E962D2900E667BD /* LZPayDetailCell.m */; };
 		492F56C71E962D2900E667BD /* LZPayDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492F56C51E962D2900E667BD /* LZPayDetailCell.xib */; };
 		492F56CF1E96321500E667BD /* LZBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56CE1E96321500E667BD /* LZBalanceViewController.m */; };
+		492F56D21E97654F00E667BD /* LZBalancePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492F56D11E97654F00E667BD /* LZBalancePayViewController.m */; };
 		494432A81E948417006AA971 /* LQXSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 494432A71E948417006AA971 /* LQXSwitch.m */; };
 		49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE171E83612B0057C02F /* SpecialityCell.m */; };
 		49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE181E83612B0057C02F /* SpecialityCell.xib */; };
@@ -385,6 +386,8 @@
 		492F56C51E962D2900E667BD /* LZPayDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZPayDetailCell.xib; sourceTree = "<group>"; };
 		492F56CD1E96321500E667BD /* LZBalanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBalanceViewController.h; sourceTree = "<group>"; };
 		492F56CE1E96321500E667BD /* LZBalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBalanceViewController.m; sourceTree = "<group>"; };
+		492F56D01E97654F00E667BD /* LZBalancePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBalancePayViewController.h; sourceTree = "<group>"; };
+		492F56D11E97654F00E667BD /* LZBalancePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBalancePayViewController.m; sourceTree = "<group>"; };
 		494432A61E948417006AA971 /* LQXSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQXSwitch.h; sourceTree = "<group>"; };
 		494432A71E948417006AA971 /* LQXSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQXSwitch.m; sourceTree = "<group>"; };
 		49AECE161E83612B0057C02F /* SpecialityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialityCell.h; sourceTree = "<group>"; };
@@ -921,6 +924,8 @@
 				492F56C01E962C9D00E667BD /* LZProfitDetailViewController.xib */,
 				492F56CD1E96321500E667BD /* LZBalanceViewController.h */,
 				492F56CE1E96321500E667BD /* LZBalanceViewController.m */,
+				492F56D01E97654F00E667BD /* LZBalancePayViewController.h */,
+				492F56D11E97654F00E667BD /* LZBalancePayViewController.m */,
 			);
 			path = "我的钱包";
 			sourceTree = "<group>";
@@ -1352,6 +1357,7 @@
 				491BA2761E7F6E8800E92175 /* LZLoginViewController.m in Sources */,
 				212D9DEE1E8906C500286DD7 /* LZReviewViewController.m in Sources */,
 				491BA1E41E7B7B6B00E92175 /* HHTabbarViewController.m in Sources */,
+				492F56D21E97654F00E667BD /* LZBalancePayViewController.m in Sources */,
 				212D9DD01E88BC7B00286DD7 /* LZDAViewController.m in Sources */,
 				491BA1C21E7B78F500E92175 /* LZRootViewController.m in Sources */,
 				21EE18251E801E5F00FB7D31 /* LZTeacherListCell.m in Sources */,

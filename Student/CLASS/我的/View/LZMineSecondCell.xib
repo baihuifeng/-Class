@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48z-S9-dJH">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="59.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_teacher" translatesAutoresizingMaskIntoConstraints="NO" id="sos-Vf-KVH">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_qianbao_icon" translatesAutoresizingMaskIntoConstraints="NO" id="sos-Vf-KVH">
                                 <rect key="frame" x="70" y="12" width="21" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8nX-T5-dlF"/>
@@ -61,7 +61,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Aa-el-pGQ">
                         <rect key="frame" x="160" y="0.0" width="160" height="59.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_teacher" translatesAutoresizingMaskIntoConstraints="NO" id="lQp-5a-nBY">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_teacher" translatesAutoresizingMaskIntoConstraints="NO" id="lQp-5a-nBY">
                                 <rect key="frame" x="70" y="12" width="21" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="21" id="DBd-1a-gdM"/>
@@ -123,6 +123,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Mine_qianbao_icon" width="21" height="18"/>
         <image name="Mine_teacher" width="17" height="20"/>
     </resources>
 </document>
