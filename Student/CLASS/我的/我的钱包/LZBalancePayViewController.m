@@ -39,11 +39,8 @@
     view.backgroundColor = [UIColor clearColor];
     
     UILabel *label = [[UILabel alloc] init];
-//    label.text = @"温馨提示：\n\n提现时间：每周二09:00-18:00\n\n提现次数：一天一次，一次最多一万元人民币\n\n提现后1-2个工作日内汇入您的银行卡\n\n若卡片信息有误，请拨打24小时服务热线400-888-666\n\n我们会尽快帮您解决";
-        NSString *str = @"温馨提示：\n\n提现时间：每周二09:00-18:00\n\n提现次数：一天一次，一次最多一万元人民币\n\n提现后1-2个工作日内汇入您的银行卡\n\n若卡片信息有误，请拨打24小时服务热线400-888-666\n\n我们会尽快帮您解决";
-//    NSString *str1 = @"400-888-666\n\n我们会尽快帮您解决";
-    
-//    [label yb_addAttributeTapActionWithStrings:@[@"400-888-666"] delegate:self];
+
+    NSString *str = @"温馨提示：\n\n提现时间：每周二09:00-18:00\n\n提现次数：一天一次，一次最多一万元人民币\n\n提现后1-2个工作日内汇入您的银行卡\n\n若卡片信息有误，请拨打24小时服务热线400-888-666\n\n我们会尽快帮您解决";
     label.numberOfLines = 0;
     label.textColor = UICOLOR_RGB_Alpha(0x696969, 1.0);
     label.font = [UIFont systemFontOfSize:13.0];
@@ -55,7 +52,7 @@
     
     [label yb_addAttributeTapActionWithStrings:@[@"400-888-666"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
         
-        NSLog(@"11111");
+        [Tool callPhone:@"400-888-666"];
     }];
     
     
