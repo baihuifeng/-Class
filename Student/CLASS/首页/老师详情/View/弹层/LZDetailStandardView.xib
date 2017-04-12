@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZIk-mU-ciO" customClass="LZDetailStandardView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetailWhiteView" translatesAutoresizingMaskIntoConstraints="NO" id="rfU-Od-blX">
+                    <rect key="frame" x="13" y="40" width="294" height="400"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LT-tc-HBm">
+                    <rect key="frame" x="267" y="44" width="40" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="E3X-f8-hSn"/>
+                        <constraint firstAttribute="width" constant="40" id="cHv-Wq-KuS"/>
+                    </constraints>
+                    <state key="normal" image="closeIcon"/>
+                    <connections>
+                        <action selector="clearBtn:" destination="ZIk-mU-ciO" eventType="touchUpInside" id="5mJ-6E-SNo"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xtt-nY-6Gy">
+                    <rect key="frame" x="13" y="71" width="294" height="363"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fih-bF-E4K"/>
+                        <outlet property="delegate" destination="-1" id="PR8-8N-3CJ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xtt-nY-6Gy" firstAttribute="bottom" secondItem="rfU-Od-blX" secondAttribute="bottom" constant="-6" id="7vz-37-cam"/>
+                <constraint firstAttribute="trailing" secondItem="rfU-Od-blX" secondAttribute="trailing" constant="13" id="OD2-Sa-Tyg"/>
+                <constraint firstItem="rfU-Od-blX" firstAttribute="top" secondItem="6LT-tc-HBm" secondAttribute="bottom" constant="-26" id="XtD-HU-qMM"/>
+                <constraint firstItem="xtt-nY-6Gy" firstAttribute="leading" secondItem="rfU-Od-blX" secondAttribute="leading" id="biY-m0-G8s"/>
+                <constraint firstItem="xtt-nY-6Gy" firstAttribute="trailing" secondItem="rfU-Od-blX" secondAttribute="trailing" id="ctr-rR-n3O"/>
+                <constraint firstItem="xtt-nY-6Gy" firstAttribute="top" secondItem="6LT-tc-HBm" secondAttribute="bottom" constant="5" id="gML-wI-zgq"/>
+                <constraint firstItem="rfU-Od-blX" firstAttribute="centerY" secondItem="ZIk-mU-ciO" secondAttribute="centerY" id="gN3-nV-mdT"/>
+                <constraint firstItem="6LT-tc-HBm" firstAttribute="trailing" secondItem="rfU-Od-blX" secondAttribute="trailing" id="onl-1m-6A7"/>
+                <constraint firstItem="rfU-Od-blX" firstAttribute="leading" secondItem="ZIk-mU-ciO" secondAttribute="leading" constant="13" id="w9G-fc-6Ch"/>
+            </constraints>
+            <connections>
+                <outlet property="standerdTableView" destination="xtt-nY-6Gy" id="zkV-8G-lag"/>
+            </connections>
+            <point key="canvasLocation" x="53" y="43"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DetailWhiteView" width="350" height="400"/>
+        <image name="closeIcon" width="11" height="11"/>
+    </resources>
+</document>

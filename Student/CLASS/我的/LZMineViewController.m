@@ -9,12 +9,16 @@
 #import "LZMineViewController.h"
 #import "LZMineFirstCell.h"
 #import "LZMineSecondCell.h"
+#import "LZMineDetailViewController.h"
+#import "LZMineTeacherViewController.h"
+#import "LZYJViewController.h"
+#import "LZMineYXViewController.h"
+#import "LZDAViewController.h"
 
 @interface LZMineViewController ()
 
 @property (nonatomic,strong) NSArray *secondArr;
-
-@property (nonatomic,strong) NSArray *thirdArr;
+@property (nonatomic,strong) NSArray *secondImgArr;
 
 @end
 
@@ -22,18 +26,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    _secondArr = @[@"我的老师",@"学习意向",@"学习档案",@"分享给好友",@"投诉建议",@"客户电话",@"推荐奖励规则介绍",@"老师招募"];
-    _thirdArr = @[@"设置"];
+    // Do any additional setup after loading the view from its nib.//
+    _secondArr = @[@[@"学习档案",@"学习意向",@"投诉建议",@"客户电话",@"推荐奖励规则介绍"],@[@"分享给好友",@"老师招募"],@[@"设置"]];
+    
+    _secondImgArr = @[@[@"Mine_dangan",@"Mine_yixian",@"Mine_jianyi",@"Mine_kefu",@"Mine_tuijian"],@[@"Mine_fenxiang",@"Mine_zhaomu"],@[@"Mine_shezhi"]];
+
     _listTableView.tableFooterView = [[UIView alloc] init];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if (section == 2) {
-        return _secondArr.count;
+        return [_secondArr[section-2] count];
     } else if (section == 3) {
-        return _thirdArr.count;
+        return [_secondArr[section-2] count];
     }
     return 1;
     
@@ -41,15 +48,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 4;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        return 90;
+        return 160;
     } else if (indexPath.section == 1){
-        return 53;
+        return 60;
     } else {
         return 45;
     }
@@ -63,7 +70,6 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZMineFirstCell" owner:self options:nil] lastObject];
         }
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 1) {
@@ -79,7 +85,8 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         }
 
-        cell.textLabel.text = indexPath.section == 2 ? _secondArr[indexPath.row] : _thirdArr[indexPath.row];
+        cell.textLabel.text = _secondArr[indexPath.section-2][indexPath.row];
+        cell.imageView.image =  [UIImage imageNamed:_secondImgArr[indexPath.section-2][indexPath.row]];
         cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.textColor = UICOLOR_RGB_Alpha(0x6a6a6a, 1);
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -89,22 +96,55 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section != 3) {
-        return 5;
+    if (section == 0 || section == 5) {
+        return 0;
     }
     
-    return 0;
+    return 5;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+        LZMineDetailViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZMineDetailViewController"];
+        [self.navigationController pushViewController:wvc animated:YES];
+    } else if (indexPath.section == 2){
+        if (indexPath.row == 0) {
+            LZDAViewController *daVc = [[LZDAViewController alloc] init];
+            daVc.title = @"学习档案";
+            [self.navigationController pushViewController:daVc animated:YES];
+        } else if (indexPath.row == 1) {
+            LZMineYXViewController *yxVc = [[LZMineYXViewController alloc] init];
+            [self.navigationController pushViewController:yxVc animated:YES];
+        } else if (indexPath.row == 4) {
+
+        } else if (indexPath.row == 2) {
+            LZYJViewController *jyVc = [[LZYJViewController alloc] init];
+            [self.navigationController pushViewController:jyVc animated:YES];
+        }  else {//
+            LZMineTeacherViewController *teacherVc = [[LZMineTeacherViewController alloc] init];
+            [self.navigationController pushViewController:teacherVc animated:YES];
+        }
+
+    } else {
         [LZJumpNextViewController presentNextViewController:0 Url:@"" title:@"登录"];
     }
     
 
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

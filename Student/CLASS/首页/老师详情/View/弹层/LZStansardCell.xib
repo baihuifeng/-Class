@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LZStansardCell" id="KGk-i7-Jjw" customClass="LZStansardCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stansardIcon" translatesAutoresizingMaskIntoConstraints="NO" id="luN-9F-Gnn">
+                        <rect key="frame" x="13" y="24" width="11" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="daS-t4-Jr8"/>
+                            <constraint firstAttribute="width" constant="11" id="tig-9O-52M"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="符合乐知服务标准" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfY-A9-FEB">
+                        <rect key="frame" x="31" y="24" width="281" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="xEX-PP-HWf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="该教师身份证件证实有效。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-7K-wG7">
+                        <rect key="frame" x="31" y="43" width="281" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="yyp-wZ-KV1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.63529411764705879" green="0.63921568627450975" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Lh6-7K-wG7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="23" id="6dj-k5-e2I"/>
+                    <constraint firstItem="Lh6-7K-wG7" firstAttribute="top" secondItem="UfY-A9-FEB" secondAttribute="bottom" constant="4" id="AIQ-yM-vSj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UfY-A9-FEB" secondAttribute="trailing" id="H3g-aa-Ny4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Lh6-7K-wG7" secondAttribute="trailing" id="TPR-Ka-0fi"/>
+                    <constraint firstItem="luN-9F-Gnn" firstAttribute="top" secondItem="UfY-A9-FEB" secondAttribute="top" id="To6-s1-M3q"/>
+                    <constraint firstItem="UfY-A9-FEB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="23" id="Ynv-yR-WBg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Lh6-7K-wG7" secondAttribute="bottom" constant="6" id="evk-PT-dtx"/>
+                    <constraint firstItem="luN-9F-Gnn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="twH-mc-UUC"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="stansardIcon" width="11" height="13"/>
+    </resources>
+</document>

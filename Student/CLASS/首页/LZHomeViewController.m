@@ -15,6 +15,10 @@
 
 @interface LZHomeViewController ()
 
+
+
+
+
 @end
 
 @implementation LZHomeViewController
@@ -25,9 +29,11 @@
     
     LZHomeHeadView *headView = [[LZHomeHeadView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 64)];
     headView.frame = CGRectMake(0, 0, kScreen_Width, 64);
+    headView.addressStr = @"111111111111";
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:headView];
+    [_homeListTableView reloadData];
 
     
 }
@@ -45,11 +51,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        return 190*kScreen_Width/320;
+        return 190;
     } else if (indexPath.section == 1) {
         return 87;
     } else if (indexPath.section == 2) {
-        return 40;
+        return 50;
     } else {
         return 570;
     }
@@ -62,6 +68,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeFirstCell" owner:self options:nil] lastObject];
         }
+        cell.index = (int)indexPath.row;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 1) {
@@ -90,6 +97,19 @@
 
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    if (section == 2) {
+        return 5;
+    }
+    return 0;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 2) {
+        return 5;
+    }
+    return 0;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

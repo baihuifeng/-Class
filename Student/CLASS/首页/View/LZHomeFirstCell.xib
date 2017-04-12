@@ -20,21 +20,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woM-19-A0l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                        <color key="backgroundColor" red="1" green="0.42745098040000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="woM-19-A0l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="0rT-kF-oc5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="woM-19-A0l" secondAttribute="bottom" constant="-8" id="9vU-vr-BPF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="woM-19-A0l" secondAttribute="trailing" constant="-8" id="O9p-a9-Q0z"/>
-                    <constraint firstItem="woM-19-A0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="o37-yj-xQK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="woM-19-A0l" secondAttribute="bottom" constant="-9" id="0qN-al-PYc"/>
+                    <constraint firstItem="woM-19-A0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="GFK-Gc-vJC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="woM-19-A0l" secondAttribute="trailing" constant="-8" id="Vz4-S3-Wdw"/>
+                    <constraint firstItem="woM-19-A0l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="joa-32-LXV"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="headView" destination="woM-19-A0l" id="bYB-Mq-fcb"/>
             </connections>
-            <point key="canvasLocation" x="-426" y="12"/>
+            <point key="canvasLocation" x="-275" y="-2"/>
         </tableViewCell>
     </objects>
 </document>

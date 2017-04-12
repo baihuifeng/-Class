@@ -9,5 +9,7 @@
 #import "LZRootViewController.h"
 
 @interface LZRegisterViewController : LZRootViewController
+@property (weak, nonatomic) IBOutlet UITextField *teleText;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
