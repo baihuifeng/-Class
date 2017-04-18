@@ -32,6 +32,8 @@
 		213FC0741E825E5600DF7115 /* LZDetailcommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */; };
 		213FC0781E8262F600DF7115 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213FC0761E8262F600DF7115 /* CommentCell.m */; };
 		213FC0791E8262F600DF7115 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0771E8262F600DF7115 /* CommentCell.xib */; };
+		215CA8F91EA4F748007213C8 /* NetApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 215CA8F61EA4F748007213C8 /* NetApiManager.m */; };
+		215CA8FA1EA4F748007213C8 /* NSDictionary+NullReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 215CA8F81EA4F748007213C8 /* NSDictionary+NullReplacement.m */; };
 		2160739B1E8B8B53008B3839 /* LZCodeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216073991E8B8B53008B3839 /* LZCodeLoginViewController.m */; };
 		2160739C1E8B8B53008B3839 /* LZCodeLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2160739A1E8B8B53008B3839 /* LZCodeLoginViewController.xib */; };
 		2160739F1E8B9383008B3839 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160739E1E8B9383008B3839 /* Tool.m */; };
@@ -222,6 +224,11 @@
 		213FC0751E8262F600DF7115 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
 		213FC0761E8262F600DF7115 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
 		213FC0771E8262F600DF7115 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		215CA8F51EA4F748007213C8 /* NetApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetApiManager.h; sourceTree = "<group>"; };
+		215CA8F61EA4F748007213C8 /* NetApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetApiManager.m; sourceTree = "<group>"; };
+		215CA8F71EA4F748007213C8 /* NSDictionary+NullReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NullReplacement.h"; sourceTree = "<group>"; };
+		215CA8F81EA4F748007213C8 /* NSDictionary+NullReplacement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullReplacement.m"; sourceTree = "<group>"; };
+		215CA8FC1EA4F8CA007213C8 /* LZRequestUrlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZRequestUrlManager.h; sourceTree = "<group>"; };
 		216073981E8B8B53008B3839 /* LZCodeLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCodeLoginViewController.h; sourceTree = "<group>"; };
 		216073991E8B8B53008B3839 /* LZCodeLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCodeLoginViewController.m; sourceTree = "<group>"; };
 		2160739A1E8B8B53008B3839 /* LZCodeLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZCodeLoginViewController.xib; sourceTree = "<group>"; };
@@ -566,6 +573,32 @@
 			path = ListModel;
 			sourceTree = "<group>";
 		};
+		215CA8F41EA4F748007213C8 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				215CA8F51EA4F748007213C8 /* NetApiManager.h */,
+				215CA8F61EA4F748007213C8 /* NetApiManager.m */,
+				215CA8F71EA4F748007213C8 /* NSDictionary+NullReplacement.h */,
+				215CA8F81EA4F748007213C8 /* NSDictionary+NullReplacement.m */,
+			);
+			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		215CA8FB1EA4F80E007213C8 /* 请求 */ = {
+			isa = PBXGroup;
+			children = (
+				215CA8FC1EA4F8CA007213C8 /* LZRequestUrlManager.h */,
+			);
+			path = "请求";
+			sourceTree = "<group>";
+		};
+		215CA8FD1EA51327007213C8 /* 预约 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "预约";
+			sourceTree = "<group>";
+		};
 		21B2E9301E841F7300CB8F37 /* 弹层 */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,10 +663,10 @@
 		491BA17E1E7B770F00E92175 /* Student */ = {
 			isa = PBXGroup;
 			children = (
+				215CA8F41EA4F748007213C8 /* 网络请求 */,
 				49AECEDE1E850B110057C02F /* 三方类 */,
 				491BA28E1E7FAEA500E92175 /* 跳转页面 */,
 				491BA1B21E7B77A600E92175 /* 公共类 */,
-				491BA1B41E7B77A600E92175 /* 网络请求 */,
 				491BA1B51E7B77A600E92175 /* CLASS */,
 				491BA1821E7B770F00E92175 /* AppDelegate.h */,
 				491BA1831E7B770F00E92175 /* AppDelegate.m */,
@@ -698,16 +731,10 @@
 			path = "公共类";
 			sourceTree = "<group>";
 		};
-		491BA1B41E7B77A600E92175 /* 网络请求 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "网络请求";
-			sourceTree = "<group>";
-		};
 		491BA1B51E7B77A600E92175 /* CLASS */ = {
 			isa = PBXGroup;
 			children = (
+				215CA8FB1EA4F80E007213C8 /* 请求 */,
 				491BA1B91E7B780200E92175 /* 首页 */,
 				491BA1B81E7B780200E92175 /* 老师 */,
 				491BA1B71E7B780200E92175 /* 课程 */,
@@ -767,6 +794,7 @@
 		491BA1B91E7B780200E92175 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				215CA8FD1EA51327007213C8 /* 预约 */,
 				4947DA1E1E8C962A00DE0410 /* LZClassView */,
 				212D9DF21E89125400286DD7 /* ListModel */,
 				49D0F26A1E820BB0009B56CF /* 老师详情 */,
@@ -1371,6 +1399,7 @@
 				21E860921E8CD00E004A0AC9 /* PullView.m in Sources */,
 				21EE18201E801E0B00FB7D31 /* LZHomeFourCell.m in Sources */,
 				491BA2911E7FAF2200E92175 /* LZJumpNextViewController.m in Sources */,
+				215CA8FA1EA4F748007213C8 /* NSDictionary+NullReplacement.m in Sources */,
 				212268D01E8E30BE002685F9 /* LZMineDetailModel.m in Sources */,
 				492F56C61E962D2900E667BD /* LZPayDetailCell.m in Sources */,
 				492F56C11E962C9D00E667BD /* LZProfitDetailViewController.m in Sources */,
@@ -1383,6 +1412,7 @@
 				491BA1D51E7B7ABD00E92175 /* LZMineViewController.m in Sources */,
 				49AECE351E83C0F90057C02F /* MineTeacherCell.m in Sources */,
 				216073A21E8BA299008B3839 /* NSStringVerify.m in Sources */,
+				215CA8F91EA4F748007213C8 /* NetApiManager.m in Sources */,
 				212D9DCA1E88B4B700286DD7 /* LZMineYXCell.m in Sources */,
 				49D0F2581E811871009B56CF /* LZClassesViewController.m in Sources */,
 				21FE2DCC1E86C1D70050F4C9 /* LZExperienceInfosCell.m in Sources */,
@@ -1548,6 +1578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
@@ -1563,6 +1594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;

@@ -10,5 +10,6 @@
 
 @interface LZHomeSecondCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong,nonatomic) NSArray *dataArr;
 
 @end

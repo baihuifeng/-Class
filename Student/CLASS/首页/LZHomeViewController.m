@@ -12,10 +12,11 @@
 #import "LZHomeThirdCell.h"
 #import "LZHomeFourCell.h"
 #import "LZHomeHeadView.h"
+#import "LZTeacherListModel.h"
 
 @interface LZHomeViewController ()
 
-
+@property (nonatomic,strong) LZHomeModel *model;
 
 
 
@@ -33,7 +34,14 @@
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:headView];
-    [_homeListTableView reloadData];
+    
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userid=%@&owener=%@",LZHomeUrl,@"1",@"0"] params:nil finished:^(NetResponse *netResponse) {
+        _model = [LZHomeModel mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
+        [_homeListTableView reloadData];
+        
+    }];
+    
+    
 
     
 }
@@ -51,13 +59,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        return 190;
+        return kScreen_Width/320 * 190;
     } else if (indexPath.section == 1) {
         return 87;
     } else if (indexPath.section == 2) {
         return 50;
     } else {
-        return 570;
+        return _model.recommendTeachers.count== 0 ? 0 : 105*_model.recommendTeachers.count+45;
     }
     
 }
@@ -68,7 +76,8 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeFirstCell" owner:self options:nil] lastObject];
         }
-        cell.index = (int)indexPath.row;
+//        cell.index = (int)indexPath.row;
+        cell.dataArr = _model.dynamicBanner;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 1) {
@@ -76,6 +85,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeSecondCell" owner:self options:nil] lastObject];
         }
+        cell.dataArr = _model.skills;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 2) {
@@ -83,6 +93,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeThirdCell" owner:self options:nil] lastObject];
         }
+//        cell.dataArr = _model.dynamicOperative;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else {
@@ -91,6 +102,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeFourCell" owner:self options:nil] lastObject];
         }
+        cell.dataArr = _model.recommendTeachers;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }

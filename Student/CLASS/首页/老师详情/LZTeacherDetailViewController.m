@@ -14,7 +14,7 @@
 
 @interface LZTeacherDetailViewController ()
 
-@property (nonatomic,strong) NSArray *caseIndexArr;
+@property (nonatomic,strong) NSMutableArray *caseIndexArr;
 
 @property (nonatomic,strong) LZDetailModel *model;
 
@@ -25,24 +25,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _caseIndexArr = @[@"1000",@"1001",@"1003",@"1008"];
+//    _caseIndexArr = @[@"1000",@"1001",@"1003",@"1008"];
+    _caseIndexArr = [[NSMutableArray alloc] init];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"File"ofType:@"json"];
+//    [NSString stringWithFormat:@"%@Api/getProviderInfo?userId=%@",ManagerUrl,@""];
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@%@",LZDedailUrl,@"1"] params:nil finished:^(NetResponse *netResponse) {
+        [_caseIndexArr addObject:@"1000"];
+        NSLog(@"%@",[netResponse.responseObject objectForKey:@"data"]);
+        _model = [LZDetailModel mj_objectWithKeyValues:[netResponse.responseObject objectForKey:@"data"]];
+        
+        if (![_model.studensCount isEqualToString:@"0"]) {
+            [_caseIndexArr addObject:@"1001"];
+        }
+        [_caseIndexArr addObject:@"1003"];
+        [_caseIndexArr addObject:@"1008"];
+        
+        [_DetailtableView reloadData];
+        
+    }];
     
-    //根据文件路径读取数据
-    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
     
-    
-    //格式化成json数据
-    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    
-//    NSLog(@"-----%@",dic);
-    
-    _model = [LZDetailModel mj_objectWithKeyValues:dic];
-    
-    NSLog(@"%@",_model);
-    
-    [_DetailtableView reloadData];
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"File"ofType:@"json"];
+//    
+//    //根据文件路径读取数据
+//    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+//    
+//    
+//    //格式化成json数据
+//    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+//    
+////    NSLog(@"-----%@",dic);
+//    
+//    _model = [LZDetailModel mj_objectWithKeyValues:dic];
+//    
+//    NSLog(@"%@",_model);
+//    
+//    [_DetailtableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

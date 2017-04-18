@@ -26,5 +26,8 @@
 #import "CommentFile.h"
 #import "NSString+Check.h"
 #import "UILabel+YBAttributeTextTapAction.h"
+#import "LZRequestUrlManager.h"
+#import "NetApiManager.h"
+#import "UIImageView+WebCache.h"
 
 #endif /* CommentClass_pch */

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZTeacherListModel.h"
 
 @interface LZTeacherListCell : UITableViewCell
+
+@property (nonatomic,strong) ListModel *model;
+;
+@property (weak, nonatomic) IBOutlet UIImageView *imgUrl;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *price;
 
 @end

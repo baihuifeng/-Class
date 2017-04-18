@@ -8,13 +8,21 @@
 
 #import "LZTeacherListCell.h"
 
+
 @implementation LZTeacherListCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
-    
+
+}
+
+
+- (void)setModel:(ListModel *)model {
+    _model = model;
+    [_imgUrl sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",LZImgUrl,model.imgUrl]] placeholderImage:nil];
+    _title.text = model.title;
+    _price.text = model.price;
     
 }
 

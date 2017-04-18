@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,12 +17,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-Je-rHH">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-Je-rHH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -31,10 +30,10 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz6-FF-Qxe">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeHeadBack" translatesAutoresizingMaskIntoConstraints="NO" id="N8N-nI-ctp">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhE-lU-FuT">
                             <rect key="frame" x="0.0" y="20" width="35" height="44"/>
@@ -48,7 +47,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-hI-WXa">
-                            <rect key="frame" x="563" y="20" width="30" height="40"/>
+                            <rect key="frame" x="338" y="20" width="30" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="2kD-PX-Q4p"/>
                                 <constraint firstAttribute="height" constant="40" id="lHT-ba-Eaw"/>
@@ -56,7 +55,7 @@
                             <state key="normal" image="detail_shar_icon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWC-Q8-t6q">
-                            <rect key="frame" x="527" y="20" width="30" height="44"/>
+                            <rect key="frame" x="302" y="20" width="30" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="S0D-yN-aOu"/>
                                 <constraint firstAttribute="height" constant="44" id="qf7-fp-Lml"/>
@@ -79,14 +78,51 @@
                         <constraint firstAttribute="trailing" secondItem="Yuc-hI-WXa" secondAttribute="trailing" constant="7" id="ybn-DN-gXp"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6F8-52-8wn">
+                    <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD9-Z6-zkd">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="45"/>
+                            <state key="normal" title="在线咨询" image="yuyue_icon">
+                                <color key="titleColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bC-HE-NgR">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="45"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="马上预约">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="0Dj-dZ-hb1"/>
+                        <constraint firstItem="5bC-HE-NgR" firstAttribute="leading" secondItem="sD9-Z6-zkd" secondAttribute="trailing" id="3WG-gc-Qyx"/>
+                        <constraint firstItem="5bC-HE-NgR" firstAttribute="width" secondItem="sD9-Z6-zkd" secondAttribute="width" id="Khf-eO-GI8"/>
+                        <constraint firstAttribute="bottom" secondItem="5bC-HE-NgR" secondAttribute="bottom" id="MXe-89-lG8"/>
+                        <constraint firstItem="sD9-Z6-zkd" firstAttribute="top" secondItem="6F8-52-8wn" secondAttribute="top" id="RN1-rI-Nk6"/>
+                        <constraint firstAttribute="bottom" secondItem="sD9-Z6-zkd" secondAttribute="bottom" id="RV8-EF-oRn"/>
+                        <constraint firstItem="sD9-Z6-zkd" firstAttribute="leading" secondItem="6F8-52-8wn" secondAttribute="leading" id="UdZ-Q6-Xew"/>
+                        <constraint firstAttribute="trailing" secondItem="5bC-HE-NgR" secondAttribute="trailing" id="bqr-Zo-hJb"/>
+                        <constraint firstItem="5bC-HE-NgR" firstAttribute="top" secondItem="6F8-52-8wn" secondAttribute="top" id="rn3-Mu-TaJ"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="6F8-52-8wn" secondAttribute="trailing" id="2Ww-Lu-xct"/>
+                <constraint firstItem="S8Z-Je-rHH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2hO-bp-ESf"/>
+                <constraint firstItem="S8Z-Je-rHH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Rc-9p-Uat"/>
+                <constraint firstAttribute="bottom" secondItem="S8Z-Je-rHH" secondAttribute="bottom" constant="45" id="6m0-F2-Z6y"/>
                 <constraint firstItem="Fz6-FF-Qxe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mdf-NK-Bod"/>
+                <constraint firstAttribute="trailing" secondItem="S8Z-Je-rHH" secondAttribute="trailing" id="N72-22-T7k"/>
+                <constraint firstItem="6F8-52-8wn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YBj-Rv-WQS"/>
                 <constraint firstAttribute="trailing" secondItem="Fz6-FF-Qxe" secondAttribute="trailing" id="bgf-Te-oaT"/>
+                <constraint firstAttribute="bottom" secondItem="6F8-52-8wn" secondAttribute="bottom" id="hur-N1-yio"/>
                 <constraint firstItem="Fz6-FF-Qxe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tLj-6s-21G"/>
             </constraints>
-            <point key="canvasLocation" x="-66" y="74"/>
+            <point key="canvasLocation" x="-66.5" y="73.5"/>
         </view>
     </objects>
     <resources>
@@ -94,5 +130,6 @@
         <image name="backIcon" width="8" height="16"/>
         <image name="detail_shar_icon" width="19" height="19"/>
         <image name="detail_shoucang_icon" width="19" height="19"/>
+        <image name="yuyue_icon" width="20" height="18"/>
     </resources>
 </document>

@@ -8,6 +8,7 @@
 
 #import "LZHomeSecondCell.h"
 #import "LZSecondItmesCell.h"
+#import "LZTeacherListModel.h"
 
 @implementation LZHomeSecondCell
 
@@ -15,14 +16,20 @@
     [super awakeFromNib];
     // Initialization code
     
+
+}
+
+- (void)setDataArr:(NSArray *)dataArr {
+    _dataArr = dataArr;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [_collectionView registerClass:[LZSecondItmesCell class] forCellWithReuseIdentifier:@"LZSecondItmesCell"];
+    [_collectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 7;
+    return _dataArr.count;
 }
 
 //返回多少组
@@ -34,6 +41,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     LZSecondItmesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LZSecondItmesCell" forIndexPath:indexPath];
+    SkillsModel *model = _dataArr[indexPath.row];
+    cell.titleLabel.text = model.tagTitle;
 
     return cell;
     

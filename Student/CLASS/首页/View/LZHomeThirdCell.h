@@ -12,4 +12,6 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic , strong) NSTimer *timer;
 
+@property (nonatomic,strong) NSArray *dataArr;
+
 @end

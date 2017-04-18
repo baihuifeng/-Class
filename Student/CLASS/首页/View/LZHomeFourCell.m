@@ -15,15 +15,24 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
+    
+}
+
+- (void)setDataArr:(NSArray *)dataArr {
+    _dataArr = dataArr;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc] init];
+    [_tableView reloadData];
+    
     
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return _dataArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -34,12 +43,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-        LZTeacherListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZTeacherListCell"];
-        if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"LZTeacherListCell" owner:self options:nil] lastObject];
-        }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
+    LZTeacherListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZTeacherListCell"];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"LZTeacherListCell" owner:self options:nil] lastObject];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.model = _dataArr[indexPath.row];
+    return cell;
        
 }
 - (IBAction)moreClassBtn:(UIButton *)sender {

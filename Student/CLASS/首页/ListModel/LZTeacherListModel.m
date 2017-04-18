@@ -20,3 +20,23 @@
 
 
 @end
+
+
+@implementation LZHomeModel
++(NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"dynamicBanner":@"DynamicinfosModel",@"skills":@"SkillsModel",@"recommendTeachers":@"ListModel",@"dynamicOperative":@"DynamicinfosModel"};
+}
+
+@end
+
+@implementation DynamicinfosModel
+
+
+@end
+
+@implementation SkillsModel
+
+
+
+@end

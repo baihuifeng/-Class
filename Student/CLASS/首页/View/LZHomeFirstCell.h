@@ -12,4 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIView *headView;
 @property (assign,nonatomic) int index;
 
+@property (strong,nonatomic) NSArray *dataArr;
+
 @end
