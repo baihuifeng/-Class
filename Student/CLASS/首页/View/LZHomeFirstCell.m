@@ -28,9 +28,9 @@
     NSMutableArray *imgArr = [[NSMutableArray alloc] init];
     
     for (DynamicinfosModel *model in dataArr) {
-        [imgArr addObject:[NSString stringWithFormat:@"%@%@",LZImgUrl,model.imgUrl]];
+        [imgArr addObject:[NSString stringWithFormat:@"%@%@",ManagerUrl,model.imgUrl]];
         
-        NSLog(@"----->%@",[NSString stringWithFormat:@"%@%@",LZImgUrl,model.imgUrl]);
+        NSLog(@"----->%@",[NSString stringWithFormat:@"%@%@",ManagerUrl,model.imgUrl]);
     }
     
     

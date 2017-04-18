@@ -16,5 +16,15 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgUrl;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *price;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *priceW;
+
+@property (strong, nonatomic) IBOutlet UIView *tagSView;
+
+@property (strong, nonatomic) IBOutlet UIView *certificationTags;
+
+@property (strong, nonatomic) IBOutlet UIView *distenceView;
+
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *distenceW;
 
 @end

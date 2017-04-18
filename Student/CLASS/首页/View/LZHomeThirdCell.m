@@ -23,6 +23,7 @@
 //    [_collectionView registerClass:[LZThirdItmesCell class] forCellWithReuseIdentifier:@"LZThirdItmesCell"];
 //    [self addTimer];
 //    [_collectionView reloadData];
+    
     [self addTimer];
 
 }

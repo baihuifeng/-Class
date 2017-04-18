@@ -11,7 +11,7 @@
 
 #define ManagerUrl  NetApiManager.get_BASEURL
 
-#define LZImgUrl [NSString stringWithFormat:@"%@upload/",ManagerUrl]
+//#define LZImgUrl [NSString stringWithFormat:@"%@upload/",ManagerUrl]
 
 
 #pragma -mark “首页”

@@ -11,6 +11,7 @@
 #import "LZDetailCellManager.h"
 #import "LZDetailStandardView.h"
 #import "LZDetailModel.h"
+#import "LZYuYueViewController.h"
 
 @interface LZTeacherDetailViewController ()
 
@@ -116,6 +117,11 @@
 }
 
 
+- (IBAction)yuyue:(UIButton *)sender {
+    LZYuYueViewController *yuyueVC = [[LZYuYueViewController alloc] init];
+    yuyueVC.dataArr = _model.price;
+    [self.navigationController pushViewController:yuyueVC animated:YES];
+}
 
 
 

@@ -37,6 +37,10 @@ fprintf(stderr, "-------\n");                                               \
 
 //****************设置颜色
 #define UICOLOR_RGB_Alpha(_color,_alpha) [UIColor colorWithRed:((_color>>16)&0xff)/255.0f green:((_color>>8)&0xff)/255.0f blue:(_color&0xff)/255.0f alpha:_alpha]
+
+#define COLORWITHRGB(red,green,blue) [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blued/255.0 alpha:1.0]
+
+
 // 所有控制器的背景颜色
 #define JYControllerBackColor UICOLOR_RGB_Alpha(0xe4e4e4, 1)
 //主题的颜色

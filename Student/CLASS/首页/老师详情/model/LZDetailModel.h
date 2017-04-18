@@ -63,5 +63,18 @@
 @property (nonatomic,strong) NSArray *grades;
 @property (nonatomic,strong) NSArray *region;
 
+@property (nonatomic,strong) NSArray *price;
+
+
+@end
+
+@interface PriceModel : NSObject
+
+@property (nonatomic,copy) NSString *gradeId;
+@property (nonatomic,copy) NSString *gradeName;
+@property (nonatomic,copy) NSString *skillId;
+@property (nonatomic,copy) NSString *skillName;
+@property (nonatomic,copy) NSString *visit;
+@property (nonatomic,copy) NSString *come;
 
 @end
