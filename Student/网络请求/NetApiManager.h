@@ -12,11 +12,11 @@
 /// 设置默认服务器 1为开发服务器, 2为测试服务器, 3为正式服务器
 #define SERVICE_TYPE 2
 //开发模式接口
-#define DEV_BASEURL @"http://api.zhishihuanqian.com/Students/"
+#define DEV_BASEURL @"http://api.zhishihuanqian.com/"
 //测试模式接口
-#define TEST_BASEURL @"http://api.zhishihuanqian.com/Students/"
+#define TEST_BASEURL @"http://api.zhishihuanqian.com/"
 //生产模式接口
-#define PRO_BASEURL @"http://api.zhishihuanqian.com/Students/"
+#define PRO_BASEURL @"http://api.zhishihuanqian.com/"
 
 
 @class NetResponse;

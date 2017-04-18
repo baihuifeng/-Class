@@ -29,6 +29,8 @@
     
     for (DynamicinfosModel *model in dataArr) {
         [imgArr addObject:[NSString stringWithFormat:@"%@%@",LZImgUrl,model.imgUrl]];
+        
+        NSLog(@"----->%@",[NSString stringWithFormat:@"%@%@",LZImgUrl,model.imgUrl]);
     }
     
     

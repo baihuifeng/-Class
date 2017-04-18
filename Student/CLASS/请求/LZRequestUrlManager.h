@@ -15,11 +15,11 @@
 
 
 #pragma -mark “首页”
-#define LZHomeUrl [NSString stringWithFormat:@"%@getInitData?",ManagerUrl]
+#define LZHomeUrl [NSString stringWithFormat:@"%@Students/getInitData?",ManagerUrl]
 
 #pragma -mark “详情页面”
 
-#define LZDedailUrl [NSString stringWithFormat:@"%@getProviderInfo?userId=",ManagerUrl]
+#define LZDedailUrl [NSString stringWithFormat:@"%@Students/getProviderInfo?userId=",ManagerUrl]
 
 
 
