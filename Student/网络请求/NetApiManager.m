@@ -62,7 +62,7 @@ static NetApiManager *netApiManager;
     AFHTTPSessionManager *manager = [NetApiManager sharedInstance].manager;
     
     NSLog(@"---->%@",manager.requestSerializer.HTTPRequestHeaders);
-    
+    NSLog(@"---->%@",URLString);
     [manager GET:URLString parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
