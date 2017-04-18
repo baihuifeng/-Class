@@ -132,6 +132,7 @@
 //    NSMutableString* str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",phoneNum];
 //    // NSLog(@"str======%@",str);
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+//    [[UIApplication sharedApplication] canOpenURL:phoneURL];
 }
 
 @end
