@@ -93,7 +93,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeThirdCell" owner:self options:nil] lastObject];
         }
-//        cell.dataArr = _model.dynamicOperative;
+        cell.dataArr = _model.dynamicOperative;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else {

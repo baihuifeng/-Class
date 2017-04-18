@@ -18,11 +18,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
-    [_collectionView registerClass:[LZThirdItmesCell class] forCellWithReuseIdentifier:@"LZThirdItmesCell"];
+//    _collectionView.delegate = self;
+//    _collectionView.dataSource = self;
+//    [_collectionView registerClass:[LZThirdItmesCell class] forCellWithReuseIdentifier:@"LZThirdItmesCell"];
+//    [self addTimer];
+//    [_collectionView reloadData];
     [self addTimer];
-    [_collectionView reloadData];
 
 }
 
@@ -32,7 +33,7 @@
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [_collectionView registerClass:[LZThirdItmesCell class] forCellWithReuseIdentifier:@"LZThirdItmesCell"];
-    [self addTimer];
+    
     [_collectionView reloadData];
     
 }
@@ -55,7 +56,7 @@
     
     NSInteger nextItem = currentIndexPathReset.item +1;
     NSInteger nextSection = currentIndexPathReset.section;
-    if (nextItem == 6) {
+    if (nextItem == _dataArr.count) {
         nextItem=0;
         nextSection++;
         
@@ -69,7 +70,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 6;
+    return _dataArr.count;
 }
 
 
