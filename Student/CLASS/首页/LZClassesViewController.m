@@ -31,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
+    _classesListTableView.tableFooterView = [[UIView alloc]init];
     
     LZClassItmeListView *lzClassView = [[LZClassItmeListView alloc] init];
     lzClassView.frame = CGRectMake(0, -130, kScreen_Width, 130);

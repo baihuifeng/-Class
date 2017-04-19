@@ -35,6 +35,9 @@
                         <state key="normal" title="-">
                             <color key="titleColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="jian:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kmc-g4-2Fu"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ie-Pj-Sds">
                         <rect key="frame" x="90" y="10" width="20" height="23"/>
@@ -45,8 +48,11 @@
                         <state key="normal" title="+">
                             <color key="titleColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="jia:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Ty-d7-JfF"/>
+                        </connections>
                     </button>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p9o-ji-QKI">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p9o-ji-QKI">
                         <rect key="frame" x="32" y="10" width="58" height="23"/>
                         <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -68,6 +74,12 @@
                     <constraint firstItem="Zlg-wf-svy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="toG-3X-Vrg"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="countText" destination="p9o-ji-QKI" id="uWA-VM-K2b"/>
+                <outlet property="jia" destination="9Ie-Pj-Sds" id="ZOT-wr-qA0"/>
+                <outlet property="jian" destination="xxZ-1r-jq4" id="agy-dN-wQw"/>
+            </connections>
+            <point key="canvasLocation" x="-66" y="68"/>
         </tableViewCell>
     </objects>
     <resources>

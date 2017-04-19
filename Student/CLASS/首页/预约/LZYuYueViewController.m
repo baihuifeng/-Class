@@ -16,6 +16,14 @@
 
 @property (nonatomic,strong) NSArray *titleArr;
 
+@property (nonatomic,strong) UIView *timeBackView;
+
+@property (nonatomic,strong) UIDatePicker *datePicker;
+
+
+@property (nonatomic,assign) int classCount;
+
+
 @end
 
 @implementation LZYuYueViewController
@@ -24,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"预约";
+    _classCount = 1;
     _titleArr = @[@"授课时间",@"授课年级",@"授课方式",@"购买课次",@"上课地址"];
     _yuyueTableView.tableHeaderView = [self tableViewHeaderView];
 }
@@ -78,7 +87,6 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        cell.priceModel = _dataArr[0];
         [cell setPriceModel:_dataArr[0] index:0];
         return cell;
     } else if(indexPath.section == 3){
@@ -86,6 +94,11 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueCountCell" owner:self options:nil] lastObject];
         }
+        cell.countText.text = [NSString stringWithFormat:@"%d",_classCount];
+        
+        cell.filterResultBlock = ^(int count) {
+            _classCount = count;
+        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else {
@@ -122,17 +135,76 @@
     [button setImage:[UIImage imageNamed:@"choose_time_icon"] forState:UIControlStateNormal];
     [button setTitle:@"选择首次上课时间" forState:UIControlStateNormal];
     [button setTitleColor:UICOLOR_RGB_Alpha(0XF5A623, 1.0) forState:UIControlStateNormal];
-    button.frame = CGRectMake(kScreen_Width/2-(kScreen_Width-150)/2, 10, kScreen_Width-150, 36);
+    button.frame = CGRectMake(kScreen_Width/2-(kScreen_Width-150)/2, 20, kScreen_Width-150, 36);
     button.layer.borderWidth = 0.5;
     button.layer.borderColor = UICOLOR_RGB_Alpha(0XF5A623, 1.0).CGColor;
     button.titleLabel.font = [UIFont systemFontOfSize:15.0];
     button.layer.cornerRadius = 4;
-    
+    [button addTarget:self action:@selector(timeAction:) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:button];
-    
-    
     return view;
 }
+
+- (void)timeAction:(UIButton *)sender {
+    self.timeBackView.hidden = NO;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+       
+        CGRect rect = self.datePicker.frame;
+        
+        rect.origin.y = kScreen_Height/2;
+        
+        self.datePicker.frame = rect;
+
+    }];
+}
+
+
+- (void)hiddenView {
+    self.timeBackView.hidden = YES;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        CGRect rect = self.datePicker.frame;
+        
+        rect.origin.y = kScreen_Height;
+        
+        self.datePicker.frame = rect;
+        
+    }];
+
+}
+
+
+
+- (UIView *)timeBackView {
+    
+    if (!_timeBackView) {
+        _timeBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height)];
+        _timeBackView.hidden = YES;
+        _timeBackView.backgroundColor = UICOLOR_RGB_Alpha(0X000000, 0.25);
+        [_timeBackView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenView)]];
+        [self.view addSubview:_timeBackView];
+    }
+    
+    return _timeBackView;
+    
+}
+
+- (UIDatePicker *)datePicker {
+    
+    if (!_datePicker) {
+        _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, kScreen_Height, kScreen_Width, kScreen_Height/2)];
+        _datePicker.backgroundColor = UICOLOR_RGB_Alpha(0XFFFFFF, 1.0);
+        _datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        
+        [self.view addSubview:_datePicker];
+    }
+    
+    return _datePicker;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

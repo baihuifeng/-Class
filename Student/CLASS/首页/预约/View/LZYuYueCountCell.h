@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZYuYueCountCell : UITableViewCell
+@interface LZYuYueCountCell : UITableViewCell 
+@property (weak, nonatomic) IBOutlet UIButton *jian;
+@property (weak, nonatomic) IBOutlet UIButton *jia;
+
+@property (weak, nonatomic) IBOutlet UITextField *countText;
+
+///筛选结果回调
+@property (nonatomic, copy) void (^filterResultBlock) (int count);
 
 @end

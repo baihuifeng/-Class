@@ -32,10 +32,11 @@
     headView.frame = CGRectMake(0, 0, kScreen_Width, 64);
     headView.addressStr = @"111111111111";
 
+    _homeListTableView.tableFooterView = [[UIView alloc] init];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:headView];
     
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userid=%@&owener=%@",LZHomeUrl,@"1",@"0"] params:nil finished:^(NetResponse *netResponse) {
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&owener=%@",LZHomeUrl,@"1",@"0"] params:nil finished:^(NetResponse *netResponse) {
         _model = [LZHomeModel mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
         [_homeListTableView reloadData];
         
@@ -47,6 +48,10 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    if (!_model) {
+        return 0;
+    }
 
     return 4;
 }

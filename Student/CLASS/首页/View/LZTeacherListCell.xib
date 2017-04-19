@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-8G-KfL">
@@ -41,7 +41,7 @@
                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="260起" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4R-5N-XAe">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="260起" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4R-5N-XAe">
                         <rect key="frame" x="265" y="15" width="42" height="12"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="JMV-EE-xRH"/>
@@ -61,7 +61,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O7-Up-g5r">
-                        <rect key="frame" x="102" y="78" width="136" height="15"/>
+                        <rect key="frame" x="102" y="78" width="131" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="Znh-tw-C1r"/>
                         </constraints>
@@ -74,7 +74,7 @@
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvl-8D-SaS">
-                        <rect key="frame" x="251" y="78" width="66" height="15"/>
+                        <rect key="frame" x="246" y="78" width="66" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="Gqe-J9-Ziy"/>
                             <constraint firstAttribute="width" constant="66" id="Lwe-p8-2Wv"/>
@@ -86,7 +86,7 @@
                     <constraint firstItem="vLM-mo-cik" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="92" id="3ay-d7-kLA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vLM-mo-cik" secondAttribute="trailing" id="7C0-cG-7Vz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="U4R-5N-XAe" secondAttribute="trailing" constant="5" id="7PB-OE-EuV"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Gvl-8D-SaS" secondAttribute="trailing" constant="-5" id="HPo-UG-lBX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Gvl-8D-SaS" secondAttribute="trailing" id="HPo-UG-lBX"/>
                     <constraint firstItem="gr1-00-8Pg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="IRT-1X-7ia"/>
                     <constraint firstAttribute="trailingMargin" secondItem="cE5-Ap-ovb" secondAttribute="trailing" constant="5" id="Iwi-Jq-mqd"/>
                     <constraint firstItem="9O7-Up-g5r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="94" id="KOO-GO-5eN"/>
