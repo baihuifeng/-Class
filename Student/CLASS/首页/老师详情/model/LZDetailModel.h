@@ -41,6 +41,12 @@
 @property (nonatomic,copy) NSString *tagID;
 @end
 
+@interface GradesModel : NSObject
+@property (nonatomic,copy) NSString *id;
+@property (nonatomic,copy) NSString *gradeName;
+
+@end
+
 @interface LZDetailModel : NSObject
 
 @property (nonatomic,copy) NSString *isCollection;
@@ -67,6 +73,8 @@
 
 
 @end
+
+
 
 @interface PriceModel : NSObject
 

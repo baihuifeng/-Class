@@ -30,12 +30,12 @@
     _caseIndexArr = [[NSMutableArray alloc] init];
     self.edgesForExtendedLayout = UIRectEdgeNone;
 //    [NSString stringWithFormat:@"%@Api/getProviderInfo?userId=%@",ManagerUrl,@""];
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@%@",LZDedailUrl,@"1"] params:nil finished:^(NetResponse *netResponse) {
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&teacherId=%@",LZDedailUrl,@"1",@"5"] params:nil finished:^(NetResponse *netResponse) {
         [_caseIndexArr addObject:@"1000"];
         NSLog(@"%@",[netResponse.responseObject objectForKey:@"data"]);
         _model = [LZDetailModel mj_objectWithKeyValues:[netResponse.responseObject objectForKey:@"data"]];
         
-        if (![_model.studensCount isEqualToString:@"0"]) {
+        if (![_model.commentsCount isEqualToString:@"0"]) {
             [_caseIndexArr addObject:@"1001"];
         }
         [_caseIndexArr addObject:@"1003"];

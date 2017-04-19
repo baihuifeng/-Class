@@ -56,6 +56,11 @@
         UIButton *btn = _buttonArr[i];
         if (i == index) {
             btn.selected = YES;
+            
+            if (self.filterResultBlock) {
+                self.filterResultBlock(index);
+            }
+            
         } else {
             btn.selected = NO;
         }

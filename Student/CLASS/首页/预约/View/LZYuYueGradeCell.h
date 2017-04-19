@@ -28,4 +28,7 @@
 @property (assign,nonatomic) int indexPrice;
 - (void)setPriceModel:(PriceModel *)priceModel index:(int)priceIndex;
 
+//选择年级
+@property (nonatomic, copy) void (^filterResultBlock) (int count);
+
 @end

@@ -147,6 +147,9 @@
 		49A369DF1EA6029B00BD34B2 /* LZYuYueCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A369DD1EA6029B00BD34B2 /* LZYuYueCountCell.xib */; };
 		49A369E31EA6053500BD34B2 /* LZYuYueAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369E11EA6053500BD34B2 /* LZYuYueAddressCell.m */; };
 		49A369E41EA6053500BD34B2 /* LZYuYueAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A369E21EA6053500BD34B2 /* LZYuYueAddressCell.xib */; };
+		49A369E91EA7042500BD34B2 /* LZChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369E71EA7042500BD34B2 /* LZChooseViewController.m */; };
+		49A369EA1EA7042500BD34B2 /* LZChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A369E81EA7042500BD34B2 /* LZChooseViewController.xib */; };
+		49A369EE1EA7290600BD34B2 /* LZManagerChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */; };
 		49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE171E83612B0057C02F /* SpecialityCell.m */; };
 		49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE181E83612B0057C02F /* SpecialityCell.xib */; };
 		49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE1C1E8364270057C02F /* TeacherCaseCell.m */; };
@@ -430,6 +433,11 @@
 		49A369E01EA6053500BD34B2 /* LZYuYueAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYuYueAddressCell.h; sourceTree = "<group>"; };
 		49A369E11EA6053500BD34B2 /* LZYuYueAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYuYueAddressCell.m; sourceTree = "<group>"; };
 		49A369E21EA6053500BD34B2 /* LZYuYueAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZYuYueAddressCell.xib; sourceTree = "<group>"; };
+		49A369E61EA7042500BD34B2 /* LZChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChooseViewController.h; sourceTree = "<group>"; };
+		49A369E71EA7042500BD34B2 /* LZChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChooseViewController.m; sourceTree = "<group>"; };
+		49A369E81EA7042500BD34B2 /* LZChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZChooseViewController.xib; sourceTree = "<group>"; };
+		49A369EC1EA7290600BD34B2 /* LZManagerChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZManagerChoose.h; sourceTree = "<group>"; };
+		49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZManagerChoose.m; sourceTree = "<group>"; };
 		49AECE161E83612B0057C02F /* SpecialityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialityCell.h; sourceTree = "<group>"; };
 		49AECE171E83612B0057C02F /* SpecialityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialityCell.m; sourceTree = "<group>"; };
 		49AECE181E83612B0057C02F /* SpecialityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialityCell.xib; sourceTree = "<group>"; };
@@ -820,6 +828,7 @@
 		491BA1B91E7B780200E92175 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				49A369E51EA703BC00BD34B2 /* 筛选 */,
 				49A369C41EA5E4CF00BD34B2 /* 预约 */,
 				4947DA1E1E8C962A00DE0410 /* LZClassView */,
 				212D9DF21E89125400286DD7 /* ListModel */,
@@ -1062,6 +1071,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		49A369E51EA703BC00BD34B2 /* 筛选 */ = {
+			isa = PBXGroup;
+			children = (
+				49A369EB1EA728EA00BD34B2 /* 管理筛选条件 */,
+				49A369E61EA7042500BD34B2 /* LZChooseViewController.h */,
+				49A369E71EA7042500BD34B2 /* LZChooseViewController.m */,
+				49A369E81EA7042500BD34B2 /* LZChooseViewController.xib */,
+			);
+			path = "筛选";
+			sourceTree = "<group>";
+		};
+		49A369EB1EA728EA00BD34B2 /* 管理筛选条件 */ = {
+			isa = PBXGroup;
+			children = (
+				49A369EC1EA7290600BD34B2 /* LZManagerChoose.h */,
+				49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */,
+			);
+			path = "管理筛选条件";
+			sourceTree = "<group>";
+		};
 		49AECE3F1E84F7E30057C02F /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1294,6 +1323,7 @@
 				491BA1D11E7B796600E92175 /* LZCourseViewController.xib in Resources */,
 				491BA2971E7FB6CB00E92175 /* LZHomeFirstCell.xib in Resources */,
 				498574AA1E9B1AF400AACD2A /* LZBalanceSuccessViewController.xib in Resources */,
+				49A369EA1EA7042500BD34B2 /* LZChooseViewController.xib in Resources */,
 				2160739C1E8B8B53008B3839 /* LZCodeLoginViewController.xib in Resources */,
 				212D9DDF1E88E0C600286DD7 /* LZDAContentCell.xib in Resources */,
 				492F56C71E962D2900E667BD /* LZPayDetailCell.xib in Resources */,
@@ -1426,6 +1456,7 @@
 				491BA2C81E7FC1E100E92175 /* LZSecondItmesCell.m in Sources */,
 				21EE18301E8036E500FB7D31 /* LZCourseJudgeCell.m in Sources */,
 				491BA1C61E7B791800E92175 /* LZHomeViewController.m in Sources */,
+				49A369EE1EA7290600BD34B2 /* LZManagerChoose.m in Sources */,
 				49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */,
 				49D0F2671E81270F009B56CF /* LZHomeHeadView.m in Sources */,
 				491BA1E21E7B7B6B00E92175 /* HHNavigationViewController.m in Sources */,
@@ -1460,6 +1491,7 @@
 				49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */,
 				491BA2761E7F6E8800E92175 /* LZLoginViewController.m in Sources */,
 				212D9DEE1E8906C500286DD7 /* LZReviewViewController.m in Sources */,
+				49A369E91EA7042500BD34B2 /* LZChooseViewController.m in Sources */,
 				491BA1E41E7B7B6B00E92175 /* HHTabbarViewController.m in Sources */,
 				492F56D21E97654F00E667BD /* LZBalancePayViewController.m in Sources */,
 				212D9DD01E88BC7B00286DD7 /* LZDAViewController.m in Sources */,
@@ -1663,7 +1695,7 @@
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1680,7 +1712,7 @@
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;

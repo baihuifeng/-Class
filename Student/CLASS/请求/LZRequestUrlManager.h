@@ -19,7 +19,7 @@
 
 #pragma -mark “详情页面”
 
-#define LZDedailUrl [NSString stringWithFormat:@"%@Students/getProviderInfo?userId=",ManagerUrl]
+#define LZDedailUrl [NSString stringWithFormat:@"%@Students/getProviderInfo?",ManagerUrl]
 
 
 

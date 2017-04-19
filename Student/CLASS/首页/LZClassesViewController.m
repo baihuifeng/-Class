@@ -15,12 +15,30 @@
 #import "LZClassListHeadView.h"
 #import "LZClassItmeListView.h"
 #import "PullView.h"
+#import "LZChooseViewController.h"
+#import "LZManagerChoose.h"
 
 @interface LZClassesViewController ()
 
 @property (nonatomic,strong) NSMutableArray *dataArr;
 
 @property (nonatomic,strong) PullView *pullView;
+
+@property (nonatomic,strong) LZChooseViewController *chooseVc;
+
+@property (nonatomic,assign) int buttonIndex;
+
+@property (nonatomic,strong) LZClassListHeadView *headView;
+
+
+@property (nonatomic,assign) int sortIndex;//排序
+
+@property (nonatomic,assign) int gradeIndex;//年级
+
+@property (nonatomic,assign) int regionIndex;//区域
+
+@property (nonatomic,strong) NSMutableArray *chooseIndexArr;
+
 
 
 @end
@@ -30,6 +48,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _chooseIndexArr = [NSMutableArray arrayWithObjects:@0,@0,@0, nil];
+    
+    
+    [self.chooseVc dataArr:[LZManagerChoose getSequenceCondition] selectedIndex:[_chooseIndexArr[0] intValue]];
     
     _classesListTableView.tableFooterView = [[UIView alloc]init];
     
@@ -50,12 +73,6 @@
     
     //格式化成json数据
     NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    
-    //    NSLog(@"-----%@",dic);
-    
-//    _model = [LZDetailModel mj_objectWithKeyValues:dic];
-//    [_dataArr addObject:[ListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
-//    NSArray *arr = ;
     
     [_dataArr addObjectsFromArray:[ListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
     
@@ -121,31 +138,36 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-        LZClassListHeadView *headView = [[LZClassListHeadView alloc] init];
-        headView.frame = CGRectMake(0, 0, kScreen_Width, 45);
-    headView.filterResultBlock = ^(NSInteger index) {
+        _headView = [[LZClassListHeadView alloc] init];
+        _headView.frame = CGRectMake(0, 0, kScreen_Width, 40);
+    __weak typeof(self) weakSelf = self;
+    _headView.filterResultBlock = ^(NSInteger index) {
+        _buttonIndex = (int)index;
         
-        
+        [weakSelf.classesListTableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+        [UIView animateWithDuration:0.3 animations:^{
+            weakSelf.chooseVc.view.hidden = NO;
+            if (index == 0) {
+               [weakSelf.chooseVc dataArr:[LZManagerChoose getSequenceCondition] selectedIndex:[weakSelf.chooseIndexArr[index] intValue]];
+            } else if (index == 1) {
+                [weakSelf.chooseVc dataArr:[LZManagerChoose getgardeCondition] selectedIndex:[weakSelf.chooseIndexArr[index] intValue]];
+            } else if (index == 2) {
+                [weakSelf.chooseVc dataArr:[LZManagerChoose getRegionCondition] selectedIndex:[weakSelf.chooseIndexArr[index] intValue]];
+            } else if (index == 3) {
+                [weakSelf.chooseVc moreViewIndex:(int)index];
+            }
 
-        [_classesListTableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-        self.pullView.selectedIndex = index;
-        [UIView animateWithDuration:10 animations:^{
-            self.pullView.hidden = NO;
-            
         }];
- 
-        
-        
-    
+
     };
-        return headView;
+        return _headView;
 }
 
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
 
-        return 45;
+        return 40;
 
 }
 
@@ -161,27 +183,31 @@
     } else {
         _classesListTableView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
     }
-    
-    
-    
-    
-    
+ 
 }
 
-- (PullView *)pullView {
-    if (!_pullView) {
-        _pullView = [[PullView alloc] initWithFrame:CGRectMake(0, 45, kScreen_Width, kScreen_Height-100) titleArr:@[@"",@"",@"",@""]];
-        _pullView.hidden = YES;
-        [self.view addSubview:_pullView];
+
+- (LZChooseViewController *)chooseVc {
+    
+    if (!_chooseVc) {
+        _chooseVc = [[LZChooseViewController alloc] init];
+        _chooseVc.view.frame = CGRectMake(0, 40, kScreen_Width, kScreen_Height);
+        _chooseVc.view.hidden = YES;
+        __weak typeof(self) weakSelf = self;
+        _chooseVc.rowBlock = ^(NSInteger rowIndex) {
+            
+            [weakSelf.chooseIndexArr replaceObjectAtIndex:weakSelf.buttonIndex withObject:@(rowIndex)];
+            weakSelf.chooseVc.view.hidden = YES;
+            for (UIButton *btn in weakSelf.headView.buttonArr) {
+                btn.selected = NO;
+            }
+        };
+        [self addChildViewController:_chooseVc];
+        [self.view addSubview:_chooseVc.view];
     }
-    return _pullView;
+    
+    return _chooseVc;
 }
-
-
-
-
-
-
 
 
 - (void)didReceiveMemoryWarning {

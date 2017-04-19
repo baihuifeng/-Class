@@ -68,6 +68,7 @@
         
         
         self.radiuView = [[LeftLabelView alloc] initWithRadiuLabelType:_radiuLabelType WithFrame:CGRectMake(CGRectGetMinX(_backgroundLabel.frame), CGRectGetMinY(_backgroundLabel.frame), self.frame.size.width/(int)itmesArr.count, self.frame.size.height)];
+        self.radiuView.hidden = YES;
         [self addSubview:self.radiuView];
         
     }
@@ -109,8 +110,9 @@
         self.selectIndex = NSNotFound;
     } else {
         self.selectIndex = sender.tag;
+        [self buttonSelectedIndex];
     }
-    [self buttonSelectedIndex];
+    
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
     
@@ -122,6 +124,7 @@
         UIButton* btn = [self.itmeArr objectAtIndex:selectIndex];
         btn.selected = YES;
     }
+    self.radiuView.hidden = NO;
 }
 - (void)resetNoneSelectStatus
 {

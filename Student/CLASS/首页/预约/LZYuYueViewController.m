@@ -21,7 +21,9 @@
 @property (nonatomic,strong) UIDatePicker *datePicker;
 
 
-@property (nonatomic,assign) int classCount;
+@property (nonatomic,assign) int classCount;  //课时
+@property (nonatomic,copy) NSString *classTime;//上课时间
+@property (nonatomic,assign) int gradeIndex;
 
 
 @end
@@ -33,11 +35,17 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"预约";
     _classCount = 1;
+    _classTime = @"";
+    _gradeIndex = 0;
     _titleArr = @[@"授课时间",@"授课年级",@"授课方式",@"购买课次",@"上课地址"];
     _yuyueTableView.tableHeaderView = [self tableViewHeaderView];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    if (_dataArr.count == 0) {
+        return 0;
+    }
     
     return 5;
 }
@@ -70,6 +78,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueTimeCell" owner:self options:nil] lastObject];
         }
+        cell.timeLabel.text = _classTime;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 1) {
@@ -78,7 +87,13 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        [cell setDataArr:_dataArr index:0];
+        
+        __weak typeof(self) weakSelf = self;
+        cell.filterResultBlock = ^(int count) {
+            weakSelf.gradeIndex = count;
+            [_yuyueTableView reloadData];
+        };
+        [cell setDataArr:_dataArr index:_gradeIndex];
         return cell;
     
     } else if (indexPath.section == 2) {
@@ -87,7 +102,7 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        [cell setPriceModel:_dataArr[0] index:0];
+        [cell setPriceModel:_dataArr[_gradeIndex] index:0];
         return cell;
     } else if(indexPath.section == 3){
         LZYuYueCountCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZYuYueCountCell"];
@@ -95,9 +110,9 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueCountCell" owner:self options:nil] lastObject];
         }
         cell.countText.text = [NSString stringWithFormat:@"%d",_classCount];
-        
+        __weak typeof(self) weakSelf = self;
         cell.filterResultBlock = ^(int count) {
-            _classCount = count;
+            weakSelf.classCount = count;
         };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -172,6 +187,10 @@
         self.datePicker.frame = rect;
         
     }];
+    
+    _classTime = [self dataStr:_datePicker.date];
+    NSIndexPath *tmpIndexpath=[NSIndexPath indexPathForRow:0 inSection:0];
+    [_yuyueTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:tmpIndexpath, nil] withRowAnimation:UITableViewRowAnimationFade];
 
 }
 
@@ -197,11 +216,20 @@
         _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, kScreen_Height, kScreen_Width, kScreen_Height/2)];
         _datePicker.backgroundColor = UICOLOR_RGB_Alpha(0XFFFFFF, 1.0);
         _datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        _datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
         
         [self.view addSubview:_datePicker];
     }
     
     return _datePicker;
+}
+
+- (NSString *)dataStr:(NSDate *)date {
+    NSString *strDate;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    strDate = [dateFormatter stringFromDate:date];
+    return strDate;
 }
 
 

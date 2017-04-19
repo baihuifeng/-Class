@@ -22,7 +22,7 @@
     _headImg.userInteractionEnabled = YES;
     [_headImg addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImgview)]];
     
-    
+    [_headImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,model.imgUrl]] placeholderImage:nil];
     
 //    UILabel *testLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, 320, 30)];
 //    

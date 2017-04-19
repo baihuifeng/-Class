@@ -11,8 +11,14 @@
 @implementation LZDetailModel
 +(NSDictionary *)mj_objectClassInArray{
     
-    return @{@"commentTags":@"CommentTagsModel",@"price":@"PriceModel"};
+    return @{@"commentTags":@"CommentTagsModel",@"price":@"PriceModel",@"grades":@"GradesModel"};
 }
+
+
+
+@end
+
+@implementation GradesModel
 
 
 
@@ -27,6 +33,8 @@
     
     return @{@"caseInfos":@"ContentModel"};
 }
+
+
 
 
 @end

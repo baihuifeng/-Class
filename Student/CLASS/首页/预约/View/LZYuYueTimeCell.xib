@@ -33,6 +33,10 @@
                     <constraint firstAttribute="trailingMargin" secondItem="czX-pJ-7UT" secondAttribute="trailing" id="vky-mR-qj5"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLabel" destination="czX-pJ-7UT" id="TDw-EZ-l78"/>
+            </connections>
+            <point key="canvasLocation" x="-167" y="24"/>
         </tableViewCell>
     </objects>
 </document>

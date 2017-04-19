@@ -10,4 +10,5 @@
 
 @interface LZYuYueTimeCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @end

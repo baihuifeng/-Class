@@ -12,4 +12,5 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *chooseCollection;
 @property (strong, nonatomic) IBOutlet UITableView *classesListTableView;
 
+
 @end
