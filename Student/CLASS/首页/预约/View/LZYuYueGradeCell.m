@@ -23,7 +23,7 @@
     int limitX =  kScreen_Width-26;
     CGFloat space = 10;
     int XNum = limitX/(75 + 10);
-    _dataArr = [[NSMutableArray alloc] init];
+//    _dataArr = [[NSMutableArray alloc] init];
     
 
     NSMutableArray *buttonMutableArr = [[NSMutableArray alloc] init];

@@ -21,6 +21,10 @@
 
 #define LZDedailUrl [NSString stringWithFormat:@"%@Students/getProviderInfo?",ManagerUrl]
 
+#define LZTeacherList [NSString stringWithFormat:@"%@Students/getInfoList?",ManagerUrl]
+
+#define LZOrderList [NSString stringWithFormat:@"%@Students/getSubjectInfo?",ManagerUrl]
+
 
 
 

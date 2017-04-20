@@ -44,25 +44,6 @@
         [_DetailtableView reloadData];
         
     }];
-    
-    
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
-//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"File"ofType:@"json"];
-//    
-//    //根据文件路径读取数据
-//    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
-//    
-//    
-//    //格式化成json数据
-//    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-//    
-////    NSLog(@"-----%@",dic);
-//    
-//    _model = [LZDetailModel mj_objectWithKeyValues:dic];
-//    
-//    NSLog(@"%@",_model);
-//    
-//    [_DetailtableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -86,7 +67,6 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LZDetailCell" owner:self options:nil] lastObject];
     }
-//    cell.caseIndex = [_caseIndexArr[indexPath.row] intValue];
     [cell setCaseIndex:[_caseIndexArr[indexPath.section] intValue] detailModel:_model];
     return cell;
 }

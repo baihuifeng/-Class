@@ -150,6 +150,7 @@
 		49A369E91EA7042500BD34B2 /* LZChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369E71EA7042500BD34B2 /* LZChooseViewController.m */; };
 		49A369EA1EA7042500BD34B2 /* LZChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A369E81EA7042500BD34B2 /* LZChooseViewController.xib */; };
 		49A369EE1EA7290600BD34B2 /* LZManagerChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */; };
+		49A369F11EA896C600BD34B2 /* JYCustomPullGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369F01EA896C600BD34B2 /* JYCustomPullGifHeader.m */; };
 		49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE171E83612B0057C02F /* SpecialityCell.m */; };
 		49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE181E83612B0057C02F /* SpecialityCell.xib */; };
 		49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE1C1E8364270057C02F /* TeacherCaseCell.m */; };
@@ -438,6 +439,8 @@
 		49A369E81EA7042500BD34B2 /* LZChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZChooseViewController.xib; sourceTree = "<group>"; };
 		49A369EC1EA7290600BD34B2 /* LZManagerChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZManagerChoose.h; sourceTree = "<group>"; };
 		49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZManagerChoose.m; sourceTree = "<group>"; };
+		49A369EF1EA896C600BD34B2 /* JYCustomPullGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCustomPullGifHeader.h; sourceTree = "<group>"; };
+		49A369F01EA896C600BD34B2 /* JYCustomPullGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCustomPullGifHeader.m; sourceTree = "<group>"; };
 		49AECE161E83612B0057C02F /* SpecialityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialityCell.h; sourceTree = "<group>"; };
 		49AECE171E83612B0057C02F /* SpecialityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialityCell.m; sourceTree = "<group>"; };
 		49AECE181E83612B0057C02F /* SpecialityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialityCell.xib; sourceTree = "<group>"; };
@@ -1103,6 +1106,8 @@
 		49AECEDE1E850B110057C02F /* 三方类 */ = {
 			isa = PBXGroup;
 			children = (
+				49A369EF1EA896C600BD34B2 /* JYCustomPullGifHeader.h */,
+				49A369F01EA896C600BD34B2 /* JYCustomPullGifHeader.m */,
 				49AECF151E850C300057C02F /* NSString+stringSizeCalculate.h */,
 				49AECF161E850C300057C02F /* NSString+stringSizeCalculate.m */,
 			);
@@ -1469,6 +1474,7 @@
 				491BA1841E7B770F00E92175 /* AppDelegate.m in Sources */,
 				491BA2A01E7FB7EE00E92175 /* LZHomeThirdCell.m in Sources */,
 				491BA1E51E7B7B6B00E92175 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
+				49A369F11EA896C600BD34B2 /* JYCustomPullGifHeader.m in Sources */,
 				49D0F27A1E821724009B56CF /* LZHeadCell.m in Sources */,
 				212D9DDE1E88E0C600286DD7 /* LZDAContentCell.m in Sources */,
 				49AECE391E83C5C00057C02F /* SegmentView.m in Sources */,
@@ -1695,7 +1701,7 @@
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1712,7 +1718,7 @@
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;

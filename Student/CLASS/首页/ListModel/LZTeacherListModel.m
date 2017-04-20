@@ -8,16 +8,22 @@
 
 #import "LZTeacherListModel.h"
 
+@implementation TagsInfoModel
+
+
+
+@end
+
 @implementation LZTeacherListModel
-+(NSDictionary *)mj_objectClassInArray{
-    
-    return @{@"data":@"ListModel"};
-}
+
 
 @end
 
 @implementation ListModel
-
++(NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"data":@"ListModel",@"tagsInfo":@"TagsInfoModel"};
+}
 
 @end
 
@@ -25,7 +31,7 @@
 @implementation LZHomeModel
 +(NSDictionary *)mj_objectClassInArray{
     
-    return @{@"dynamicBanner":@"DynamicinfosModel",@"skills":@"SkillsModel",@"recommendTeachers":@"ListModel",@"dynamicOperative":@"DynamicinfosModel"};
+    return @{@"dynamicBanner":@"DynamicinfosModel",@"skills":@"SkillsModel",@"recommendTeachers":@"ListModel",@"dynamicOperative":@"DynamicinfosModel",@"dynamicNews":@"DynamicinfosModel"};
 }
 
 @end

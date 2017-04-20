@@ -91,9 +91,9 @@
         __weak typeof(self) weakSelf = self;
         cell.filterResultBlock = ^(int count) {
             weakSelf.gradeIndex = count;
-            [weakSelf.yuyueTableView reloadData];
+//            [weakSelf.yuyueTableView reloadData];
         };
-        [cell setDataArr:weakSelf.grades index:weakSelf.gradeIndex];
+        [cell setDataArr:_grades index:_gradeIndex];
         return cell;
     
     } else if (indexPath.section == 2) {
@@ -102,7 +102,7 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        [cell setPriceModel:_dataArr index:0];
+        [cell setPriceModel:_dataArr index:0];
         return cell;
     } else if(indexPath.section == 3){
         LZYuYueCountCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZYuYueCountCell"];

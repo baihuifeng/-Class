@@ -7,6 +7,7 @@
 //
 
 #import "LZRootViewController.h"
+#import "JYCustomPullGifHeader.h"
 
 @interface LZRootViewController ()
 
@@ -20,6 +21,33 @@
     
     self.view.backgroundColor = JYControllerBackColor;
 }
+
+
+
+- (void)setRefreshHeader:(UITableView *)tableView completion:(void (^)(void))completion{
+    
+        __unsafe_unretained __typeof(self) weakSelf = self;
+        JYCustomPullGifHeader *header = [JYCustomPullGifHeader headerWithRefreshingBlock:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                // 刷新表格
+                // 刷新表格
+                [weakSelf refreshRequest];
+            });
+        }];
+    
+        // 隐藏时间
+        header.lastUpdatedTimeLabel.hidden = YES;
+    
+        // 隐藏状态
+        header.stateLabel.hidden = YES;
+    // 设置header
+    
+//    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:completion];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    tableView.mj_header = header;
+    
+}
+
 
 - (void)index:(NSInteger)index {
 

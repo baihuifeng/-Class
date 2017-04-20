@@ -10,4 +10,11 @@
 
 @interface LZRootViewController : UIViewController <selectedDelegate>
 
+
+//头部刷新
+- (void)setRefreshHeader:(UITableView *)tableView completion:(void (^)(void))completion;
+- (void)refreshRequest;
+
+
+
 @end

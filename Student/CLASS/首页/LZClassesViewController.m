@@ -8,7 +8,6 @@
 
 #import "LZClassesViewController.h"
 #import "LZClassesItmesCell.h"
-#import "LZClassesListCell.h"
 #import "LZTeacherDetailViewController.h"
 #import "LZDetailStandardView.h"
 #import "LZTeacherListModel.h"
@@ -17,6 +16,7 @@
 #import "PullView.h"
 #import "LZChooseViewController.h"
 #import "LZManagerChoose.h"
+#import "LZTeacherListCell.h"
 
 @interface LZClassesViewController ()
 
@@ -67,21 +67,20 @@
     
     
     _dataArr = [[NSMutableArray alloc] init];
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ListJson"ofType:@"json"];
-    
-    //根据文件路径读取数据
-    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
-    
-    
-    //格式化成json数据
-    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    
-    [_dataArr addObjectsFromArray:[ListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
+
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@",LZTeacherList] params:nil finished:^(NetResponse *netResponse) {
+        
+        [_dataArr addObjectsFromArray:[ListModel mj_objectArrayWithKeyValuesArray:netResponse.responseObject[@"data"]]];
+        
+        [_classesListTableView reloadData];
+    }];
     
     
     
     
-    [_classesListTableView reloadData];
+    
+    
+    
     
     
     
@@ -112,16 +111,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return 80;  
+    return 105;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
 
-    LZClassesListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZClassesListCell"];
+    LZTeacherListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZTeacherListCell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"LZClassesListCell" owner:self options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"LZTeacherListCell" owner:self options:nil] lastObject];
     }
     cell.model = _dataArr[indexPath.row];
 

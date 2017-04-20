@@ -18,6 +18,8 @@
 
 @property (assign,nonatomic) NSInteger indexSelect;
 
+@property (nonatomic,strong) NSMutableArray *pageArr;
+
 @end
 
 @implementation LZCourseViewController
@@ -32,6 +34,7 @@
     segment.delegate = self;
     segment.backgroundColor = [UIColor redColor];
     segment.selectIndex = 0;
+    _indexSelect = 0;
     segment.lineHeight = 20;
     segment.radiuLabelType = radiuLabelTypeBottom;
     segment.radiuView.isRadius = YES;
@@ -40,30 +43,79 @@
     [self.chooseView addSubview:segment];
     
     
-    _dataArr = [[NSMutableArray alloc] init];
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"OrderFile"ofType:@"json"];
+    _dataArr = [NSMutableArray arrayWithObjects:[[NSMutableArray alloc] init],[[NSMutableArray alloc] init],[[NSMutableArray alloc] init],[[NSMutableArray alloc] init], nil];
+    _pageArr = [NSMutableArray arrayWithObjects:@1,@1,@1,@1, nil];
     
-    //根据文件路径读取数据
-    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+
+    [self setRefreshHeader:_courseListTableView completion:nil];
+    
+    _courseListTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerViewRequest)];
     
     
-    //格式化成json数据
-    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+    [self requstUrl];
     
-        [_dataArr addObjectsFromArray:[LZCourseModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
-    
-    [_courseListTableView reloadData];
+//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"OrderFile"ofType:@"json"];
+//    
+//    //根据文件路径读取数据
+//    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+//    
+//    
+//    //格式化成json数据
+//    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+//    
+//        [_dataArr addObjectsFromArray:[LZCourseModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
+//    
+//    [_courseListTableView reloadData];
     
     
     
     
 }
 
+- (void)refreshRequest {
+    
+    [_pageArr replaceObjectAtIndex:_indexSelect withObject:@0];
+    
+    [self requstUrl];
+}
+
+- (void)footerViewRequest {
+    
+    int pag = [_pageArr[_indexSelect] intValue];
+    pag++;
+    NSLog(@"=========>>>>>>>>>%d",pag);
+    [_pageArr replaceObjectAtIndex:_indexSelect withObject:@(pag)];
+    [self requstUrl];
+    
+    
+
+}
+
+- (void)requstUrl {
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&type=%ld",LZOrderList,@"1",(long)_indexSelect+1] params:nil finished:^(NetResponse *netResponse) {
+        
+        [_dataArr[_indexSelect] addObjectsFromArray:[LZCourseModel mj_objectArrayWithKeyValuesArray:netResponse.responseObject[@"data"]]];
+        [_courseListTableView reloadData];
+        [_courseListTableView.mj_footer endRefreshing];
+        [_courseListTableView.mj_header endRefreshing];
+        
+        
+    }];
+}
+
 - (void)index:(NSInteger)index {
     
     _indexSelect = index;
     
-    [_courseListTableView reloadData];
+    if ([_dataArr[_indexSelect] count] == 0) {
+        [self requstUrl];
+        [_courseListTableView reloadData];
+        return;
+    } else {
+        [_courseListTableView reloadData];
+    }
+    
+    
     
 
     
@@ -71,10 +123,10 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (_indexSelect == 2) {
-        return 20;
+        return [_dataArr[_indexSelect]count];
     }
     
-    return _dataArr.count;
+    return [_dataArr[_indexSelect]count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -88,7 +140,7 @@
         return 70;
     }
     
-    return [LZCourseFirstCell tabViewCellHeight:_dataArr[indexPath.section]];
+    return [LZCourseFirstCell tabViewCellHeight:_dataArr[_indexSelect][indexPath.section]];
     
 }
 
@@ -106,8 +158,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZCourseFirstCell" owner:self options:nil] lastObject];
         }
-//        cell.model = _dataArr[indexPath.section];
-        [cell setModel:_dataArr[indexPath.section] index:_indexSelect];
+        [cell setModel:_dataArr[_indexSelect][indexPath.section] index:_indexSelect];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     

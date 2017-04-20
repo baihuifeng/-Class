@@ -10,13 +10,20 @@
 
 @interface LZCourseModel : NSObject
 
+@property (nonatomic,strong) NSString *teacherId;
+
 @property (nonatomic,strong) NSString *teacherName;
-@property (nonatomic,strong) NSString *teacherHeadImgUrl;
-@property (nonatomic,strong) NSString *teachSkill;
-@property (nonatomic,strong) NSString *teacherCellPhone;
+@property (nonatomic,strong) NSString *teacherImg;
+
+@property (nonatomic,strong) NSString *gradeName;
+
+
+@property (nonatomic,strong) NSString *skillName;
+//@property (nonatomic,strong) NSString *teacherCellPhone;
 @property (nonatomic,strong) NSString *address;
-@property (nonatomic,strong) NSString *price;
-@property (nonatomic,strong) NSString *unit;
+@property (nonatomic,strong) NSString *priceDescribe;
+@property (nonatomic,strong) NSString *startTime;
 @property (nonatomic,strong) NSString *status;
+
 
 @end

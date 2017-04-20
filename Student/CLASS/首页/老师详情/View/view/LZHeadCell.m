@@ -8,6 +8,7 @@
 
 #import "LZHeadCell.h"
 #import "LZTagsView.h"
+#import "LZDetailStandardView.h"
 
 @implementation LZHeadCell
 
@@ -55,7 +56,7 @@
             return;
         }
         else {
-            [self.certificationTagsView addSubview:[LZTagsView certificationTagsView:@"certification_icon" title:tagStr x:Xstar y:2.5]];
+            [self.certificationTagsView addSubview:[LZTagsView certificationTagsView:@"stansardIcon" title:tagStr x:Xstar y:2.5]];
             Xstar += lablelWidth + 15;
             
         }
@@ -83,6 +84,15 @@
     if (self.filterResultBlock) {
         self.filterResultBlock();
     }
+    
+}
+- (IBAction)tanceng:(UIButton *)sender {
+    
+    LZDetailStandardView *tancen = [[LZDetailStandardView alloc] init];
+    tancen.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height);
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:tancen];
+    
     
 }
         

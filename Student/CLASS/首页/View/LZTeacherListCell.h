@@ -27,5 +27,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *tagInfo;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *distenceW;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *titleW;
+
+@property (strong, nonatomic) IBOutlet UIImageView *sexImg;
+
+
 
 @end

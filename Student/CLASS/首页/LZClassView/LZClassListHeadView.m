@@ -45,6 +45,10 @@
     view.backgroundColor = UICOLOR_RGB_Alpha(0Xeeeeee, 1.0);
     [self addSubview:view];
     
+    UIView *topview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 0.5)];
+    topview.backgroundColor = UICOLOR_RGB_Alpha(0Xeeeeee, 1.0);
+    [self addSubview:topview];
+    
     return self;
     
 }

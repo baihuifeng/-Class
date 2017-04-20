@@ -33,9 +33,10 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-00-8Pg">
-                        <rect key="frame" x="102" y="13" width="149" height="15"/>
+                        <rect key="frame" x="102" y="13" width="46" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="G4u-Md-f45"/>
+                            <constraint firstAttribute="width" constant="46" id="v48-Hd-Jyi"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,7 +48,7 @@
                             <constraint firstAttribute="width" constant="42" id="JMV-EE-xRH"/>
                             <constraint firstAttribute="height" constant="20" id="kww-BG-zgo"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="1" green="0.34901960784313724" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -80,8 +81,16 @@
                             <constraint firstAttribute="width" constant="66" id="Lwe-p8-2Wv"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V4N-Hn-sKp">
+                        <rect key="frame" x="150" y="13" width="13" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="46m-G8-MEn"/>
+                            <constraint firstAttribute="height" constant="15" id="ga9-RY-Z1D"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="V4N-Hn-sKp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="10q-67-UA9"/>
                     <constraint firstItem="cE5-Ap-ovb" firstAttribute="top" secondItem="U4R-5N-XAe" secondAttribute="bottom" constant="7" id="2VN-KY-69I"/>
                     <constraint firstItem="vLM-mo-cik" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="92" id="3ay-d7-kLA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vLM-mo-cik" secondAttribute="trailing" id="7C0-cG-7Vz"/>
@@ -90,7 +99,7 @@
                     <constraint firstItem="gr1-00-8Pg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="IRT-1X-7ia"/>
                     <constraint firstAttribute="trailingMargin" secondItem="cE5-Ap-ovb" secondAttribute="trailing" constant="5" id="Iwi-Jq-mqd"/>
                     <constraint firstItem="9O7-Up-g5r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="94" id="KOO-GO-5eN"/>
-                    <constraint firstItem="U4R-5N-XAe" firstAttribute="leading" secondItem="gr1-00-8Pg" secondAttribute="trailing" constant="14" id="QzI-v7-p9u"/>
+                    <constraint firstItem="V4N-Hn-sKp" firstAttribute="leading" secondItem="gr1-00-8Pg" secondAttribute="trailing" constant="2" id="LKW-WH-AMB"/>
                     <constraint firstItem="cE5-Ap-ovb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="94" id="Uze-8j-pk5"/>
                     <constraint firstItem="U4R-5N-XAe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="bJv-PF-WmU"/>
                     <constraint firstItem="gr1-00-8Pg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="94" id="d3f-fu-Az3"/>
@@ -109,11 +118,13 @@
                 <outlet property="imgUrl" destination="LDV-8G-KfL" id="DwM-DZ-GMF"/>
                 <outlet property="price" destination="U4R-5N-XAe" id="fQC-Bg-iWw"/>
                 <outlet property="priceW" destination="JMV-EE-xRH" id="VRW-NI-1ow"/>
+                <outlet property="sexImg" destination="V4N-Hn-sKp" id="FyC-pE-MNr"/>
                 <outlet property="tagInfo" destination="cE5-Ap-ovb" id="3ee-Sf-Lug"/>
                 <outlet property="tagSView" destination="vLM-mo-cik" id="2XY-L9-MUk"/>
                 <outlet property="title" destination="gr1-00-8Pg" id="EXf-Yf-hN6"/>
+                <outlet property="titleW" destination="v48-Hd-Jyi" id="457-e2-buS"/>
             </connections>
-            <point key="canvasLocation" x="-1421" y="-2"/>
+            <point key="canvasLocation" x="-1759" y="-113"/>
         </tableViewCell>
     </objects>
     <resources>

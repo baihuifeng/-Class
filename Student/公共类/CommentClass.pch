@@ -29,5 +29,6 @@
 #import "LZRequestUrlManager.h"
 #import "NetApiManager.h"
 #import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
 
 #endif /* CommentClass_pch */

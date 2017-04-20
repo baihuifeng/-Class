@@ -36,15 +36,24 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:headView];
     
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&owener=%@",LZHomeUrl,@"1",@"0"] params:nil finished:^(NetResponse *netResponse) {
-        _model = [LZHomeModel mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
-        [_homeListTableView reloadData];
-        
-    }];
+    [self setRefreshHeader:_homeListTableView completion:nil];
     
+
+    [self refreshRequest];
     
 
     
+}
+
+- (void)refreshRequest {
+    
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&owener=%@",LZHomeUrl,@"1",@"0"] params:nil finished:^(NetResponse *netResponse) {
+        _model = [LZHomeModel mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
+        [_homeListTableView.mj_header endRefreshing];
+        [_homeListTableView reloadData];
+        
+    }];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -98,7 +107,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeThirdCell" owner:self options:nil] lastObject];
         }
-        cell.dataArr = _model.dynamicOperative;
+        cell.dataArr = _model.dynamicNews;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else {

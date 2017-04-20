@@ -26,7 +26,7 @@
     _title.text = model.title;
     _price.text = model.price;
     
-    _priceW.constant = [NSString stringSizeWithString:_price.text maxSize:CGSizeMake(CGFLOAT_MAX, 12) wordFont:12].width+5;
+    _priceW.constant = [NSString stringSizeWithString:_price.text maxSize:CGSizeMake(CGFLOAT_MAX, 15) wordFont:15].width+5;
     
     if ([model.isExclusive isEqualToString:@"0"]) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, _imgUrl.frame.size.height-15, _imgUrl.frame.size.width, 15)];
@@ -41,27 +41,36 @@
         [view addSubview:label];
     }
     
-    _tagInfo.text = [model.tagsInfo componentsJoinedByString:@"　"];
+    
+    _titleW.constant = [NSString stringSizeWithString:_title.text maxSize:CGSizeMake(kScreen_Width-102-_priceW.constant-10, 15) wordFont:15].width+5;
+    
+    NSMutableArray *taginfo = [[NSMutableArray alloc] init];
+    for (TagsInfoModel *tagStr in model.tagsInfo) {
+        [taginfo addObject:tagStr.name];
+    }
+    
+    _tagInfo.text = [taginfo componentsJoinedByString:@"　"];
     
     NSString *pingfen = [NSString stringWithFormat:@"%.f%%",[_model.satisfaction floatValue]/5*100];
     NSString *juli = [_model.distance floatValue] > 1000 ? [NSString stringWithFormat:@"%.2fKm",[_model.distance floatValue]/1000] : [NSString stringWithFormat:@"%@Km",_model.distance];
     
+    _sexImg.image = [model.sex isEqualToString:@"男"] ? [UIImage imageNamed:@"LZ_nan_icon"] : [UIImage imageNamed:@"LZ_nv_icon"];
     
-    model.tagsInfo = @[pingfen,juli];
+    NSArray *distent = @[pingfen,juli];
     
     
     int DstarX = 0;
     
     NSArray *ImgArr = @[@"LZHomePinglun_icon",@"LZHome_distence_icon"];
     int limitD=0;
-    for (NSString *str in model.tagsInfo) {
+    for (NSString *str in distent) {
         limitD+= [NSString stringSizeWithString:str maxSize:CGSizeMake(CGFLOAT_MAX, 12) wordFont:12].width+20;
     }
     
     
     int index = 0;
     
-    for (NSString *tagStr in model.tagsInfo) {
+    for (NSString *tagStr in distent) {
         
         CGFloat lablelWidth = [LZTagsView getTagLabelWidth:tagStr];
         

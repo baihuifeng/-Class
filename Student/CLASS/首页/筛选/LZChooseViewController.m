@@ -51,11 +51,9 @@
 }
 
 - (void)hiddenView {
-//    if ([_biaoshi isEqualToString:@"nomal"]) {
-//        if (self.rowBlock) {
-            self.rowBlock(_rowSelected,_moreArr);
-//        }
-//    }
+
+    self.rowBlock(_rowSelected,_moreArr);
+
 
 }
 

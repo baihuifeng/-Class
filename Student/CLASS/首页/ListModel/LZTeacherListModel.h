@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@interface TagsInfoModel : NSObject
+@property (nonatomic,copy) NSString *id;
+@property (nonatomic,copy) NSString *name;
+@end
+
 @interface ListModel : NSObject
 
 @property (nonatomic,copy) NSString *userID;
@@ -36,6 +41,7 @@
 @property (nonatomic,strong) NSArray *dynamicBanner;
 @property (nonatomic,strong) NSArray *dynamicOperative;
 @property (nonatomic,strong) NSArray *skills;
+@property (nonatomic,strong) NSArray *dynamicNews;
 @property (nonatomic,strong) NSArray *recommendTeachers;
 @end
 

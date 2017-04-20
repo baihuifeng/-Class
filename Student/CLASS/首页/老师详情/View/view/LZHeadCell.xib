@@ -215,14 +215,24 @@
                             <constraint firstAttribute="height" constant="20" id="f6C-Xk-W3A"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-d5-6hr">
+                        <rect key="frame" x="0.0" y="215" width="320" height="20"/>
+                        <connections>
+                            <action selector="tanceng:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bNb-Gi-nNp"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="zcb-d5-6hr" firstAttribute="top" secondItem="BBW-9S-rRA" secondAttribute="bottom" id="5No-kz-UQ2"/>
                     <constraint firstItem="BBW-9S-rRA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="8Sr-3X-Fc7"/>
                     <constraint firstAttribute="bottomMargin" secondItem="USJ-qt-5tT" secondAttribute="bottom" constant="-9" id="A0W-Cx-SSi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zcb-d5-6hr" secondAttribute="bottom" constant="-8.5" id="FYi-9f-cDD"/>
+                    <constraint firstItem="zcb-d5-6hr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="IBn-ka-gVh"/>
                     <constraint firstItem="USJ-qt-5tT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Sa1-ez-RD7"/>
                     <constraint firstItem="USJ-qt-5tT" firstAttribute="top" secondItem="BBW-9S-rRA" secondAttribute="bottom" id="T19-5P-Rqd"/>
                     <constraint firstAttribute="trailingMargin" secondItem="USJ-qt-5tT" secondAttribute="trailing" constant="-8" id="awE-uc-RJe"/>
                     <constraint firstAttribute="trailingMargin" secondItem="BBW-9S-rRA" secondAttribute="trailing" constant="-8" id="rU0-jX-nzH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zcb-d5-6hr" secondAttribute="trailing" constant="-8" id="vCc-oN-tHE"/>
                     <constraint firstItem="BBW-9S-rRA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ytL-Xy-KPq"/>
                 </constraints>
             </tableViewCellContentView>
@@ -236,7 +246,7 @@
                 <outlet property="teachingAge" destination="hdu-k9-XZU" id="yoQ-7x-bYG"/>
                 <outlet property="timeLabel" destination="fBv-v4-hut" id="bHF-Kv-KMt"/>
             </connections>
-            <point key="canvasLocation" x="-1750" y="-209.5"/>
+            <point key="canvasLocation" x="-2213" y="-263"/>
         </tableViewCell>
     </objects>
 </document>

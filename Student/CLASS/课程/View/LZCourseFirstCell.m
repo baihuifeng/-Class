@@ -17,12 +17,13 @@
 
 - (void)setModel:(LZCourseModel *)model index:(NSInteger)index {
     _model = model;
+    [_teacherHeadImgUrl sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,model.teacherImg]] placeholderImage:nil];
     _teacherName.text = model.teacherName;
-    _teachSkill.text = model.teachSkill;
-    _price.text = [NSString stringWithFormat:@"老师课酬：%@",model.price];
-    _unit.text = model.unit;
+    _teachSkill.text = [NSString stringWithFormat:@"%@-%@",model.gradeName,model.skillName];
+    _price.text = [NSString stringWithFormat:@"老师课酬：%@",model.priceDescribe];
+    _unit.text = model.startTime;
     _address.text = [NSString stringWithFormat:@"上课地址：%@",model.address];
-    
+    _teacherId.text = [NSString stringWithFormat:@"老师ID:%@",model.teacherId];
     if (index == 0) {
         if ([model.status isEqualToString:@"0"]) {
             [_stateBtn setTitle:@"等待老师同意" forState:UIControlStateNormal];
@@ -37,12 +38,15 @@
         _stateBtn.layer.borderColor =UICOLOR_RGB_Alpha(0xF5A623, 1.0).CGColor;
     } else if (index == 1) {
         
-        [_stateBtn setTitle:[NSString stringWithFormat:@" 去支付：%@ ",model.price] forState:UIControlStateNormal];
+        [_stateBtn setTitle:[NSString stringWithFormat:@" 去支付：%@ ",model.priceDescribe] forState:UIControlStateNormal];
         [_stateBtn setTitleColor:UICOLOR_RGB_Alpha(0xF5A623, 1.0) forState:UIControlStateNormal];
         _stateBtn.layer.cornerRadius = 4;
         _stateBtn.layer.borderWidth = 0.5;
         _stateBtn.layer.borderColor =UICOLOR_RGB_Alpha(0xF5A623, 1.0).CGColor;
             
+    } else {
+    
+        
     }
     
 
