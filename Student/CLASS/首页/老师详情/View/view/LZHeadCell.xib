@@ -227,6 +227,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="certificationTagsView" destination="USJ-qt-5tT" id="GCW-qr-uTP"/>
                 <outlet property="headImg" destination="ag8-Mx-Th7" id="ReO-z8-VF9"/>
                 <outlet property="nickName" destination="00H-BL-k6o" id="nrg-Q3-yMv"/>
                 <outlet property="priceDescribe" destination="G2s-BH-kur" id="jKJ-KP-mE9"/>

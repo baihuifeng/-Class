@@ -13,5 +13,7 @@
 
 @property (nonatomic,strong) NSArray *dataArr;
 
+@property (nonatomic,strong) NSArray *grades;
+
 @property (strong, nonatomic) IBOutlet UITableView *yuyueTableView;
 @end

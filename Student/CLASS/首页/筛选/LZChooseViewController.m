@@ -26,6 +26,8 @@
 
 @property (strong, nonatomic) IBOutlet UIView *backView;
 
+@property (strong,nonatomic) NSMutableArray *moreArr;
+
 @end
 
 @implementation LZChooseViewController
@@ -34,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _headTitle = @[@"性别",@"教龄",@"其他"];
+    
+    _moreArr = [NSMutableArray arrayWithObjects:@0,@0,@0, nil];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 0) style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -47,11 +51,11 @@
 }
 
 - (void)hiddenView {
-    if ([_biaoshi isEqualToString:@"nomal"]) {
-        if (self.rowBlock) {
-            self.rowBlock(_rowSelected);
-        }
-    }
+//    if ([_biaoshi isEqualToString:@"nomal"]) {
+//        if (self.rowBlock) {
+            self.rowBlock(_rowSelected,_moreArr);
+//        }
+//    }
 
 }
 
@@ -115,7 +119,7 @@
         }
         
         cell.textLabel.text = model.name;
-        cell.textLabel.textColor = _rowSelected == indexPath.row ? UICOLOR_RGB_Alpha(0X23CD77, 1.0): UICOLOR_RGB_Alpha(0X666666, 1.0);
+        cell.textLabel.textColor = [_moreArr[indexPath.section] intValue] == indexPath.row ? UICOLOR_RGB_Alpha(0X23CD77, 1.0): UICOLOR_RGB_Alpha(0X666666, 1.0);
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.font = [UIFont systemFontOfSize:15.0];
         return cell;
@@ -151,8 +155,12 @@
     if ([_biaoshi isEqualToString:@"nomal"]) {
         if (self.rowBlock) {
             _rowSelected = (int)indexPath.section;
-            self.rowBlock(indexPath.section);
+            self.rowBlock(indexPath.section,_moreArr);
         }
+    } else {
+        [_moreArr replaceObjectAtIndex:indexPath.section withObject:@(indexPath.row)];
+        NSIndexSet *indexSet=[[NSIndexSet alloc]initWithIndex:indexPath.section];
+        [_tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     
     
@@ -196,6 +204,7 @@
         [_centerBtn setTitleColor:UICOLOR_RGB_Alpha(0X333333, 1.0) forState:UIControlStateNormal];
         _centerBtn.tintColor = [UIColor clearColor];
         [_centerBtn setBackgroundColor:[UIColor whiteColor]];
+        [_centerBtn addTarget:self action:@selector(hiddenView) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_centerBtn];
     }
     

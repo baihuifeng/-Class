@@ -18,6 +18,9 @@
 @property (nonatomic,copy) NSString *satisfaction;
 @property (nonatomic,strong) NSArray *certificationTags;
 @property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *distance;
+@property (nonatomic,copy) NSString *sex;
+@property (nonatomic,strong) NSArray *features;
 @end
 
 @interface LZTeacherListModel : NSObject

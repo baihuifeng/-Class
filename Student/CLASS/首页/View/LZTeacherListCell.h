@@ -24,6 +24,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *distenceView;
 
+@property (weak, nonatomic) IBOutlet UILabel *tagInfo;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *distenceW;
 

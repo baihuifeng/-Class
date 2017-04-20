@@ -28,16 +28,16 @@
 
     NSMutableArray *buttonMutableArr = [[NSMutableArray alloc] init];
     for (int i = 0; i<dataArr.count; i++) {
-        PriceModel *Price = dataArr[i];
+        GradesModel *Grades = dataArr[i];
         
         if (i%XNum == 0 && i) {
             startX = 0;
             startY += 25+10;
         }
         
-        UIButton *button = [self SenderTagsName:Price.gradeName x:startX y:startY tag:i+100];
+        UIButton *button = [self SenderTagsName:Grades.gradeName x:startX y:startY tag:i+100];
         
-        
+        NSLog(@"%@",Grades.gradeName);
         [self.contentView addSubview:button];
         startX += 75+space;
         
@@ -114,23 +114,24 @@
 
 #pragma -价格
 
-- (void)setPriceModel:(PriceModel *)priceModel index:(int)priceIndex {
-    _priceModel = priceModel;
+- (void)setPriceModel:(NSArray *)priceArr index:(int)priceIndex {
+//    _priceModel = priceModel;
     
-    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
-    if (priceModel.visit) {
-        [titleArr addObject:[NSString stringWithFormat:@"老师上门\n%@/小时",priceModel.visit]];
-    }
-    
-    if (priceModel.come) {
-        [titleArr addObject:[NSString stringWithFormat:@"学生上门\n%@/小时",priceModel.come]];
-    }
+//    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+//    if (priceModel.visit) {
+//        [titleArr addObject:[NSString stringWithFormat:@"老师上门\n%@/小时",priceModel.visit]];
+//    }
+//    
+//    if (priceModel.come) {
+//        [titleArr addObject:[NSString stringWithFormat:@"学生上门\n%@/小时",priceModel.come]];
+//    }
     
     
     NSMutableArray *priceMutableArr = [[NSMutableArray alloc] init];
     
-    for (int i= 0; i < titleArr.count; i++) {
-        UIButton *button = [self SenderTagsName:titleArr[i] x:10+i*100 tag:i+10];
+    for (int i= 0; i < priceArr.count; i++) {
+        PriceModel *model = priceArr[i];
+        UIButton *button = [self SenderTagsName:[NSString stringWithFormat:@"%@\n%@",model.serviceName,model.price] x:10+i*100 tag:i+10];
         
         [self.contentView addSubview:button];
         [priceMutableArr addObject:button];

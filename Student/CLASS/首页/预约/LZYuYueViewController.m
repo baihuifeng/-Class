@@ -43,9 +43,9 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    if (_dataArr.count == 0) {
-        return 0;
-    }
+//    if (_dataArr.count == 0) {
+//        return 0;
+//    }
     
     return 5;
 }
@@ -60,7 +60,7 @@
     if (indexPath.section == 0) {
         return 50;
     } else if (indexPath.section == 1) {
-        return [LZYuYueGradeCell gradeNameArr:_dataArr];
+        return [LZYuYueGradeCell gradeNameArr:_grades];
     } else if (indexPath.section == 2){
         return 60;
     } else if (indexPath.section == 3) {
@@ -91,9 +91,9 @@
         __weak typeof(self) weakSelf = self;
         cell.filterResultBlock = ^(int count) {
             weakSelf.gradeIndex = count;
-            [_yuyueTableView reloadData];
+            [weakSelf.yuyueTableView reloadData];
         };
-        [cell setDataArr:_dataArr index:_gradeIndex];
+        [cell setDataArr:weakSelf.grades index:weakSelf.gradeIndex];
         return cell;
     
     } else if (indexPath.section == 2) {
@@ -102,7 +102,7 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        [cell setPriceModel:_dataArr[_gradeIndex] index:0];
+//        [cell setPriceModel:_dataArr index:0];
         return cell;
     } else if(indexPath.section == 3){
         LZYuYueCountCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZYuYueCountCell"];

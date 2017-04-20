@@ -120,6 +120,7 @@
 - (IBAction)yuyue:(UIButton *)sender {
     LZYuYueViewController *yuyueVC = [[LZYuYueViewController alloc] init];
     yuyueVC.dataArr = _model.price;
+    yuyueVC.grades = _model.grades;
     [self.navigationController pushViewController:yuyueVC animated:YES];
 }
 

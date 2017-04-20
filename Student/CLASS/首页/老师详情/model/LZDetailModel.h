@@ -78,11 +78,8 @@
 
 @interface PriceModel : NSObject
 
-@property (nonatomic,copy) NSString *gradeId;
-@property (nonatomic,copy) NSString *gradeName;
-@property (nonatomic,copy) NSString *skillId;
-@property (nonatomic,copy) NSString *skillName;
-@property (nonatomic,copy) NSString *visit;
-@property (nonatomic,copy) NSString *come;
+@property (nonatomic,copy) NSString *id;
+@property (nonatomic,copy) NSString *serviceName;
+@property (nonatomic,copy) NSString *price;
 
 @end

@@ -41,10 +41,13 @@
         [view addSubview:label];
     }
     
+    _tagInfo.text = [model.tagsInfo componentsJoinedByString:@"　"];
+    
+    NSString *pingfen = [NSString stringWithFormat:@"%.f%%",[_model.satisfaction floatValue]/5*100];
+    NSString *juli = [_model.distance floatValue] > 1000 ? [NSString stringWithFormat:@"%.2fKm",[_model.distance floatValue]/1000] : [NSString stringWithFormat:@"%@Km",_model.distance];
     
     
-    
-    model.tagsInfo = @[@"50%",@"2.2555KM"];
+    model.tagsInfo = @[pingfen,juli];
     
     
     int DstarX = 0;
@@ -78,12 +81,6 @@
     
     [self layoutIfNeeded];
     
-    
-    
-    
-    
-    
-    model.tagsInfo = @[@"测试",@"测试",@"测试"];
     int starX = 0;
     
     int starY = 0;
@@ -91,7 +88,7 @@
     int limitX = kScreen_Width-110;
     NSArray *titleArrColor = @[RGB(247, 112, 111),RGB(113, 37, 239),RGB(209, 100, 236),RGB(19, 144, 241),RGB(234, 103, 24),RGB(242, 182, 38)];
     int i = 0;
-    for (NSString *tagStr in model.tagsInfo) {
+    for (NSString *tagStr in model.features) {
         
         CGFloat lablelWidth = [LZTagsView getTagLabelWidth:tagStr];
         UIColor *titleColor = titleArrColor[i%6];
@@ -112,7 +109,7 @@
     
     
     int limit = kScreen_Width-limitD-100;
-    for (NSString *tagStr in model.tagsInfo) {
+    for (NSString *tagStr in model.certificationTags) {
         
         CGFloat lablelWidth = [LZTagsView getTagLabelWidth:tagStr];
         

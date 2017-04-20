@@ -15,7 +15,7 @@
 - (void)dataArr:(NSArray *)dataArr selectedIndex:(int)selectedIndex;
 
 ///回调
-@property (nonatomic, copy) void (^rowBlock) (NSInteger index);
+@property (nonatomic, copy) void (^rowBlock) (NSInteger index ,NSArray *moreArr);
 
 
 - (void)moreViewIndex:(int)index;

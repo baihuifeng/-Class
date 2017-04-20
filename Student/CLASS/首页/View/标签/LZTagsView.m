@@ -20,7 +20,7 @@
 
 + (UILabel *)getTag:(NSString *)tagString x:(CGFloat)x y:(CGFloat)y w:(CGFloat)w backColor:(UIColor *)backColor titleColor:(UIColor *)titltcolor {
     
-    UILabel *tagLabel = [[UILabel alloc]initWithFrame:CGRectMake(x, y, w, 12)];
+    UILabel *tagLabel = [[UILabel alloc]initWithFrame:CGRectMake(x, y, w, 14)];
     tagLabel.clipsToBounds = YES;
     tagLabel.layer.cornerRadius = 2;
     tagLabel.text = tagString;

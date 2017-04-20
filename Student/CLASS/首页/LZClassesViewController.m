@@ -39,6 +39,8 @@
 
 @property (nonatomic,strong) NSMutableArray *chooseIndexArr;
 
+@property (nonatomic,strong) NSArray *moreArr;
+
 
 
 @end
@@ -49,8 +51,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _chooseIndexArr = [NSMutableArray arrayWithObjects:@0,@0,@0, nil];
-    
+    _chooseIndexArr = [NSMutableArray arrayWithObjects:@0,@0,@0,@0, nil];
+    _moreArr = @[@0,@0,@0];
     
     [self.chooseVc dataArr:[LZManagerChoose getSequenceCondition] selectedIndex:[_chooseIndexArr[0] intValue]];
     
@@ -194,16 +196,21 @@
         _chooseVc.view.frame = CGRectMake(0, 40, kScreen_Width, kScreen_Height);
         _chooseVc.view.hidden = YES;
         __weak typeof(self) weakSelf = self;
-        _chooseVc.rowBlock = ^(NSInteger rowIndex) {
+        _chooseVc.rowBlock = ^(NSInteger rowIndex,NSArray *moreArr) {
             
             [weakSelf.chooseIndexArr replaceObjectAtIndex:weakSelf.buttonIndex withObject:@(rowIndex)];
             weakSelf.chooseVc.view.hidden = YES;
             for (UIButton *btn in weakSelf.headView.buttonArr) {
                 btn.selected = NO;
             }
+            weakSelf.moreArr = moreArr;
+            
+            NSLog(@"-------=======>>>>%@,%@",weakSelf.chooseIndexArr,weakSelf.moreArr);
         };
         [self addChildViewController:_chooseVc];
         [self.view addSubview:_chooseVc.view];
+        
+        
     }
     
     return _chooseVc;
