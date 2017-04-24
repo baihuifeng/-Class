@@ -20,6 +20,9 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = JYControllerBackColor;
+    
+
+    
 }
 
 
@@ -47,6 +50,9 @@
     tableView.mj_header = header;
     
 }
+
+
+
 
 
 - (void)index:(NSInteger)index {

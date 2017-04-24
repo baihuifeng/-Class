@@ -43,13 +43,13 @@
     [super viewDidLoad];
     
     // 添加子控制器
-    [self setupChildVc:[LZHomeViewController new] title:@"首页" image:@"tab_Home" selectedImage:@"tab_Home_ed"];
+    [self setupChildVc:[LZHomeViewController new] title:@"" image:@"shouye_icon_deful" selectedImage:@"shouye_icon_selected"];
 //
-    [self setupChildVc:[LZSTeacherViewController new] title:@"老师" image:@"tab_jieyi" selectedImage:@"tab_jie_yied"];
+    [self setupChildVc:[LZSTeacherViewController new] title:@"" image:@"jieyi_icon_deful" selectedImage:@"jieyi_icon_selected"];
 //
-    [self setupChildVc:[LZCourseViewController new] title:@"课程" image:@"tab_kebiao" selectedImage:@"tab_kebiao _ed"];
+    [self setupChildVc:[LZCourseViewController new] title:@"" image:@"kebiao_icon_deful" selectedImage:@"kebiao_icon_selected"];
     
-     [self setupChildVc:[LZMineViewController new] title:@"我的" image:@"tab_mine" selectedImage:@"tab_mine_ed"];
+     [self setupChildVc:[LZMineViewController new] title:@"" image:@"mine_icon_deful" selectedImage:@"mine_icon_selected"];
     
 //    // 更换tabBar
      [self setValue:[[HHTababr alloc] init] forKey:@"tabBar"];
@@ -69,7 +69,10 @@
     UIImage *selectedImageOriginal =  [UIImage imageNamed:selectedImage];
     vc.tabBarItem.image =[imageOriginal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [selectedImageOriginal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.tabBarItem.imageInsets = UIEdgeInsetsMake(8,0, -8, 0);
     vc.title = title;
+    
+
     // 包装一个导航控制器，添加导航控制器为tabBarController的子控制器
     HHNavigationViewController *nav = [[HHNavigationViewController alloc]initWithRootViewController:vc];
     [self addChildViewController:nav];

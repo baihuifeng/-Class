@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4971FA3FB5C8D122A987EF7238D04D80'
+               BlueprintIdentifier = '145EE729617C5D8624D1DD03F028B6A6'
                BlueprintName = 'YBAttributeTextTapAction'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libYBAttributeTextTapAction.a'>

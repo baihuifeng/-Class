@@ -12,6 +12,7 @@
 #import "LZDetailStandardView.h"
 #import "LZDetailModel.h"
 #import "LZYuYueViewController.h"
+#import "LZChatViewController.h"
 
 @interface LZTeacherDetailViewController ()
 
@@ -104,6 +105,11 @@
     [self.navigationController pushViewController:yuyueVC animated:YES];
 }
 
+- (IBAction)zixun:(UIButton *)sender {
+    LZChatViewController *chatVC = [[LZChatViewController alloc] initWithConversationChatter:@"111" conversationType:EMConversationTypeChat];
+    chatVC.title = @"111";
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

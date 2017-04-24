@@ -88,6 +88,9 @@
                             <state key="normal" title="在线咨询" image="yuyue_icon">
                                 <color key="titleColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="zixun:" destination="-1" eventType="touchUpInside" id="my8-cd-bvF"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bC-HE-NgR">
                             <rect key="frame" x="187.5" y="0.0" width="187.5" height="45"/>

@@ -151,6 +151,17 @@
 		49A369EA1EA7042500BD34B2 /* LZChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A369E81EA7042500BD34B2 /* LZChooseViewController.xib */; };
 		49A369EE1EA7290600BD34B2 /* LZManagerChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */; };
 		49A369F11EA896C600BD34B2 /* JYCustomPullGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A369F01EA896C600BD34B2 /* JYCustomPullGifHeader.m */; };
+		49A369F31EA99FC700BD34B2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369F21EA99FC700BD34B2 /* CoreMedia.framework */; };
+		49A369F51EA99FCF00BD34B2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369F41EA99FCF00BD34B2 /* AudioToolbox.framework */; };
+		49A369F71EA99FD800BD34B2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369F61EA99FD800BD34B2 /* AVFoundation.framework */; };
+		49A369F91EA99FE000BD34B2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369F81EA99FE000BD34B2 /* MobileCoreServices.framework */; };
+		49A369FB1EA99FE900BD34B2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369FA1EA99FE900BD34B2 /* ImageIO.framework */; };
+		49A369FD1EA99FF800BD34B2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369FC1EA99FF800BD34B2 /* libc++.tbd */; };
+		49A369FF1EA9A00600BD34B2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A369FE1EA9A00600BD34B2 /* libz.tbd */; };
+		49A36A011EA9A01400BD34B2 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A36A001EA9A01400BD34B2 /* libstdc++.6.0.9.tbd */; };
+		49A36A031EA9A02100BD34B2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A36A021EA9A02100BD34B2 /* libsqlite3.tbd */; };
+		49A36A051EA9A02B00BD34B2 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A36A041EA9A02B00BD34B2 /* libiconv.tbd */; };
+		49A36A091EA9D76100BD34B2 /* LZChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A36A081EA9D76100BD34B2 /* LZChatViewController.m */; };
 		49AECE191E83612B0057C02F /* SpecialityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE171E83612B0057C02F /* SpecialityCell.m */; };
 		49AECE1A1E83612B0057C02F /* SpecialityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AECE181E83612B0057C02F /* SpecialityCell.xib */; };
 		49AECE1E1E8364270057C02F /* TeacherCaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AECE1C1E8364270057C02F /* TeacherCaseCell.m */; };
@@ -441,6 +452,18 @@
 		49A369ED1EA7290600BD34B2 /* LZManagerChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZManagerChoose.m; sourceTree = "<group>"; };
 		49A369EF1EA896C600BD34B2 /* JYCustomPullGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCustomPullGifHeader.h; sourceTree = "<group>"; };
 		49A369F01EA896C600BD34B2 /* JYCustomPullGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCustomPullGifHeader.m; sourceTree = "<group>"; };
+		49A369F21EA99FC700BD34B2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		49A369F41EA99FCF00BD34B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		49A369F61EA99FD800BD34B2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		49A369F81EA99FE000BD34B2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		49A369FA1EA99FE900BD34B2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		49A369FC1EA99FF800BD34B2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		49A369FE1EA9A00600BD34B2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		49A36A001EA9A01400BD34B2 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		49A36A021EA9A02100BD34B2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		49A36A041EA9A02B00BD34B2 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		49A36A071EA9D76100BD34B2 /* LZChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChatViewController.h; sourceTree = "<group>"; };
+		49A36A081EA9D76100BD34B2 /* LZChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatViewController.m; sourceTree = "<group>"; };
 		49AECE161E83612B0057C02F /* SpecialityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialityCell.h; sourceTree = "<group>"; };
 		49AECE171E83612B0057C02F /* SpecialityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialityCell.m; sourceTree = "<group>"; };
 		49AECE181E83612B0057C02F /* SpecialityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialityCell.xib; sourceTree = "<group>"; };
@@ -500,6 +523,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A36A051EA9A02B00BD34B2 /* libiconv.tbd in Frameworks */,
+				49A36A031EA9A02100BD34B2 /* libsqlite3.tbd in Frameworks */,
+				49A36A011EA9A01400BD34B2 /* libstdc++.6.0.9.tbd in Frameworks */,
+				49A369FF1EA9A00600BD34B2 /* libz.tbd in Frameworks */,
+				49A369FD1EA99FF800BD34B2 /* libc++.tbd in Frameworks */,
+				49A369FB1EA99FE900BD34B2 /* ImageIO.framework in Frameworks */,
+				49A369F91EA99FE000BD34B2 /* MobileCoreServices.framework in Frameworks */,
+				49A369F71EA99FD800BD34B2 /* AVFoundation.framework in Frameworks */,
+				49A369F51EA99FCF00BD34B2 /* AudioToolbox.framework in Frameworks */,
+				49A369F31EA99FC700BD34B2 /* CoreMedia.framework in Frameworks */,
 				8CCECCB608BFC5A07FAA469B /* libPods-Student.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,6 +804,7 @@
 		491BA1B51E7B77A600E92175 /* CLASS */ = {
 			isa = PBXGroup;
 			children = (
+				49A36A061EA9D74700BD34B2 /* 聊天 */,
 				215CA8FB1EA4F80E007213C8 /* 请求 */,
 				491BA1B91E7B780200E92175 /* 首页 */,
 				491BA1B81E7B780200E92175 /* 老师 */,
@@ -1094,6 +1128,15 @@
 			path = "管理筛选条件";
 			sourceTree = "<group>";
 		};
+		49A36A061EA9D74700BD34B2 /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				49A36A071EA9D76100BD34B2 /* LZChatViewController.h */,
+				49A36A081EA9D76100BD34B2 /* LZChatViewController.m */,
+			);
+			path = "聊天";
+			sourceTree = "<group>";
+		};
 		49AECE3F1E84F7E30057C02F /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1188,6 +1231,16 @@
 		6777F8CDCA9D0AE72E1D4E68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49A36A041EA9A02B00BD34B2 /* libiconv.tbd */,
+				49A36A021EA9A02100BD34B2 /* libsqlite3.tbd */,
+				49A36A001EA9A01400BD34B2 /* libstdc++.6.0.9.tbd */,
+				49A369FE1EA9A00600BD34B2 /* libz.tbd */,
+				49A369FC1EA99FF800BD34B2 /* libc++.tbd */,
+				49A369FA1EA99FE900BD34B2 /* ImageIO.framework */,
+				49A369F81EA99FE000BD34B2 /* MobileCoreServices.framework */,
+				49A369F61EA99FD800BD34B2 /* AVFoundation.framework */,
+				49A369F41EA99FCF00BD34B2 /* AudioToolbox.framework */,
+				49A369F21EA99FC700BD34B2 /* CoreMedia.framework */,
 				DA3B6E76FDE9E22696F3E978 /* libPods-Student.a */,
 			);
 			name = Frameworks;
@@ -1509,6 +1562,7 @@
 				49D0F2631E811C31009B56CF /* LZClassesListCell.m in Sources */,
 				21FE2DD51E8770F20050F4C9 /* LZDetaiCellHeadView.m in Sources */,
 				49A369DE1EA6029B00BD34B2 /* LZYuYueCountCell.m in Sources */,
+				49A36A091EA9D76100BD34B2 /* LZChatViewController.m in Sources */,
 				21B12E151E8F8F2C000EB1D9 /* LZCourseModel.m in Sources */,
 				49AECE221E83A3400057C02F /* LZPayViewController.m in Sources */,
 				21E860921E8CD00E004A0AC9 /* PullView.m in Sources */,
@@ -1699,9 +1753,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
+				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
@@ -1716,9 +1771,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2Y3Z3T4NVH;
+				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/bai/Desktop/学生/Student/公共类/CommentClass.pch";
+				GCC_PREFIX_HEADER = "/Users/Qiao-Lionheart/Desktop/学生Class/Student/公共类/CommentClass.pch";
 				INFOPLIST_FILE = Student/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LZ.Student;
