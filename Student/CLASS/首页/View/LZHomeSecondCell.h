@@ -12,4 +12,8 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong,nonatomic) NSArray *dataArr;
 
+@property (nonatomic,strong) LZHomeModel *homeModel;
+
+- (void)setDataArr:(NSArray *)dataArr homeModel:(LZHomeModel *)homeModel;
+
 @end

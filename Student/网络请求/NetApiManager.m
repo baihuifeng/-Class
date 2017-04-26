@@ -104,6 +104,39 @@ static NetApiManager *netApiManager;
     }];
 }
 
++ (void)postToImgUrl:(NSString *)strUrl parme:(NSDictionary *)parme ImgArr:(NSArray *)imgArr finished:(NetApiCallBack)finished {
+    AFHTTPSessionManager *manager = [NetApiManager sharedInstance].manager;
+    
+    [manager POST:strUrl parameters:parme constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        for (int i = 0; i<imgArr.count; i++) {
+            
+            UIImage *image = imgArr[i];
+            NSData* imageData = UIImageJPEGRepresentation(image, 0.3);
+            if (!imageData) {
+                imageData = UIImagePNGRepresentation(image);
+            }
+            [formData appendPartWithFileData:imageData name:@"file" fileName:[NSString stringWithFormat:@"file%d",i] mimeType:@"image/jpeg"];
+            
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        responseObject = [self replaceNullsWithBlanksWithResponseObject:responseObject];
+        
+        NetResponse *apiObject = [[NetResponse alloc]initWithTask:task responseObject:responseObject error:nil];
+        finished(apiObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NetResponse *apiObject = [[NetResponse alloc]initWithTask:task responseObject:nil error:error];
+        
+        [apiObject checkNotReachability];
+        finished(apiObject);
+        
+    }];
+}
+
 
 - (AFHTTPSessionManager *)manager
 {
@@ -231,10 +264,17 @@ static NetApiManager *netApiManager;
             self.isSuccess = YES;
         }else{
             self.isSuccess = NO;
-            int code;
-            self.errorMessage = [self getErrorMessage:error code:&code];//error.errorMsg;
-            self.code = code;
-            self.error = error;
+            if (responseObject!= nil) {
+                self.errorMessage = responseObject[@"msg"];
+            } else {
+                int code;
+                
+                self.errorMessage = [self getErrorMessage:error code:&code];
+                self.code = code;
+                self.error = error;
+
+            }
+
         }
     }
     return self;
@@ -245,7 +285,7 @@ static NetApiManager *netApiManager;
     NSString *errorMessage = nil;
     for (id data in error.userInfo.allValues) {
         if ([data isKindOfClass:[NSData class]]) {
-            //            NSString * totalString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                        NSString * totalString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             errorMessage = dic[@"msg"];
             *code = [dic[@"status"] intValue];

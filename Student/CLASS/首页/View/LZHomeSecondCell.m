@@ -9,6 +9,7 @@
 #import "LZHomeSecondCell.h"
 #import "LZSecondItmesCell.h"
 #import "LZTeacherListModel.h"
+#import "LZClassesViewController.h"
 
 @implementation LZHomeSecondCell
 
@@ -19,7 +20,8 @@
 
 }
 
-- (void)setDataArr:(NSArray *)dataArr {
+- (void)setDataArr:(NSArray *)dataArr homeModel:(LZHomeModel *)homeModel {
+    _homeModel = homeModel;
     _dataArr = dataArr;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
@@ -43,6 +45,7 @@
     LZSecondItmesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LZSecondItmesCell" forIndexPath:indexPath];
     SkillsModel *model = _dataArr[indexPath.row];
     cell.titleLabel.text = model.tagTitle;
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,model.tagImgUrl]] placeholderImage:nil];
 
     return cell;
     
@@ -50,6 +53,16 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     return CGSizeMake(kScreen_Width/5, 86);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    SkillsModel *model = _dataArr[indexPath.row];
+    HHTabbarViewController *tabar = (HHTabbarViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    LZClassesViewController *classVc = [[LZClassesViewController alloc] init];
+    classVc.titleModel = model;
+    classVc.listModel = _homeModel;
+    [(UINavigationController *)tabar.selectedViewController pushViewController:classVc animated:YES];
 }
 
 

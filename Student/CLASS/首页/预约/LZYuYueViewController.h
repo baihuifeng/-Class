@@ -11,9 +11,18 @@
 
 @interface LZYuYueViewController : LZRootViewController
 
-@property (nonatomic,strong) NSArray *dataArr;
+@property (nonatomic,strong) PriceModel *PriceModel;
 
 @property (nonatomic,strong) NSArray *grades;
 
+@property (nonatomic,strong) NSArray *skillsArr;
+
+@property (nonatomic,strong) LZDetailModel *detailModel;
+
 @property (strong, nonatomic) IBOutlet UITableView *yuyueTableView;
+
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+
+
 @end

@@ -26,9 +26,14 @@
 @property (nonatomic,strong) NSArray *priceBtnArr;
 
 @property (assign,nonatomic) int indexPrice;
-- (void)setPriceModel:(NSArray *)priceArr index:(int)priceIndex;
+- (void)setPriceModel:(PriceModel *)PriceModel index:(int)priceIndex;
 
 //选择年级
-@property (nonatomic, copy) void (^filterResultBlock) (int count);
+@property (nonatomic, copy) void (^filterResultBlock) (NSArray *gradeArr);
+
+@property (nonatomic,strong) NSMutableArray *selectedArr;
+
+//选择年级
+@property (nonatomic, copy) void (^priceBlock) (int index);
 
 @end

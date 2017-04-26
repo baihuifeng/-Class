@@ -10,4 +10,10 @@
 
 @interface LZMineYXViewController : LZRootViewController
 
+@property (nonatomic,strong) JYAccount *model;
+@property (nonatomic,assign) ComeApp comeApp;
+
+@property (nonatomic,strong) UIImage *img;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

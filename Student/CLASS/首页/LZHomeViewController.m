@@ -18,6 +18,8 @@
 
 @property (nonatomic,strong) LZHomeModel *model;
 
+@property (nonatomic,strong) JYAccount *infoModel;
+
 
 
 @end
@@ -38,6 +40,7 @@
     
     [self setRefreshHeader:_homeListTableView completion:nil];
     
+    _infoModel = [JYAccountTool account];
 
     [self refreshRequest];
     
@@ -47,7 +50,7 @@
 
 - (void)refreshRequest {
     
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&owener=%@",LZHomeUrl,@"1",@"0"] params:nil finished:^(NetResponse *netResponse) {
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&owener=%@",LZHomeUrl,_infoModel.userId,@"0"] params:nil finished:^(NetResponse *netResponse) {
         _model = [LZHomeModel mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
         [_homeListTableView.mj_header endRefreshing];
         [_homeListTableView reloadData];
@@ -99,7 +102,8 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeSecondCell" owner:self options:nil] lastObject];
         }
-        cell.dataArr = _model.skills;
+//        cell.dataArr = _model.skills;
+        [cell setDataArr:_model.skills homeModel:_model];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 2) {
@@ -116,7 +120,8 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZHomeFourCell" owner:self options:nil] lastObject];
         }
-        cell.dataArr = _model.recommendTeachers;
+//        cell.dataArr = _model.recommendTeachers;
+        [cell setDataArr:_model.recommendTeachers teacherModel:_model];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }

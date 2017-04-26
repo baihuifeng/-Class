@@ -11,4 +11,6 @@
 @interface LZClassItmeListView : UIView <UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *chooseCollection;
 
+@property (nonatomic,strong) NSArray *itmeArr;
+
 @end

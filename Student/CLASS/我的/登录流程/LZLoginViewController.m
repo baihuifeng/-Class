@@ -7,6 +7,7 @@
 //
 
 #import "LZLoginViewController.h"
+#import "LZRegisterViewController.h"
 
 @interface LZLoginViewController ()
 
@@ -23,7 +24,9 @@
     
 }
 - (IBAction)registBtn:(UIButton *)sender {
-    [LZJumpNextViewController presentNextViewController:1 Url:@"" title:@"注册"];
+//    [LZJumpNextViewController presentNextViewController:1 Url:@"" title:@"注册"];
+    LZRegisterViewController *regVC = [[LZRegisterViewController alloc] init];
+    [self.navigationController pushViewController:regVC animated:YES];
 }
 - (IBAction)foundBtn:(UIButton *)sender {
     [LZJumpNextViewController presentNextViewController:2 Url:@"" title:@"找回密码"];
@@ -47,7 +50,25 @@
     [Tool showHUDAddedTo:self.view animated:YES];
     [Tool hideHUDForView:self.view animated:YES];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@",LZInfoUrl,@"1"] params:nil finished:^(NetResponse *netResponse) {
+       
+        if (netResponse.isSuccess) {
+            JYAccount *infoAccount = [JYAccount mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
+            [JYAccountTool save:infoAccount];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+//    [self.navigationController popViewControllerAnimated:YES];
     
 //    if (!_teleText.text.length) {
 //        SWToast(@"请输入手机号码");

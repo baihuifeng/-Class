@@ -10,5 +10,10 @@
 
 @interface LZTeacherDetailViewController : LZRootViewController <UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *DetailtableView;
+@property (weak, nonatomic) IBOutlet UIButton *isCollection;
+
+@property (nonatomic,copy) NSString *teacherId;
+
+
 
 @end

@@ -11,8 +11,10 @@
 #import "LZYuYueGradeCell.h"
 #import "LZYuYueCountCell.h"
 #import "LZYuYueAddressCell.h"
+#import "LZYuYueModel.h"
 
-@interface LZYuYueViewController () <UITableViewDelegate,UITableViewDataSource>
+
+@interface LZYuYueViewController () <UITableViewDelegate,UITableViewDataSource,UITextViewDelegate>
 
 @property (nonatomic,strong) NSArray *titleArr;
 
@@ -24,6 +26,9 @@
 @property (nonatomic,assign) int classCount;  //课时
 @property (nonatomic,copy) NSString *classTime;//上课时间
 @property (nonatomic,assign) int gradeIndex;
+
+@property (nonatomic,strong) LZYuYueModel *yuyueModel;
+@property (nonatomic,strong) ComeWithGoModel *ComeWithGomodel;
 
 
 @end
@@ -37,17 +42,23 @@
     _classCount = 1;
     _classTime = @"";
     _gradeIndex = 0;
-    _titleArr = @[@"授课时间",@"授课年级",@"授课方式",@"购买课次",@"上课地址"];
+    _titleArr = @[@"授课时间",@"授课年级",@"选择科目",@"授课方式",@"购买课次",@"上课地址"];
     _yuyueTableView.tableHeaderView = [self tableViewHeaderView];
+    
+    JYAccount *infoModel = [JYAccountTool account];
+    
+    _yuyueModel = [[LZYuYueModel alloc] init];
+    _ComeWithGomodel = [[ComeWithGoModel alloc] init];
+    _yuyueModel.userId = infoModel.userId;
+    _yuyueModel.teacherId = _detailModel.userID;
+    
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-//    if (_dataArr.count == 0) {
-//        return 0;
-//    }
     
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -61,9 +72,11 @@
         return 50;
     } else if (indexPath.section == 1) {
         return [LZYuYueGradeCell gradeNameArr:_grades];
-    } else if (indexPath.section == 2){
+    } else if (indexPath.section == 2) {
+        return [LZYuYueGradeCell gradeNameArr:_skillsArr];
+    }else if (indexPath.section == 3){
         return 60;
-    } else if (indexPath.section == 3) {
+    } else if (indexPath.section == 4) {
         return 44;
     }
     
@@ -89,11 +102,16 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         __weak typeof(self) weakSelf = self;
-        cell.filterResultBlock = ^(int count) {
-            weakSelf.gradeIndex = count;
-//            [weakSelf.yuyueTableView reloadData];
+        cell.filterResultBlock = ^(NSArray *gradeArr) {
+//            weakSelf.gradeIndex = count;
+            NSMutableArray *arr = [[NSMutableArray alloc] init];
+            for (GradesModel *grademodel in gradeArr) {
+                [arr addObject:grademodel.gradeName];
+            }
+            weakSelf.yuyueModel.gradeName = arr;
+            
         };
-        [cell setDataArr:_grades index:_gradeIndex];
+        [cell setDataArr:_detailModel.grades index:1];
         return cell;
     
     } else if (indexPath.section == 2) {
@@ -102,9 +120,36 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        [cell setPriceModel:_dataArr index:0];
+        __weak typeof(self) weakSelf = self;
+        cell.filterResultBlock = ^(NSArray *gradeArr) {
+            //            weakSelf.gradeIndex = count;
+            NSMutableArray *arr = [[NSMutableArray alloc] init];
+            for (GradesModel *grademodel in gradeArr) {
+                [arr addObject:grademodel.name];
+            }
+            weakSelf.yuyueModel.skillName = arr;
+            
+        };
+        [cell setDataArr:_detailModel.skills index:2];
         return cell;
-    } else if(indexPath.section == 3){
+    } else if (indexPath.section == 3) {
+        LZYuYueGradeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZYuYueGradeCell"];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueGradeCell" owner:self options:nil] lastObject];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        __weak typeof(self) weakSelf = self;
+        cell.priceBlock = ^(int index) {
+            weakSelf.ComeWithGomodel = weakSelf.detailModel.price.mode[index];
+            weakSelf.yuyueModel.priceId = weakSelf.ComeWithGomodel.id;
+            
+            weakSelf.priceLabel.text = [NSString stringWithFormat:@"%@*%d",weakSelf.ComeWithGomodel.priceDescribe,weakSelf.classCount];
+            [_yuyueTableView reloadData];
+        };
+        
+        [cell setPriceModel:_detailModel.price index:0];
+        return cell;
+    } else if(indexPath.section == 4){
         LZYuYueCountCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZYuYueCountCell"];
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueCountCell" owner:self options:nil] lastObject];
@@ -113,6 +158,8 @@
         __weak typeof(self) weakSelf = self;
         cell.filterResultBlock = ^(int count) {
             weakSelf.classCount = count;
+            weakSelf.yuyueModel.times = [NSString stringWithFormat:@"%d",count];
+            weakSelf.priceLabel.text = [NSString stringWithFormat:@"%@*%d",weakSelf.ComeWithGomodel.priceDescribe,weakSelf.classCount];
         };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -121,6 +168,13 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZYuYueAddressCell" owner:self options:nil] lastObject];
         }
+        cell.addressText.delegate = self;
+        if (_ComeWithGomodel.id != nil) {
+            cell.addressText.text = [_ComeWithGomodel.serviceName isEqualToString:@"学生上门"] ? _detailModel.price.studentAddress : _detailModel.price.teacherAddress;
+        } else {
+            cell.addressText.text = @"";
+        }
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -140,6 +194,12 @@
     [view addSubview:label];
     label.text = _titleArr[section];
     return view;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    
+    _yuyueModel.address = textView.text;
+    
 }
 
 - (UIView *)tableViewHeaderView {
@@ -189,6 +249,7 @@
     }];
     
     _classTime = [self dataStr:_datePicker.date];
+    _yuyueModel.startTime = _classTime;
     NSIndexPath *tmpIndexpath=[NSIndexPath indexPathForRow:0 inSection:0];
     [_yuyueTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:tmpIndexpath, nil] withRowAnimation:UITableViewRowAnimationFade];
 
@@ -232,6 +293,38 @@
     return strDate;
 }
 
+- (IBAction)yuyue:(UIButton *)sender {
+    
+    if (_yuyueModel.startTime.length == 0) {
+        SWToast(@"请选择上课时间");
+        return;
+    }
+    if (_yuyueModel.gradeName.count == 0) {
+        SWToast(@"请选择年级");
+        return;
+    }
+    if (_yuyueModel.skillName.count == 0) {
+        SWToast(@"请选择科目");
+        return;
+    }
+    
+    if (_yuyueModel.priceId.length == 0) {
+        SWToast(@"请选择上课方式");
+        return;
+    }
+    
+    
+    if (_yuyueModel.address.length == 0) {
+        SWToast(@"请输入地址");
+        return;
+    }
+    
+    
+    NSDictionary *pram = _yuyueModel.mj_keyValues;
+    
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

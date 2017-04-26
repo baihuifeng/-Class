@@ -20,6 +20,8 @@
 
 @property (nonatomic,strong) LZDetailModel *model;
 
+@property (nonatomic,strong) JYAccount *infoModel;
+
 @end
 
 @implementation LZTeacherDetailViewController
@@ -30,11 +32,18 @@
 //    _caseIndexArr = @[@"1000",@"1001",@"1003",@"1008"];
     _caseIndexArr = [[NSMutableArray alloc] init];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-//    [NSString stringWithFormat:@"%@Api/getProviderInfo?userId=%@",ManagerUrl,@""];
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&teacherId=%@",LZDedailUrl,@"1",@"5"] params:nil finished:^(NetResponse *netResponse) {
+    _infoModel = [JYAccountTool account];
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&teacherId=%@",LZDedailUrl,_infoModel.userId,@"5"] params:nil finished:^(NetResponse *netResponse) {
         [_caseIndexArr addObject:@"1000"];
         NSLog(@"%@",[netResponse.responseObject objectForKey:@"data"]);
         _model = [LZDetailModel mj_objectWithKeyValues:[netResponse.responseObject objectForKey:@"data"]];
+        
+        if ([_model.isCollection isEqualToString:@"0"]) {
+            _isCollection.selected = YES;
+        } else {
+            _isCollection.selected = NO;
+        }
+        
         
         if (![_model.commentsCount isEqualToString:@"0"]) {
             [_caseIndexArr addObject:@"1001"];
@@ -100,8 +109,7 @@
 
 - (IBAction)yuyue:(UIButton *)sender {
     LZYuYueViewController *yuyueVC = [[LZYuYueViewController alloc] init];
-    yuyueVC.dataArr = _model.price;
-    yuyueVC.grades = _model.grades;
+    yuyueVC.detailModel = _model;
     [self.navigationController pushViewController:yuyueVC animated:YES];
 }
 
@@ -111,6 +119,37 @@
     [self.navigationController pushViewController:chatVC animated:YES];
 }
 
+- (IBAction)collection:(UIButton *)sender {
+    
+    if (!_infoModel.userId) {
+        
+    } else {
+        if (sender.selected == YES) {
+            [self isCollection:@"1" userId:_infoModel.userId];
+        } else {
+            [self isCollection:@"0" userId:_infoModel.userId];
+        }
+    }
+
+}
+
+- (void)isCollection:(NSString *)tag userId:(NSString *)userId{
+    
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&collectorId=%@&isCollection=%@",LZCollection,userId,_model.userID,tag] params:nil finished:^(NetResponse *netResponse) {
+        if (netResponse.isSuccess) {
+            if ([tag isEqualToString:@"1"]) {
+                SWToast(@"取消关注");
+                _isCollection.selected = NO;
+            } else {
+                SWToast(@"成功关注");
+                _isCollection.selected = YES;
+            }
+        } else {
+            SWToast(@"操作失败");
+        }
+    }];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

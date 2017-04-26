@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LZInfoGradeViewController">
+            <connections>
+                <outlet property="quedin" destination="zhQ-Je-iqg" id="cu4-od-BKw"/>
+                <outlet property="tableView" destination="XJ8-xN-y8A" id="RTp-fR-SRM"/>
+                <outlet property="titleLabel" destination="405-9s-Tfg" id="llg-YO-UzL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B84-lX-Drk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-2c-MSZ">
+                    <rect key="frame" x="52" y="141" width="271" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择年级" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="405-9s-Tfg">
+                            <rect key="frame" x="100.5" y="10" width="69.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JFh-ZH-dX4"/>
+                        <constraint firstItem="405-9s-Tfg" firstAttribute="centerX" secondItem="cXm-2c-MSZ" secondAttribute="centerX" id="PiO-dc-TOp"/>
+                        <constraint firstItem="405-9s-Tfg" firstAttribute="centerY" secondItem="cXm-2c-MSZ" secondAttribute="centerY" id="cAL-yA-Uqi"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XJ8-xN-y8A">
+                    <rect key="frame" x="52" y="181" width="271" height="305"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="305" id="Lzv-eH-YKK"/>
+                        <constraint firstAttribute="width" constant="271" id="eCv-fe-hZS"/>
+                    </constraints>
+                    <color key="separatorColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ecl-bc-1zP"/>
+                        <outlet property="delegate" destination="-1" id="xSa-2i-N0f"/>
+                    </connections>
+                </tableView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhQ-Je-iqg">
+                    <rect key="frame" x="52" y="486" width="271" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="queding:" destination="-1" eventType="touchUpInside" id="9p7-tR-VeN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="B84-lX-Drk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4H7-Ki-XNx"/>
+                <constraint firstItem="XJ8-xN-y8A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="76D-GU-eZu"/>
+                <constraint firstItem="zhQ-Je-iqg" firstAttribute="leading" secondItem="XJ8-xN-y8A" secondAttribute="leading" id="BK4-ih-Vbv"/>
+                <constraint firstItem="XJ8-xN-y8A" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="D20-j0-jQo"/>
+                <constraint firstItem="cXm-2c-MSZ" firstAttribute="trailing" secondItem="XJ8-xN-y8A" secondAttribute="trailing" id="GkJ-Ya-14k"/>
+                <constraint firstAttribute="bottom" secondItem="B84-lX-Drk" secondAttribute="bottom" id="VEW-2J-6gn"/>
+                <constraint firstItem="XJ8-xN-y8A" firstAttribute="top" secondItem="cXm-2c-MSZ" secondAttribute="bottom" id="ZKt-Ye-Swi"/>
+                <constraint firstItem="zhQ-Je-iqg" firstAttribute="top" secondItem="XJ8-xN-y8A" secondAttribute="bottom" id="jaf-ho-SHd"/>
+                <constraint firstItem="B84-lX-Drk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qHR-Iq-hBs"/>
+                <constraint firstAttribute="trailing" secondItem="B84-lX-Drk" secondAttribute="trailing" id="ru4-FC-Npg"/>
+                <constraint firstItem="zhQ-Je-iqg" firstAttribute="trailing" secondItem="XJ8-xN-y8A" secondAttribute="trailing" id="ryK-ZJ-Tmn"/>
+                <constraint firstItem="cXm-2c-MSZ" firstAttribute="leading" secondItem="XJ8-xN-y8A" secondAttribute="leading" id="yW0-ul-zIx"/>
+            </constraints>
+            <point key="canvasLocation" x="-352.5" y="30.5"/>
+        </view>
+    </objects>
+</document>

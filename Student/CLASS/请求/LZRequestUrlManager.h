@@ -13,9 +13,15 @@
 
 //#define LZImgUrl [NSString stringWithFormat:@"%@upload/",ManagerUrl]
 
+#pragma -mark "上传图片"
+#define LZUpLoadImg [NSString stringWithFormat:@"%@Common/upload",ManagerUrl]
+
 
 #pragma -mark “首页”
 #define LZHomeUrl [NSString stringWithFormat:@"%@Students/getInitData?",ManagerUrl]
+#pragma -mark "科目"
+#define LZGetSubject [NSString stringWithFormat:@"%@Students/getTypeTags?",ManagerUrl]
+
 
 #pragma -mark “详情页面”
 
@@ -25,6 +31,26 @@
 
 #define LZOrderList [NSString stringWithFormat:@"%@Students/getSubjectInfo?",ManagerUrl]
 
+#pragma -mark "收藏"
+#define LZCollection [NSString stringWithFormat:@"%@Common/collection?",ManagerUrl]
+
+
+#pragma -mark "个人信息/编辑"
+#define LZInfoUrl [NSString stringWithFormat:@"%@Students/getUserInfo?",ManagerUrl]
+#define LZEditInfoUrl [NSString stringWithFormat:@"%@Students/modifyUserInfo",ManagerUrl]
+
+
+
+#pragma -mark "年级信息/区域"
+#define LZGradeInfo [NSString stringWithFormat:@"%@Students/getGradeInfo?",ManagerUrl]
+#define LZRegion [NSString stringWithFormat:@"%@Common/getRegion?",ManagerUrl]
+
+
+#pragma -mark "建议"
+#define LZJianYi [NSString stringWithFormat:@"%@Common/complaint",ManagerUrl]
+
+#pragma -mark “注册”
+#define LZZhuCe [NSString stringWithFormat:@"%@User/register",ManagerUrl]
 
 
 

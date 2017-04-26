@@ -15,10 +15,13 @@
 #import "LZMineYXViewController.h"
 #import "LZDAViewController.h"
 
+
 @interface LZMineViewController ()
 
 @property (nonatomic,strong) NSArray *secondArr;
 @property (nonatomic,strong) NSArray *secondImgArr;
+
+@property (nonatomic,strong) JYAccount *model;
 
 @end
 
@@ -70,6 +73,7 @@
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"LZMineFirstCell" owner:self options:nil] lastObject];
         }
+        cell.model = _model;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 1) {
@@ -109,6 +113,8 @@
     if (indexPath.section == 0) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
         LZMineDetailViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZMineDetailViewController"];
+        wvc.model = _model;
+        wvc.comeApp = ComeCountApp;
         [self.navigationController pushViewController:wvc animated:YES];
     } else if (indexPath.section == 2){
         if (indexPath.row == 0) {
@@ -117,6 +123,10 @@
             [self.navigationController pushViewController:daVc animated:YES];
         } else if (indexPath.row == 1) {
             LZMineYXViewController *yxVc = [[LZMineYXViewController alloc] init];
+            
+            JYAccount *infomodel = [JYAccountTool account];
+            yxVc.model = infomodel;
+            yxVc.comeApp = ComeCountApp;
             [self.navigationController pushViewController:yxVc animated:YES];
         } else if (indexPath.row == 4) {
 
@@ -138,6 +148,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    _model = [JYAccountTool account];
+    [_listTableView reloadData];
+    
+    
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

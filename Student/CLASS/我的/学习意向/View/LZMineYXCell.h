@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LZMineYXCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *kemu;
 
 @end

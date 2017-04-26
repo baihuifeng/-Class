@@ -23,11 +23,21 @@
     return self;
 }
 
+
+- (void)setItmeArr:(NSArray *)itmeArr {
+    _itmeArr = itmeArr;
+    _chooseCollection.delegate =self;
+    _chooseCollection.dataSource = self;
+    [_chooseCollection reloadData];
+    
+}
+
+
 #pragma -mark collectionViewdelegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 7;
+    return _itmeArr.count;
 }
 
 //返回多少组
@@ -39,6 +49,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     LZClassesItmesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LZClassesItmesCell" forIndexPath:indexPath];
+    SkillsModel *model = _itmeArr[indexPath.row];
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,model.tagImgUrl]] placeholderImage:nil];
+    cell.titleContent.text = model.tagTitle;
     
     return cell;
     

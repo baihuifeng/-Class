@@ -57,7 +57,7 @@ typedef void(^NetApiCallBack)(NetResponse * netResponse);
 
 
 
-
++ (void)postToImgUrl:(NSString *)strUrl parme:(NSDictionary *)parme ImgArr:(NSArray *)imgArr finished:(NetApiCallBack)finished;
 
 
 @end

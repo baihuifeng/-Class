@@ -7,9 +7,12 @@
 //
 
 #import "LZRootViewController.h"
+#import "JYAccount.h"
 
 @interface LZRegisterViewController : LZRootViewController
 @property (weak, nonatomic) IBOutlet UITextField *teleText;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (nonatomic,strong) JYAccount *infoModel;
+@property (weak, nonatomic) IBOutlet UITextField *code;
 
 @end

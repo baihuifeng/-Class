@@ -21,6 +21,18 @@
     _headImg.layer.borderWidth = 1.5;
     _headImg.layer.borderColor = UICOLOR_RGB_Alpha(0x23CD77, 1.0).CGColor;
     
+
+    
+    
+}
+
+- (void)setModel:(JYAccount *)model {
+    _model = model;
+    NSLog(@"=====%@",[NSString stringWithFormat:@"%@%@",ManagerUrl,_model.headImgUrl]);
+    
+    [_headImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,_model.headImgUrl]] placeholderImage:nil];
+    
+    [_backHeadImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,_model.headImgUrl]] placeholderImage:nil];
     
     _backHeadImg.transform = CGAffineTransformScale(_headImg.transform, 10, 10);
     
@@ -30,8 +42,7 @@
     view.frame = CGRectMake(0, 0, kScreen_Width, 160);
     
     [self.backView addSubview:view];
-    
-    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

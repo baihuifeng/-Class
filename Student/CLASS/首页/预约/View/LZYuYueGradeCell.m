@@ -17,7 +17,9 @@
 
 - (void)setDataArr:(NSArray *)dataArr index:(int)indexSelect{
     _dataArr = dataArr;
+    _selectedArr = [[NSMutableArray alloc] init];
     
+    _index = indexSelect;
     int startX = 10;
     int startY = 10;
     int limitX =  kScreen_Width-26;
@@ -35,7 +37,13 @@
             startY += 25+10;
         }
         
-        UIButton *button = [self SenderTagsName:Grades.gradeName x:startX y:startY tag:i+100];
+        UIButton *button = nil;
+        if (indexSelect == 1) {
+          button =  [self SenderTagsName:Grades.gradeName x:startX y:startY tag:i+100];
+        } else {
+          button =[self SenderTagsName:Grades.name x:startX y:startY tag:i+100];
+        }
+        
         
         NSLog(@"%@",Grades.gradeName);
         [self.contentView addSubview:button];
@@ -45,29 +53,8 @@
     }
     _buttonArr = buttonMutableArr;
     
-    self.index = indexSelect;
-    
 }
 
-- (void)setIndex:(int)index {
-    _index = index;
-    
-    for (int i = 0; i<_buttonArr.count; i++) {
-        UIButton *btn = _buttonArr[i];
-        if (i == index) {
-            btn.selected = YES;
-            
-            if (self.filterResultBlock) {
-                self.filterResultBlock(index);
-            }
-            
-        } else {
-            btn.selected = NO;
-        }
-    }
-    
-    
-}
 
 + (CGFloat)gradeNameArr:(NSArray *)dataArr {
 
@@ -106,54 +93,37 @@
 }
 
 - (void)senderTags:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.selected == YES) {
+        [_selectedArr removeObject:_dataArr[sender.tag-100]];
+    } else {
+        [_selectedArr addObject:_dataArr[sender.tag-100]];
+    }
     
-    NSLog(@"%d",(int)sender.tag-100);
-    self.index = (int)sender.tag-100;
+    if (self.filterResultBlock) {
+        self.filterResultBlock(_selectedArr);
+    }
+    
 }
 
 
 #pragma -价格
 
-- (void)setPriceModel:(NSArray *)priceArr index:(int)priceIndex {
-//    _priceModel = priceModel;
-    
-//    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
-//    if (priceModel.visit) {
-//        [titleArr addObject:[NSString stringWithFormat:@"老师上门\n%@/小时",priceModel.visit]];
-//    }
-//    
-//    if (priceModel.come) {
-//        [titleArr addObject:[NSString stringWithFormat:@"学生上门\n%@/小时",priceModel.come]];
-//    }
-    
+- (void)setPriceModel:(PriceModel *)PriceModel index:(int)priceIndex {
     
     NSMutableArray *priceMutableArr = [[NSMutableArray alloc] init];
     
-    for (int i= 0; i < priceArr.count; i++) {
-        PriceModel *model = priceArr[i];
-        UIButton *button = [self SenderTagsName:[NSString stringWithFormat:@"%@\n%@",model.serviceName,model.price] x:10+i*100 tag:i+10];
+    for (int i= 0; i < PriceModel.mode.count; i++) {
+        ComeWithGoModel *model = PriceModel.mode[i];
+        UIButton *button = [self SenderTagsName:[NSString stringWithFormat:@"%@\n%@",model.serviceName,model.priceDescribe] x:10+i*100 tag:i+10];
         
         [self.contentView addSubview:button];
         [priceMutableArr addObject:button];
     }
     
     _priceBtnArr = priceMutableArr;
-    
-    self.indexPrice = priceIndex;
-  
-}
 
-- (void)setIndexPrice:(int)indexPrice {
-    _indexPrice = indexPrice;
-    for (int i = 0; i<_priceBtnArr.count; i++) {
-        UIButton *btn = _priceBtnArr[i];
-        if (i == _indexPrice) {
-            btn.selected = YES;
-        } else {
-            btn.selected = NO;
-        }
-    }
-    
+  
 }
 
 
@@ -176,7 +146,25 @@
 }
 
 - (void)priceTags:(UIButton *)sender {
-    self.indexPrice = (int)sender.tag-10;
+//    self.indexPrice = (int)sender.tag-10;
+    
+    for (int i = 0; i<_priceBtnArr.count; i++) {
+        UIButton *btn = _priceBtnArr[i];
+        if (i == (int)sender.tag-10) {
+            btn.selected = YES;
+        } else {
+            btn.selected = NO;
+        }
+    }
+    
+    if (self.priceBlock) {
+        self.priceBlock((int)sender.tag-10);
+        
+    }
+    
+    
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -23,11 +23,17 @@
     // 设置窗口的根控制器
     self.window.rootViewController = [[HHTabbarViewController alloc] init];
     
-    [[EaseSDKHelper shareHelper] hyphenateApplication:application didFinishLaunchingWithOptions:launchOptions appkey:@"douser#istore" apnsCertName:@"istore_dev" otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
+    [[EaseSDKHelper shareHelper] hyphenateApplication:application didFinishLaunchingWithOptions:launchOptions appkey:@"1139170320178256#lzjy" apnsCertName:@"istore_dev" otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
     
     __weak typeof(self) weakself = self;
     
     [[EMClient sharedClient] addDelegate:weakself delegateQueue:nil];
+    
+    //获取标签
+    [[LZCommonManager shareInstance]getGrandInfo];
+    
+    
+    
 
     return YES;
 }

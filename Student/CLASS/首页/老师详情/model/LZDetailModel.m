@@ -11,8 +11,14 @@
 @implementation LZDetailModel
 +(NSDictionary *)mj_objectClassInArray{
     
-    return @{@"commentTags":@"CommentTagsModel",@"price":@"PriceModel",@"grades":@"GradesModel"};
+    return @{@"commentTags":@"CommentTagsModel",@"grades":@"GradesModel",@"skills":@"GradesModel"};
 }
+
+
+
+@end
+
+@implementation ComeWithGoModel
 
 
 
@@ -57,6 +63,11 @@
 @end
 
 @implementation PriceModel
+
++(NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"mode":@"ComeWithGoModel"};
+}
 
 
 

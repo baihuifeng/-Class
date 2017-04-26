@@ -41,7 +41,7 @@
         _jian.enabled = YES;
     }
     
-    if (!self.filterResultBlock) {
+    if (self.filterResultBlock) {
         self.filterResultBlock([_countText.text intValue]);
     }
 }

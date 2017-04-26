@@ -24,7 +24,8 @@
 }
 
 + (NSArray *)getgardeCondition {
-    return [LZManagerChoose getChooseCondition:1];
+    
+    return [LZCommonManager shareInstance].gradeArrInfo;
 
 }
 
@@ -69,16 +70,21 @@
         case 1:
             
         {
-            NSArray *titleArr = @[@"一年级",@"二年级",@"三年级",@"四年级",@"五年级"];
-            NSArray *index = @[@"1",@"2",@"3",@"4",@"5"];
             
-            for (int i= 0; i<titleArr.count; i++) {
-                LZChooseModel *model = [[LZChooseModel alloc] init];
-                model.name = titleArr[i];
-                model.code = index[i];
-                [dataArr addObject:model];
-            }
-            
+            [NetApiManager getFromURL:LZGradeInfo params:nil finished:^(NetResponse *netResponse) {
+                
+                for (NSDictionary *grade in netResponse.responseObject[@"data"]) {
+                    
+                    LZChooseModel *model = [[LZChooseModel alloc] init];
+                    model.name = grade[@"gradeName"];
+                    model.code = grade[@"id"];
+                    
+                    [dataArr addObject:model];
+                    
+                }
+                
+                
+            }];
             return dataArr;
         }
             break;
@@ -155,6 +161,7 @@
     
 
 }
+
 
 
 @end

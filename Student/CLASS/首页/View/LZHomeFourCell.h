@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZTeacherListModel.h"
 
 @interface LZHomeFourCell : UITableViewCell <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic,strong) NSArray *dataArr;
+@property (nonatomic,strong)LZHomeModel *listmodel;
+
+- (void)setDataArr:(NSArray *)dataArr teacherModel:(LZHomeModel *)model;
 
 @end
