@@ -4,7 +4,7 @@
 # 效果图
 ![(演示效果)](http://7xt3dd.com1.z0.glb.clouddn.com/attributeAction.gif)
 
-# Swfit版本
+# Swfit版本（已更新至swfit3.0）
 https://github.com/lyb5834/YBAttributeTextTapForSwfit.git
 
 #使用方法
@@ -30,6 +30,13 @@ https://github.com/lyb5834/YBAttributeTextTapForSwfit.git
 #重要提醒
   * 使用本框架时，最好设置一下`NSParagraphStyle中`的`lineSpacing`属性，也就是行间距，如果不设置，则默认为0！
   * 使用本框架时，一定要设置`label.attributedText = ？？？？？` ，不设置则无效果！！
+  
+#问题总结
+  *  因为UILabel的封装，有些属性不能实现，在此说一下一些提的比较多的问题
+  1. 关于文字排版的正确设置方式，设置`label.textAlignment = NSTextAlignmentCenter`会导致点击失效，正确的设置方法是`NSMutableParagraphStyle *sty = [[NSMutableParagraphStyle alloc] init];
+     sty.alignment = NSTextAlignmentCenter;
+     [attributedString addAttribute:NSParagraphStyleAttributeName value:sty range:NSMakeRange(0, text.length)];`
+  2. 务必查看下是否设置了`NSFontAttributeName`这个属性，不设置的话，coreText上下文获取不到font属性，更别提计算了准确了
 
 #版本支持
   * `xcode6.0+`

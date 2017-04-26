@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "HHTabbarViewController.h"
+#import "EaseSDKHelper.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()  <EMClientDelegate>
 
 @end
 
@@ -22,7 +23,23 @@
     // 设置窗口的根控制器
     self.window.rootViewController = [[HHTabbarViewController alloc] init];
     
+    [[EaseSDKHelper shareHelper] hyphenateApplication:application didFinishLaunchingWithOptions:launchOptions appkey:@"1139170320178256#lzjy" apnsCertName:@"istore_dev" otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
+    
+    __weak typeof(self) weakself = self;
+    
+    [[EMClient sharedClient] addDelegate:weakself delegateQueue:nil];
+    
+    //获取标签
+    [[LZCommonManager shareInstance]getGrandInfo];
+    
+    
+    
+
     return YES;
+}
+
+- (void)userAccountDidLoginFromOtherDevice {
+    
 }
 
 
@@ -35,11 +52,15 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
 
@@ -51,6 +72,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
 
 
 @end

@@ -10,4 +10,8 @@
 
 @interface LZClassesItmesCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *img;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleContent;
+
 @end

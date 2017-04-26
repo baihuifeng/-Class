@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-G0-JoJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Bh-9Yw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-Bh-9Yw">
                                 <rect key="frame" x="12" y="7" width="50" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -36,7 +36,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小初数学老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ny-YH-5Da">
-                                <rect key="frame" x="77" y="18" width="187" height="16"/>
+                                <rect key="frame" x="77" y="18" width="98" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="DgZ-B4-Ch9"/>
                                 </constraints>
@@ -60,28 +60,17 @@
                                     <constraint firstAttribute="height" constant="0.5" id="Tqs-bK-TuE"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F95-1R-Zbq">
-                                <rect key="frame" x="272" y="16" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="sYd-Ww-iO6"/>
-                                    <constraint firstAttribute="height" constant="40" id="tFF-hN-tlf"/>
-                                </constraints>
-                                <state key="normal" image="dianhua_icon"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8ij-pE-ikd" secondAttribute="trailing" id="4Vi-t6-ujl"/>
                             <constraint firstItem="8ij-pE-ikd" firstAttribute="leading" secondItem="cx7-G0-JoJ" secondAttribute="leading" id="5xA-GW-Tl0"/>
-                            <constraint firstItem="F95-1R-Zbq" firstAttribute="top" secondItem="cx7-G0-JoJ" secondAttribute="top" constant="16" id="Gsn-be-l7W"/>
                             <constraint firstItem="2K5-kd-Vdt" firstAttribute="top" secondItem="3ny-YH-5Da" secondAttribute="bottom" constant="4" id="IwP-qO-Iq0"/>
-                            <constraint firstAttribute="trailing" secondItem="F95-1R-Zbq" secondAttribute="trailing" constant="8" id="R2w-fN-FN8"/>
                             <constraint firstItem="3ny-YH-5Da" firstAttribute="leading" secondItem="cx7-G0-JoJ" secondAttribute="leading" constant="77" id="UHl-Ii-ciG"/>
                             <constraint firstItem="3ny-YH-5Da" firstAttribute="top" secondItem="cx7-G0-JoJ" secondAttribute="top" constant="18" id="VcT-aT-SXa"/>
                             <constraint firstItem="Rfk-Bh-9Yw" firstAttribute="centerY" secondItem="cx7-G0-JoJ" secondAttribute="centerY" id="YSS-S7-bFa"/>
                             <constraint firstItem="Rfk-Bh-9Yw" firstAttribute="leading" secondItem="cx7-G0-JoJ" secondAttribute="leading" constant="12" id="Yrz-Od-2eN"/>
                             <constraint firstAttribute="bottom" secondItem="8ij-pE-ikd" secondAttribute="bottom" id="bmj-7W-DA4"/>
-                            <constraint firstItem="F95-1R-Zbq" firstAttribute="leading" secondItem="3ny-YH-5Da" secondAttribute="trailing" constant="8" id="icH-eE-x9T"/>
                             <constraint firstItem="2K5-kd-Vdt" firstAttribute="leading" secondItem="cx7-G0-JoJ" secondAttribute="leading" constant="77" id="u7n-RV-efj"/>
                             <constraint firstAttribute="height" constant="64" id="zXa-Z9-sgK"/>
                         </constraints>
@@ -178,7 +167,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dianhua_icon" width="24" height="25"/>
         <image name="headIcon" width="50" height="50"/>
     </resources>
 </document>

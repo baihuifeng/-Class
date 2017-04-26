@@ -7,6 +7,7 @@
 //
 
 #import "LZRegisterViewController.h"
+#import "LZMineDetailViewController.h"
 
 @interface LZRegisterViewController ()
 
@@ -28,6 +29,14 @@
             return;
         }
     }
+    
+    if (!_code.text.length) {
+        SWToast(@"请输入验证码");
+        return;
+    }
+    
+    
+    
     if (!_password.text.length) {
         SWToast(@"请输入密码");
         return;
@@ -51,7 +60,17 @@
             }
         }
     }
+    _infoModel = [[JYAccount alloc] init];
+    _infoModel.cellPhone = _teleText.text;
+    _infoModel.password = _password.text;
+    _infoModel.verifyCode = _code.text;
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
+    LZMineDetailViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZMineDetailViewController"];
+    wvc.comeApp = ComeFirstApp;
+//    wvc.model = [[JYAccount alloc] init];
+    wvc.model = _infoModel;
+    [self.navigationController pushViewController:wvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

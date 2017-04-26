@@ -41,8 +41,33 @@
 @property (nonatomic,copy) NSString *tagID;
 @end
 
-@interface LZDetailModel : NSObject
+@interface GradesModel : NSObject
+@property (nonatomic,copy) NSString *id;
+@property (nonatomic,copy) NSString *gradeName;
+@property (nonatomic,copy) NSString *name;
 
+@end
+
+@interface PriceModel : NSObject
+
+
+@property (nonatomic,copy) NSString *studentAddress;
+@property (nonatomic,copy) NSString *teacherAddress;
+@property (nonatomic,strong) NSArray *mode;
+@end
+
+@interface ComeWithGoModel : NSObject
+
+@property (nonatomic,copy) NSString *id;
+@property (nonatomic,copy) NSString *serviceName;
+@property (nonatomic,copy) NSString *priceDescribe;
+@property (nonatomic,copy) NSString *price;
+@property (nonatomic,copy) NSString *whogo;
+
+@end
+
+@interface LZDetailModel : NSObject
+@property (nonatomic,copy) NSString *userID;
 @property (nonatomic,copy) NSString *isCollection;
 @property (nonatomic,copy) NSString *imgUrl;
 @property (nonatomic,copy) NSString *nickName;
@@ -63,5 +88,13 @@
 @property (nonatomic,strong) NSArray *grades;
 @property (nonatomic,strong) NSArray *region;
 
+@property (nonatomic,strong) PriceModel *price;
+
+@property (nonatomic,strong) NSArray *skills;
+
 
 @end
+
+
+
+

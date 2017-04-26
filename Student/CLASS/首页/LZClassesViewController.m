@@ -8,19 +8,51 @@
 
 #import "LZClassesViewController.h"
 #import "LZClassesItmesCell.h"
-#import "LZClassesListCell.h"
 #import "LZTeacherDetailViewController.h"
 #import "LZDetailStandardView.h"
-#import "LZTeacherListModel.h"
 #import "LZClassListHeadView.h"
 #import "LZClassItmeListView.h"
 #import "PullView.h"
+#import "LZChooseViewController.h"
+#import "LZManagerChoose.h"
+#import "LZTeacherListCell.h"
 
 @interface LZClassesViewController ()
 
 @property (nonatomic,strong) NSMutableArray *dataArr;
 
 @property (nonatomic,strong) PullView *pullView;
+
+@property (nonatomic,strong) LZChooseViewController *chooseVc;
+
+@property (nonatomic,assign) int buttonIndex;
+
+@property (nonatomic,strong) LZClassListHeadView *headView;
+
+@property (nonatomic,strong) NSMutableArray *itmeArr;
+
+@property (nonatomic,assign) int row;
+
+
+@property (nonatomic,assign) int sortIndex;//排序
+
+@property (nonatomic,assign) int gradeIndex;//年级
+
+@property (nonatomic,assign) int regionIndex;//区域
+
+@property (nonatomic,strong) NSMutableArray *chooseIndexArr;
+
+@property (nonatomic,strong) NSArray *moreArr;
+
+@property (nonatomic,strong) LZClassItmeListView *lzClassView;
+
+#pragma -mark "总科目筛选"
+
+@property (nonatomic,strong) UITableView *KeMuTableView;
+@property (nonatomic,strong) UIView *keMuBackView;
+@property (nonatomic,strong) NSArray *kemuArr;
+@property (nonatomic,strong) UIButton *kemuButton;
+
 
 
 @end
@@ -33,45 +65,140 @@
     
     
     
-    LZClassItmeListView *lzClassView = [[LZClassItmeListView alloc] init];
-    lzClassView.frame = CGRectMake(0, -130, kScreen_Width, 130);
-    lzClassView.backgroundColor = [UIColor redColor];
+    if (_titleModel.tagTitle== nil) {
+        _titleModel = _listModel.skills[0];
+    }
     
-    [_classesListTableView addSubview:lzClassView];
+    
+    _kemuButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_kemuButton setTitle:_titleModel.tagTitle forState:UIControlStateNormal];
+    [_kemuButton setTitleColor:UICOLOR_RGB_Alpha(0xffffff, 1.0) forState:UIControlStateNormal];
+    [_kemuButton addTarget:self action:@selector(chooseList:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = _kemuButton;
+    
+    [self.view addSubview:self.keMuBackView];
+    [self.view addSubview:self.KeMuTableView];
+    
+    
+    
+    
+    _chooseIndexArr = [NSMutableArray arrayWithObjects:@0,@0,@0,@0, nil];
+    _moreArr = @[@0,@0,@0];
+    
+    [self.chooseVc dataArr:[LZManagerChoose getSequenceCondition] selectedIndex:[_chooseIndexArr[0] intValue]];
+    
+    _classesListTableView.tableFooterView = [[UIView alloc]init];
+    
+    _lzClassView = [[LZClassItmeListView alloc] init];
+    _lzClassView.frame = CGRectMake(0, 0, kScreen_Width, 0);
+    _lzClassView.backgroundColor = [UIColor redColor];
+    
+    [_classesListTableView addSubview:_lzClassView];
+    
     
     
     
     _dataArr = [[NSMutableArray alloc] init];
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ListJson"ofType:@"json"];
+    _itmeArr = [[NSMutableArray alloc] init];
     
-    //根据文件路径读取数据
-    NSData *jdata = [[NSData alloc]initWithContentsOfFile:filePath];
+    JYAccount *infoModel = [JYAccountTool account];
     
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@&parentId=%@",LZGetSubject,infoModel.userId,_parentId] params:nil finished:^(NetResponse *netResponse) {
+        
+        if (netResponse.isSuccess) {
+            [_itmeArr addObjectsFromArray:[SkillsModel mj_objectArrayWithKeyValuesArray:netResponse.responseObject[@"data"]]];
+            
+
+            [self collectionHeight:_itmeArr];
+            
+            _lzClassView.itmeArr = _itmeArr;
+            
+            [NetApiManager getFromURL:[NSString stringWithFormat:@"%@",LZTeacherList] params:nil finished:^(NetResponse *netResponse) {
+                
+                [_dataArr addObjectsFromArray:[ListModel mj_objectArrayWithKeyValuesArray:netResponse.responseObject[@"data"]]];
+                
+                [_classesListTableView reloadData];
+            }];
+
+            
+            
+        }
+        
+        
+        
+    }];
     
-    //格式化成json数据
-    NSMutableDictionary *dic= [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
+}
+
+- (void)chooseList:(UIButton *)sender {
     
-    //    NSLog(@"-----%@",dic);
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    for (SkillsModel *model in _listModel.skills) {
+        if (![_titleModel.tagTitle isEqualToString:model.tagTitle]) {
+            [arr addObject:model];
+        }
+    }
+
+    _kemuArr = arr;
+    _KeMuTableView.hidden = NO;
+    _keMuBackView.hidden = NO;
     
-//    _model = [LZDetailModel mj_objectWithKeyValues:dic];
-//    [_dataArr addObject:[ListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
-//    NSArray *arr = ;
+    [_KeMuTableView reloadData];
+   
+}
+
+- (UIView *)keMuBackView {
     
-    [_dataArr addObjectsFromArray:[ListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]]];
+    if (_keMuBackView == nil) {
+        _keMuBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height)];
+        _keMuBackView.backgroundColor = UICOLOR_RGB_Alpha(0x000000, 0.25);
+        _keMuBackView.hidden = YES;
+        [_keMuBackView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenBackView)]];
+        
+    }
     
+    return _keMuBackView;
     
+}
+
+- (void)hiddenBackView {
+    _keMuBackView.hidden = YES;
+    _KeMuTableView.hidden = YES;
+}
+
+- (UITableView *)KeMuTableView {
+    if (_KeMuTableView == nil) {
+        _KeMuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height/3) style:UITableViewStylePlain];
+        _KeMuTableView.delegate = self;
+        _KeMuTableView.dataSource = self;
+        _KeMuTableView.hidden = YES;
+        _KeMuTableView.tableFooterView = [[UIView alloc] init];
+        _KeMuTableView.separatorColor = UICOLOR_RGB_Alpha(0xeeeeee, 1.0);
+        _KeMuTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    }
     
+    return _KeMuTableView;
+
+}
+
+- (void)collectionHeight:(NSArray *)itmeArr {
+
+//    int row;
+    if (_itmeArr.count % 3 == 0) {
+        _row = (int)_itmeArr.count/3;
+    } else {
+        _row = (int)_itmeArr.count/3 + 1;
+    }
     
-    [_classesListTableView reloadData];
+    CGRect collectionfram = _lzClassView.frame;
+    collectionfram.origin.y = -80*_row;
+    collectionfram.size.height = 80*_row;
+    _lzClassView.frame = collectionfram;
     
-    
-    
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        _classesListTableView.contentOffset = CGPointMake(0, -130);
-        _classesListTableView.contentInset = UIEdgeInsetsMake(130, 0, 0, 0);
-    });
-    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+        _classesListTableView.contentOffset = CGPointMake(0, -80*_row);
+        _classesListTableView.contentInset = UIEdgeInsetsMake(80*_row, 0, 0, 0);
+//    });
     
     
 }
@@ -81,6 +208,10 @@
 #pragma -mark tableViewViewdelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (_KeMuTableView == tableView) {
+        return _kemuArr.count;
+    }
     
 
     return _dataArr.count;
@@ -92,17 +223,37 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (_KeMuTableView == tableView) {
+        return 44;
+    }
 
-    return 80;  
+    return 105;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (tableView == _KeMuTableView) {
+        static NSString *str = @"qqq";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        }
+        SkillsModel *mdoel = _kemuArr[indexPath.row];
+        
+        cell.textLabel.text = mdoel.tagTitle;
+        cell.textLabel.font = [UIFont systemFontOfSize:13.0];
+        cell.textLabel.textColor = UICOLOR_RGB_Alpha(0x6a6a6a, 1);
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        
+        return cell;
+    }
+    
 
-    LZClassesListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZClassesListCell"];
+    LZTeacherListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LZTeacherListCell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"LZClassesListCell" owner:self options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"LZTeacherListCell" owner:self options:nil] lastObject];
     }
     cell.model = _dataArr[indexPath.row];
 
@@ -115,73 +266,113 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    LZTeacherDetailViewController *detailVc = [[LZTeacherDetailViewController alloc] init];
-    [self.navigationController pushViewController:detailVc animated:YES];
+    
+    if (tableView == _KeMuTableView) {
+        SkillsModel *mdoel = _kemuArr[indexPath.row];
+        _titleModel = mdoel;
+        _KeMuTableView.hidden = YES;
+        _keMuBackView.hidden = YES;
+        [_kemuButton setTitle:mdoel.tagTitle forState:UIControlStateNormal];
+        
+    } else {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        ListModel *model = _dataArr[indexPath.row];
+        LZTeacherDetailViewController *detailVc = [[LZTeacherDetailViewController alloc] init];
+        detailVc.teacherId = model.userID;
+        [self.navigationController pushViewController:detailVc animated:YES];
+    }
+
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-        LZClassListHeadView *headView = [[LZClassListHeadView alloc] init];
-        headView.frame = CGRectMake(0, 0, kScreen_Width, 45);
-    headView.filterResultBlock = ^(NSInteger index) {
-        
-        
-
-        [_classesListTableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-        self.pullView.selectedIndex = index;
-        [UIView animateWithDuration:10 animations:^{
-            self.pullView.hidden = NO;
+    if (tableView != _KeMuTableView) {
+        _headView = [[LZClassListHeadView alloc] init];
+        _headView.frame = CGRectMake(0, 0, kScreen_Width, 40);
+        __weak typeof(self) weakSelf = self;
+        _headView.filterResultBlock = ^(NSInteger index) {
+            _buttonIndex = (int)index;
             
-        }];
- 
-        
-        
-    
-    };
-        return headView;
+            [weakSelf.classesListTableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+            [UIView animateWithDuration:0.3 animations:^{
+                weakSelf.chooseVc.view.hidden = NO;
+                if (index == 0) {
+                    [weakSelf.chooseVc dataArr:[LZManagerChoose getSequenceCondition] selectedIndex:[weakSelf.chooseIndexArr[index] intValue]];
+                } else if (index == 1) {
+                    [weakSelf.chooseVc dataArr:[LZManagerChoose getgardeCondition] selectedIndex:[weakSelf.chooseIndexArr[index] intValue]];
+                } else if (index == 2) {
+                    [weakSelf.chooseVc dataArr:[LZManagerChoose getRegionCondition] selectedIndex:[weakSelf.chooseIndexArr[index] intValue]];
+                } else if (index == 3) {
+                    [weakSelf.chooseVc moreViewIndex:(int)index];
+                }
+                
+            }];
+            
+        };
+        return _headView;
+    }
+
+    return nil;
 }
 
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    if (tableView == _KeMuTableView) {
+        return 0;
+    }
 
-        return 45;
+        return 40;
 
 }
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-    NSLog(@"1111    f = %f",-scrollView.contentOffset.y);
     
-    if (-scrollView.contentOffset.y <= 0) {
+    if (scrollView != (UIScrollView *)_KeMuTableView) {
+        NSLog(@"1111    f = %f",-scrollView.contentOffset.y);
+        
+        if (-scrollView.contentOffset.y <= 0) {
             _classesListTableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        return;
-    } else if (-scrollView.contentOffset.y >= 130) {
-        _classesListTableView.contentInset = UIEdgeInsetsMake(130, 0, 0, 0);
-    } else {
-        _classesListTableView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+            return;
+        } else if (-scrollView.contentOffset.y >= 80*_row) {
+            _classesListTableView.contentInset = UIEdgeInsetsMake(80*_row, 0, 0, 0);
+        } else {
+            _classesListTableView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+        }
     }
-    
-    
-    
-    
-    
-}
 
-- (PullView *)pullView {
-    if (!_pullView) {
-        _pullView = [[PullView alloc] initWithFrame:CGRectMake(0, 45, kScreen_Width, kScreen_Height-100) titleArr:@[@"",@"",@"",@""]];
-        _pullView.hidden = YES;
-        [self.view addSubview:_pullView];
-    }
-    return _pullView;
+
+ 
 }
 
 
-
-
-
-
+- (LZChooseViewController *)chooseVc {
+    
+    if (!_chooseVc) {
+        _chooseVc = [[LZChooseViewController alloc] init];
+        _chooseVc.view.frame = CGRectMake(0, 40, kScreen_Width, kScreen_Height);
+        _chooseVc.view.hidden = YES;
+        __weak typeof(self) weakSelf = self;
+        _chooseVc.rowBlock = ^(NSInteger rowIndex,NSArray *moreArr) {
+            
+            [weakSelf.chooseIndexArr replaceObjectAtIndex:weakSelf.buttonIndex withObject:@(rowIndex)];
+            weakSelf.chooseVc.view.hidden = YES;
+            for (UIButton *btn in weakSelf.headView.buttonArr) {
+                btn.selected = NO;
+            }
+            weakSelf.moreArr = moreArr;
+            
+            NSLog(@"-------=======>>>>%@,%@",weakSelf.chooseIndexArr,weakSelf.moreArr);
+        };
+        [self addChildViewController:_chooseVc];
+        [self.view addSubview:_chooseVc.view];
+        
+        
+    }
+    
+    return _chooseVc;
+}
 
 
 - (void)didReceiveMemoryWarning {

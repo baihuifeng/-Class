@@ -11,4 +11,7 @@
 @interface LZMineDetailViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *mineInfoTableView;
+@property (nonatomic,strong) JYAccount *model;
+
+@property (nonatomic,assign) ComeApp comeApp;
 @end

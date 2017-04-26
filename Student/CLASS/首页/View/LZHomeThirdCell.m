@@ -8,6 +8,7 @@
 
 #import "LZHomeThirdCell.h"
 #import "LZThirdItmesCell.h"
+#import "LZTeacherListModel.h"
 
 
 #define YYMaxSections 100
@@ -17,11 +18,25 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+//    _collectionView.delegate = self;
+//    _collectionView.dataSource = self;
+//    [_collectionView registerClass:[LZThirdItmesCell class] forCellWithReuseIdentifier:@"LZThirdItmesCell"];
+//    [self addTimer];
+//    [_collectionView reloadData];
+    
+    [self addTimer];
+
+}
+
+- (void)setDataArr:(NSArray *)dataArr {
+    _dataArr = dataArr;
     
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [_collectionView registerClass:[LZThirdItmesCell class] forCellWithReuseIdentifier:@"LZThirdItmesCell"];
-    [self addTimer];
+    
+    [_collectionView reloadData];
+    
 }
 
 #pragma mark 添加定时器
@@ -42,7 +57,7 @@
     
     NSInteger nextItem = currentIndexPathReset.item +1;
     NSInteger nextSection = currentIndexPathReset.section;
-    if (nextItem == 6) {
+    if (nextItem == _dataArr.count) {
         nextItem=0;
         nextSection++;
         
@@ -56,7 +71,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 6;
+    return _dataArr.count;
 }
 
 
@@ -69,6 +84,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     LZThirdItmesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LZThirdItmesCell" forIndexPath:indexPath];
+    DynamicinfosModel *model = _dataArr[indexPath.row];
+    cell.titleLabel.text = model.title;
     
     return cell;
     

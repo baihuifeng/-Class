@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *teachingAge;
 @property (weak, nonatomic) IBOutlet UILabel *satisfaction;
 
+@property (weak, nonatomic) IBOutlet UIView *certificationTagsView;
 
 ///回调
 @property (nonatomic, copy) void (^filterResultBlock) ();

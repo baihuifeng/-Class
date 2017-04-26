@@ -26,5 +26,14 @@
 #import "CommentFile.h"
 #import "NSString+Check.h"
 #import "UILabel+YBAttributeTextTapAction.h"
+#import "LZRequestUrlManager.h"
+#import "NetApiManager.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "JYAccount.h"
+#import "JYAccountTool.h"
+#import "LZCommonManager.h"
+#import "EaseUI.h" //环信
+#import <Hyphenate/Hyphenate.h>
 
 #endif /* CommentClass_pch */

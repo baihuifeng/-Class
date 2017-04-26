@@ -7,6 +7,8 @@
 //
 
 #import "LZHeadCell.h"
+#import "LZTagsView.h"
+#import "LZDetailStandardView.h"
 
 @implementation LZHeadCell
 
@@ -22,7 +24,7 @@
     _headImg.userInteractionEnabled = YES;
     [_headImg addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImgview)]];
     
-    
+    [_headImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",ManagerUrl,model.imgUrl]] placeholderImage:nil];
     
 //    UILabel *testLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, 320, 30)];
 //    
@@ -39,6 +41,28 @@
     _teachingAge.attributedText = [self attribuedStrring:teachingAge Range:NSMakeRange(4, teachingAge.length-5) font:[UIFont systemFontOfSize:25.0]];
     NSString *satisfaction = [NSString stringWithFormat:@"满意度%@",model.satisfaction];
     _satisfaction.attributedText = [self attribuedStrring:satisfaction Range:NSMakeRange(3, satisfaction.length-3) font:[UIFont systemFontOfSize:35.0]];
+    
+    
+    
+    int Xstar = 5;
+    
+    
+    int limit = kScreen_Width-26;
+    for (NSString *tagStr in model.certificationTags) {
+        
+        CGFloat lablelWidth = [LZTagsView getTagLabelWidth:tagStr];
+        
+        if ((Xstar + lablelWidth+15)>limit) {
+            return;
+        }
+        else {
+            [self.certificationTagsView addSubview:[LZTagsView certificationTagsView:@"stansardIcon" title:tagStr x:Xstar y:2.5]];
+            Xstar += lablelWidth + 15;
+            
+        }
+    }
+    
+    
     
 }
 
@@ -60,6 +84,15 @@
     if (self.filterResultBlock) {
         self.filterResultBlock();
     }
+    
+}
+- (IBAction)tanceng:(UIButton *)sender {
+    
+    LZDetailStandardView *tancen = [[LZDetailStandardView alloc] init];
+    tancen.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height);
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:tancen];
+    
     
 }
         

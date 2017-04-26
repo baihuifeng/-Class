@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SegmentView.h"
-@interface LZClassListHeadView : UIView <selectedDelegate>
+@interface LZClassListHeadView : UIView 
 
 @property (weak, nonatomic) IBOutlet UIView *headView;
+
+@property (nonatomic,strong) NSArray *buttonArr;
+
+@property (nonatomic,assign) int index;
 
 ///回调
 @property (nonatomic, copy) void (^filterResultBlock) (NSInteger index);

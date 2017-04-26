@@ -7,7 +7,9 @@
 //
 
 #import "LZRootViewController.h"
+#import "QIAOTextView.h"
 
 @interface LZYJViewController : LZRootViewController
+@property (weak, nonatomic) IBOutlet QIAOTextView *textView;
 
 @end

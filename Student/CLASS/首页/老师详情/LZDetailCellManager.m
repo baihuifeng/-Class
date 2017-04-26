@@ -182,7 +182,13 @@
             } else {
                 if (model.region.count != 0) {
                     cell.title.text = indexPath.section == 0 ? @"科目年级" : @"授课区域";
-                    cell.comment.text = indexPath.section == 0 ? [[model.grades componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "]: [[model.region componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
+                    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+                    
+                    for (GradesModel *Gradesmodel in model.grades) {
+                        [titleArr addObject:Gradesmodel.gradeName];
+                    }
+                    
+                    cell.comment.text = indexPath.section == 0 ? [[titleArr componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "]: [[model.region componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
                     
                 }
             }
@@ -379,11 +385,11 @@
 }
 #pragma -mark "自我介绍的高度"
 + (CGFloat)sizeCharacteristicsHeightDetailModel:(LZDetailModel *)model {
-    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:14].height + 30;
+    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:14].height + 50;
 }
 
 + (CGFloat)sizeCharacteristicsCellHeightDetailModel:(LZDetailModel *)model {
-    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:14].height + 70;
+    return [NSString stringSizeWithString:model.characteristics maxSize:CGSizeMake(kScreen_Width-30, CGFLOAT_MAX) wordFont:14].height + 80;
 }
 #pragma -mark "成功案例"
 + (CGFloat)sizeSuccessfulCaseCaseInfosDetailmodel:(LZDetailModel *)model IndexPath:(NSIndexPath *)indexPath{
@@ -447,12 +453,22 @@
         NSString *str = [[model.region componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
         return [NSString stringSizeWithString:str maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 24;
     } else if (model.region.count == 0 && model.grades.count !=0 ) {
-        NSString *str = [[model.grades componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
+        NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+        
+        for (GradesModel *Gradesmodel in model.grades) {
+            [titleArr addObject:Gradesmodel.gradeName];
+        }
+        NSString *str = [[titleArr componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
         return [NSString stringSizeWithString:str maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 24;
     } else {
+        NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+        
+        for (GradesModel *Gradesmodel in model.grades) {
+            [titleArr addObject:Gradesmodel.gradeName];
+        }
         NSString *regionStr = [[model.region componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
         
-        NSString *gradesStr = [[model.grades componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
+        NSString *gradesStr = [[titleArr componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
         
         if (indexPath.section == 0) {
             return [NSString stringSizeWithString:gradesStr maxSize:CGSizeMake(kScreen_Width-110, CGFLOAT_MAX) wordFont:14].height + 28;
@@ -470,12 +486,21 @@
         NSString *str = [[model.region componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
         return [NSString stringSizeWithString:str maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 65;
     } else if (model.region.count == 0 && model.grades.count !=0 ) {
-        NSString *str = [[model.grades componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
+        NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+        
+        for (GradesModel *Gradesmodel in model.grades) {
+            [titleArr addObject:Gradesmodel.gradeName];
+        }
+        NSString *str = [[titleArr componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
         return [NSString stringSizeWithString:str maxSize:CGSizeMake(kScreen_Width-55, CGFLOAT_MAX) wordFont:14].height + 65;
     } else {
         NSString *regionStr = [[model.region componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
+        NSMutableArray *titleArr = [[NSMutableArray alloc] init];
         
-        NSString *gradesStr = [[model.grades componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
+        for (GradesModel *Gradesmodel in model.grades) {
+            [titleArr addObject:Gradesmodel.gradeName];
+        }
+        NSString *gradesStr = [[titleArr componentsJoinedByString:@","] stringByReplacingOccurrencesOfString:@"," withString:@" "];
 
 
             return [NSString stringSizeWithString:regionStr maxSize:CGSizeMake(kScreen_Width-110, CGFLOAT_MAX) wordFont:14].height + 28 +[NSString stringSizeWithString:gradesStr maxSize:CGSizeMake(kScreen_Width-110, CGFLOAT_MAX) wordFont:14].height + 28+50;

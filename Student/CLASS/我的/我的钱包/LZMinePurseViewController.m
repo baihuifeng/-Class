@@ -11,6 +11,7 @@
 #import "LZMinePurseSecondCell.h"
 #import "LZProfitDetailViewController.h"
 #import "LZBalancePayViewController.h"
+#import "LZYaJingViewController.h"
 
 @interface LZMinePurseViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray *titleArr;
@@ -100,6 +101,9 @@
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LZPayViewController" bundle:nil];
             LZBalancePayViewController *wvc = [storyboard instantiateViewControllerWithIdentifier:@"LZBalancePayViewController"];
             [self.navigationController pushViewController:wvc animated:YES];
+        } else {
+            LZYaJingViewController *vc = [[LZYaJingViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
     }
 }
