@@ -4,45 +4,87 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Student.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>RTRootNavigationController.xcscheme</key>
+		<key>MJExtension.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>RealReachability.xcscheme</key>
-		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>Pods-Student.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>RTRootNavigationController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>RealReachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>YBAttributeTextTapAction.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7AAF2990FA3B12CA77070E959367B854</key>
+		<key>175B076ED45EB1A3E40F58BA14036467</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>847332D5308384ECAB88C9398548F892</key>
+		<key>1ACEABAE8E0D9F5EE3ECCB7438771BFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F6C691C3C0A9EEE32989614A757FC69</key>
+		<key>6D64A0E837F9BB6C03BEA35A45FFCA9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE1446D975F8AA2F251D469CA57B49EA</key>
+		<key>91FF54231066172712B25AAD7E353535</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6AC9EF7BAA77CD9E698CA8A2672697B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9170503907B7749BBBC5A20E5945C6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

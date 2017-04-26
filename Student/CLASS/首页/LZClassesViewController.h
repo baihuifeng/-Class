@@ -8,7 +8,7 @@
 
 #import "LZRootViewController.h"
 
-@interface LZClassesViewController : LZRootViewController <UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
+@interface LZClassesViewController : LZRootViewController <UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *chooseCollection;
 @property (strong, nonatomic) IBOutlet UITableView *classesListTableView;
 

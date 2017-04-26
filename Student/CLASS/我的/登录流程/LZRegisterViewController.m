@@ -18,6 +18,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)finishBtn:(UIButton *)sender {
+    if (!_teleText.text.length) {
+        SWToast(@"请输入手机号码");
+        return;
+    } else {
+        if (![[NSStringVerify sharedInstance] isValidateMobile:_teleText.text]) {
+            SWToast(@"请输入正确的手机号码");
+            return;
+        }
+    }
+    if (!_password.text.length) {
+        SWToast(@"请输入密码");
+        return;
+    } else {
+        if ([NSString validateFigure:_password.text length:18]) {
+            SWToast(@"密码不能为纯数字\n必须是6-18数字和英文组合");
+            return;
+        } else {
+            
+            if ([NSString validateEnglish:_password.text length:18]) {
+                SWToast(@"密码不能为纯英文\n必须是6-18数字和英文组合");
+                return;
+            } else {
+                if ([NSString validateCutomerName:_password.text length:18]) {
+                    
+                    if (_password.text.length < 6 || _password.text.length >18) {
+                        SWToast(@"密码格式不正确\n必须是6-18数字和英文组合");
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

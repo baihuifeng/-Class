@@ -1,4 +1,6 @@
 PODS:
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.13)
   - RealReachability (1.1.8):
     - RealReachability/Connection (= 1.1.8)
     - RealReachability/Ping (= 1.1.8)
@@ -8,17 +10,24 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - YBAttributeTextTapAction (2.0.5)
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension (~> 3.0.10)
   - RealReachability (~> 1.1.8)
   - RTRootNavigationController (~> 0.5.22)
   - SDWebImage (~> 3.7.3)
+  - YBAttributeTextTapAction
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   RealReachability: e6c8a2bbffa316006e8c282efc1ee2567d61a920
   RTRootNavigationController: cf134c044a8ce14d97fc668847ed4567efc53f91
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  YBAttributeTextTapAction: 686e3d886e53095923686786d842265b5e5a4ccb
 
-PODFILE CHECKSUM: 912d46c4a8eee2388c59afd8792d2245793d6a15
+PODFILE CHECKSUM: f537e2ec68c383528e33ad808ebc5892d71ace94
 
 COCOAPODS: 1.2.0.beta.3

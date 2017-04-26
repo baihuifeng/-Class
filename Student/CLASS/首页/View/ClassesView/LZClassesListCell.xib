@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-W8-2Ig">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headIcon" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-W8-2Ig">
                         <rect key="frame" x="12" y="9" width="60" height="60"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.36470588240000001" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -62,18 +62,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-2S-db0">
-                        <rect key="frame" x="84" y="33" width="67" height="12"/>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="67" id="9Tg-Me-KHH"/>
-                            <constraint firstAttribute="height" constant="12" id="wDV-LW-dVp"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计培训30名学生" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C35-mK-Fgc">
-                        <rect key="frame" x="159" y="32" width="153" height="12"/>
+                        <rect key="frame" x="159" y="32" width="153" height="13"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="12" id="AoX-0p-qOw"/>
+                            <constraint firstAttribute="height" constant="13" id="AoX-0p-qOw"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,28 +88,48 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21G-Mx-TRK">
+                        <rect key="frame" x="84" y="33" width="67" height="13"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="dIx-0n-uGJ"/>
+                            <constraint firstAttribute="width" constant="67" id="hEt-j3-j19"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hW6-xE-di7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="6eL-gS-CfR"/>
-                    <constraint firstItem="GE3-2S-db0" firstAttribute="top" secondItem="XeG-4j-Yuk" secondAttribute="bottom" constant="9" id="7iZ-B4-NtV"/>
                     <constraint firstItem="C35-mK-Fgc" firstAttribute="top" secondItem="XeG-4j-Yuk" secondAttribute="bottom" constant="8" id="DPj-Dt-gbG"/>
-                    <constraint firstItem="aVn-YY-fhf" firstAttribute="top" secondItem="GE3-2S-db0" secondAttribute="bottom" constant="8" id="KHB-xJ-hy1"/>
+                    <constraint firstItem="21G-Mx-TRK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="76" id="Ftn-CY-9ZJ"/>
+                    <constraint firstItem="aVn-YY-fhf" firstAttribute="top" secondItem="21G-Mx-TRK" secondAttribute="bottom" constant="7" id="HvH-7k-fi8"/>
                     <constraint firstItem="Hzl-w6-RnS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="LAj-IK-vEH"/>
                     <constraint firstItem="XeG-4j-Yuk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="76" id="SpO-Xj-JRY"/>
                     <constraint firstItem="XeG-4j-Yuk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="akZ-9n-mt6"/>
                     <constraint firstItem="EFN-W8-2Ig" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eoQ-mw-Rc9"/>
+                    <constraint firstItem="LZO-rf-oDW" firstAttribute="top" secondItem="aVn-YY-fhf" secondAttribute="bottom" constant="-16" id="gX5-aX-l5k"/>
                     <constraint firstItem="Hzl-w6-RnS" firstAttribute="leading" secondItem="XeG-4j-Yuk" secondAttribute="trailing" constant="8" id="h9o-Fp-9yS"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hW6-xE-di7" secondAttribute="trailing" id="jpJ-Tf-qgB"/>
                     <constraint firstItem="EFN-W8-2Ig" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="km1-2d-qus"/>
-                    <constraint firstItem="C35-mK-Fgc" firstAttribute="leading" secondItem="GE3-2S-db0" secondAttribute="trailing" constant="8" id="oeR-2b-FBc"/>
-                    <constraint firstItem="LZO-rf-oDW" firstAttribute="top" secondItem="GE3-2S-db0" secondAttribute="bottom" constant="8" id="p4g-I4-J3Q"/>
                     <constraint firstItem="LZO-rf-oDW" firstAttribute="leading" secondItem="aVn-YY-fhf" secondAttribute="trailing" constant="17" id="p8F-6D-Vhr"/>
+                    <constraint firstItem="C35-mK-Fgc" firstAttribute="leading" secondItem="21G-Mx-TRK" secondAttribute="trailing" constant="8" id="ts7-nt-PYu"/>
                     <constraint firstItem="aVn-YY-fhf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="76" id="wNC-Tg-VSq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LZO-rf-oDW" secondAttribute="trailing" id="yx1-CY-wwx"/>
-                    <constraint firstItem="GE3-2S-db0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="76" id="zCB-JS-sDL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="C35-mK-Fgc" secondAttribute="trailing" id="zmx-P1-mCd"/>
+                    <constraint firstItem="21G-Mx-TRK" firstAttribute="top" secondItem="XeG-4j-Yuk" secondAttribute="bottom" constant="9" id="zna-sS-JIx"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="headImg" destination="EFN-W8-2Ig" id="5Km-N3-uiT"/>
+                <outlet property="isExclusive" destination="Hzl-w6-RnS" id="ao2-0x-vAv"/>
+                <outlet property="pingfenView" destination="21G-Mx-TRK" id="cw3-XS-pAs"/>
+                <outlet property="pingfenW" destination="hEt-j3-j19" id="qFL-pS-vL6"/>
+                <outlet property="price" destination="hW6-xE-di7" id="l5S-Gn-8K8"/>
+                <outlet property="title" destination="XeG-4j-Yuk" id="Ovg-dr-ykJ"/>
+            </connections>
+            <point key="canvasLocation" x="-608" y="-145"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="headIcon" width="50" height="50"/>
+    </resources>
 </document>

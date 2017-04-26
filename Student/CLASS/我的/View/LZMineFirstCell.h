@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LZMineFirstCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
+@property (strong, nonatomic) IBOutlet UIImageView *backHeadImg;
 
+@property (strong, nonatomic) IBOutlet UIView *backView;
 @end

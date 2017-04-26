@@ -10,5 +10,6 @@
 #import "SDCycleScrollView.h"
 @interface LZHomeFirstCell : UITableViewCell <SDCycleScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headView;
+@property (assign,nonatomic) int index;
 
 @end
