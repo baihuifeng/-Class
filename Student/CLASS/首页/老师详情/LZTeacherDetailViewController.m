@@ -114,8 +114,8 @@
 }
 
 - (IBAction)zixun:(UIButton *)sender {
-    LZChatViewController *chatVC = [[LZChatViewController alloc] initWithConversationChatter:@"111" conversationType:EMConversationTypeChat];
-    chatVC.title = @"111";
+    LZChatViewController *chatVC = [[LZChatViewController alloc] initWithConversationChatter:_model.imName conversationType:EMConversationTypeChat];
+    chatVC.title = _model.imName;
     [self.navigationController pushViewController:chatVC animated:YES];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "LZHomeHeadView.h"
+#import "MassageListViewController.h"
 
 @implementation LZHomeHeadView
 
@@ -25,6 +26,13 @@
     _addressStr = addressStr;
     [_addressBtn setTitle:addressStr forState:UIControlStateNormal];
 
+}
+- (IBAction)massage:(UIButton *)sender {
+    
+    HHTabbarViewController *tabar = (HHTabbarViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    MassageListViewController *massageVc = [[MassageListViewController alloc] init];
+    massageVc.title = @"消息列表";
+    [(UINavigationController *)tabar.selectedViewController pushViewController:massageVc animated:YES];
 }
 
 @end

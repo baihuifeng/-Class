@@ -59,6 +59,7 @@
 		213A7EDF1EB077540019FB97 /* LZYaJinJineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213A7EDD1EB077540019FB97 /* LZYaJinJineCell.xib */; };
 		213A7EE31EB07AEA0019FB97 /* LZYajinFinishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213A7EE11EB07AEA0019FB97 /* LZYajinFinishCell.m */; };
 		213A7EE41EB07AEA0019FB97 /* LZYajinFinishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213A7EE21EB07AEA0019FB97 /* LZYajinFinishCell.xib */; };
+		213A7EED1EB1E3530019FB97 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 213A7EEC1EB1E3530019FB97 /* NSString+MD5.m */; };
 		213FC0731E825E5600DF7115 /* LZDetailcommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213FC0711E825E5600DF7115 /* LZDetailcommentCell.m */; };
 		213FC0741E825E5600DF7115 /* LZDetailcommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */; };
 		213FC0781E8262F600DF7115 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 213FC0761E8262F600DF7115 /* CommentCell.m */; };
@@ -77,6 +78,7 @@
 		21B2E9351E841FD900CB8F37 /* LZDetailStandardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E9341E841FD900CB8F37 /* LZDetailStandardView.xib */; };
 		21B2E9391E84234B00CB8F37 /* LZStansardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E9371E84234B00CB8F37 /* LZStansardCell.m */; };
 		21B2E93A1E84234B00CB8F37 /* LZStansardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */; };
+		21E6CCBC1EB2EC3000776866 /* MassageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E6CCBB1EB2EC3000776866 /* MassageListViewController.m */; };
 		21E860821E8C9BA9004A0AC9 /* LZClassListHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E860811E8C9BA9004A0AC9 /* LZClassListHeadView.m */; };
 		21E860841E8C9BD1004A0AC9 /* LZClassListHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E860831E8C9BD1004A0AC9 /* LZClassListHeadView.xib */; };
 		21E860871E8CAF4C004A0AC9 /* LZClassItmeListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E860861E8CAF4C004A0AC9 /* LZClassItmeListView.m */; };
@@ -330,6 +332,8 @@
 		213A7EE01EB07AEA0019FB97 /* LZYajinFinishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYajinFinishCell.h; sourceTree = "<group>"; };
 		213A7EE11EB07AEA0019FB97 /* LZYajinFinishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYajinFinishCell.m; sourceTree = "<group>"; };
 		213A7EE21EB07AEA0019FB97 /* LZYajinFinishCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZYajinFinishCell.xib; sourceTree = "<group>"; };
+		213A7EEB1EB1E3530019FB97 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		213A7EEC1EB1E3530019FB97 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		213FC0701E825E5600DF7115 /* LZDetailcommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDetailcommentCell.h; sourceTree = "<group>"; };
 		213FC0711E825E5600DF7115 /* LZDetailcommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDetailcommentCell.m; sourceTree = "<group>"; };
 		213FC0721E825E5600DF7115 /* LZDetailcommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZDetailcommentCell.xib; sourceTree = "<group>"; };
@@ -363,6 +367,8 @@
 		21B2E9361E84234B00CB8F37 /* LZStansardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStansardCell.h; sourceTree = "<group>"; };
 		21B2E9371E84234B00CB8F37 /* LZStansardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStansardCell.m; sourceTree = "<group>"; };
 		21B2E9381E84234B00CB8F37 /* LZStansardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZStansardCell.xib; sourceTree = "<group>"; };
+		21E6CCBA1EB2EC3000776866 /* MassageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MassageListViewController.h; sourceTree = "<group>"; };
+		21E6CCBB1EB2EC3000776866 /* MassageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MassageListViewController.m; sourceTree = "<group>"; };
 		21E860801E8C9BA9004A0AC9 /* LZClassListHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZClassListHeadView.h; sourceTree = "<group>"; };
 		21E860811E8C9BA9004A0AC9 /* LZClassListHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZClassListHeadView.m; sourceTree = "<group>"; };
 		21E860831E8C9BD1004A0AC9 /* LZClassListHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZClassListHeadView.xib; sourceTree = "<group>"; };
@@ -870,6 +876,15 @@
 			path = "弹层";
 			sourceTree = "<group>";
 		};
+		21E6CCB91EB2EC0E00776866 /* 聊天列表 */ = {
+			isa = PBXGroup;
+			children = (
+				21E6CCBA1EB2EC3000776866 /* MassageListViewController.h */,
+				21E6CCBB1EB2EC3000776866 /* MassageListViewController.m */,
+			);
+			path = "聊天列表";
+			sourceTree = "<group>";
+		};
 		21EE18271E802B0100FB7D31 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1324,6 +1339,7 @@
 		49A36A061EA9D74700BD34B2 /* 聊天 */ = {
 			isa = PBXGroup;
 			children = (
+				21E6CCB91EB2EC0E00776866 /* 聊天列表 */,
 				49A36A071EA9D76100BD34B2 /* LZChatViewController.h */,
 				49A36A081EA9D76100BD34B2 /* LZChatViewController.m */,
 			);
@@ -1342,6 +1358,8 @@
 		49AECEDE1E850B110057C02F /* 三方类 */ = {
 			isa = PBXGroup;
 			children = (
+				213A7EEB1EB1E3530019FB97 /* NSString+MD5.h */,
+				213A7EEC1EB1E3530019FB97 /* NSString+MD5.m */,
 				49A369EF1EA896C600BD34B2 /* JYCustomPullGifHeader.h */,
 				49A369F01EA896C600BD34B2 /* JYCustomPullGifHeader.m */,
 				49AECF151E850C300057C02F /* NSString+stringSizeCalculate.h */,
@@ -1759,6 +1777,7 @@
 				212D9DBE1E88B10E00286DD7 /* QIAOTextView.m in Sources */,
 				21E860871E8CAF4C004A0AC9 /* LZClassItmeListView.m in Sources */,
 				49AECF171E850C300057C02F /* NSString+stringSizeCalculate.m in Sources */,
+				21E6CCBC1EB2EC3000776866 /* MassageListViewController.m in Sources */,
 				492F56CF1E96321500E667BD /* LZBalanceViewController.m in Sources */,
 				213A7E8B1EAD9F760019FB97 /* JYAccountTool.m in Sources */,
 				49AECE281E83B8690057C02F /* LZJudgeController.m in Sources */,
@@ -1791,6 +1810,7 @@
 				492F56C11E962C9D00E667BD /* LZProfitDetailViewController.m in Sources */,
 				491BA2B81E7FBA7000E92175 /* UIView+SDExtension.m in Sources */,
 				216073A51E8BA737008B3839 /* NSString+Check.m in Sources */,
+				213A7EED1EB1E3530019FB97 /* NSString+MD5.m in Sources */,
 				213A7E941EADCDB40019FB97 /* LZCommonManager.m in Sources */,
 				212D9DBB1E88AEEC00286DD7 /* LZYJViewController.m in Sources */,
 				49AECE2C1E83BD7B0057C02F /* LZMineDetailViewController.m in Sources */,

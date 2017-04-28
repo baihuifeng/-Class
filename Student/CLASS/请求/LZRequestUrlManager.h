@@ -11,6 +11,8 @@
 
 #define ManagerUrl  NetApiManager.get_BASEURL
 
+#define LZMiYaoSalt @"lzjy_login_app_slat"
+
 //#define LZImgUrl [NSString stringWithFormat:@"%@upload/",ManagerUrl]
 
 #pragma -mark "上传图片"
@@ -51,6 +53,10 @@
 
 #pragma -mark “注册”
 #define LZZhuCe [NSString stringWithFormat:@"%@User/register",ManagerUrl]
+
+#pragma -mark "登录"
+#define LZLogin [NSString stringWithFormat:@"%@User/login?",ManagerUrl]
+
 
 
 

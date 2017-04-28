@@ -217,7 +217,7 @@ static NetApiManager *netApiManager;
     NSMutableString *mString = [[NSMutableString alloc] init];
     [mString appendString:[NSString stringWithFormat:@"APPkey=%@",HomeHealthAPPKEY]];
     
-    [mString appendFormat:@"&cityId=%@",[HHCommonManager sharedHHCommonManager].cityId];
+    [mStr￼ing appendFormat:@"&cityId=%@",[HHCommonManager sharedHHCommonManager].cityId];
     [mString appendString:[NSString stringWithFormat:@"&devicebrand=%@",[GeneralTool deviceVersion]]];
     if ([UMSAgent getUMSUDID]) {
         [mString appendString:[NSString stringWithFormat:@"&deviceid=%@",[UMSAgent getUMSUDID]]];

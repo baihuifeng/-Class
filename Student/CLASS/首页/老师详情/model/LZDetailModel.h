@@ -91,6 +91,8 @@
 @property (nonatomic,strong) PriceModel *price;
 
 @property (nonatomic,strong) NSArray *skills;
+@property (nonatomic,copy) NSString *imName;
+@property (nonatomic,copy) NSString *imPsw;
 
 
 @end

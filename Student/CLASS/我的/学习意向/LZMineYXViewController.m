@@ -134,24 +134,31 @@
 
 - (void)getUserInfo:(int)tag {
     
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@",LZInfoUrl,_userId] params:nil finished:^(NetResponse *netResponse) {
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@",LZLogin,_userId] params:nil finished:^(NetResponse *netResponse) {
         if (netResponse.isSuccess) {
             JYAccount *infoAccount = [JYAccount mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
             [JYAccountTool save:infoAccount];
-            if (tag == 0) {
-                SWToast(@"注册成功");
-                _isEide = YES;
-                HHTabbarViewController *tab = (HHTabbarViewController *)JYRootTabBarController;
-                tab.selectedIndex = 0;
-                [Tool hideHUDForView:self.view animated:YES];
-                [self.navigationController popToRootViewControllerAnimated:YES];
-
-            } else {
-                SWToast(@"编辑成功");
-                _isEide = YES;
-                [self.navigationController popViewControllerAnimated:YES];
-                
+            
+            EMError *errorlog = [[EMClient sharedClient] loginWithUsername:infoAccount.imName password:infoAccount.imPsw];
+            
+            if (!errorlog) {
+                if (tag == 0) {
+                    SWToast(@"注册成功");
+                    
+                    _isEide = YES;
+                    HHTabbarViewController *tab = (HHTabbarViewController *)JYRootTabBarController;
+                    tab.selectedIndex = 0;
+                    [Tool hideHUDForView:self.view animated:YES];
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+                    
+                } else {
+                    SWToast(@"编辑成功");
+                    _isEide = YES;
+                    [self.navigationController popViewControllerAnimated:YES];
+                    
+                }
             }
+
             
             
         } else {

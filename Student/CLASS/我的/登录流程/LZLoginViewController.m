@@ -47,16 +47,51 @@
 }
 
 - (IBAction)logBtn:(UIButton *)sender {
+//    [Tool showHUDAddedTo:self.view animated:YES];
+//    [Tool hideHUDForView:self.view animated:YES];
+    NSString *strMd5 = [_password.text md5Encrypt];
+    
+    NSString *password = [[NSString stringWithFormat:@"%@%@%@",strMd5,_teleText.text,LZMiYaoSalt] md5Encrypt];
+    
+    NSLog(@"%@",password);
+    
     [Tool showHUDAddedTo:self.view animated:YES];
-    [Tool hideHUDForView:self.view animated:YES];
     
-    
-    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@",LZInfoUrl,@"1"] params:nil finished:^(NetResponse *netResponse) {
+    [NetApiManager getFromURL:[NSString stringWithFormat:@"%@cellPhone=%@&loginPSW=%@",LZLogin,_teleText.text,password] params:nil finished:^(NetResponse *netResponse) {
        
         if (netResponse.isSuccess) {
-            JYAccount *infoAccount = [JYAccount mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
-            [JYAccountTool save:infoAccount];
-            [self.navigationController popViewControllerAnimated:YES];
+            
+            [NetApiManager getFromURL:[NSString stringWithFormat:@"%@userId=%@",LZInfoUrl,netResponse.responseObject[@"data"]] params:nil finished:^(NetResponse *netResponse) {
+                if (netResponse.isSuccess) {
+                    JYAccount *infoAccount = [JYAccount mj_objectWithKeyValues:netResponse.responseObject[@"data"]];
+                    [JYAccountTool save:infoAccount];
+                    
+                    EMError *errorlog = [[EMClient sharedClient] loginWithUsername:infoAccount.imName password:infoAccount.imPsw];
+                    NSLog(@"======%@",errorlog);
+                    if (!errorlog) {
+                        [Tool hideHUDForView:self.view animated:YES];
+                        SWToast(@"登录成功");
+                        HHTabbarViewController *tab = (HHTabbarViewController *)JYRootTabBarController;
+                        tab.selectedIndex = 0;
+                        [Tool hideHUDForView:self.view animated:YES];
+                        [self.navigationController popToRootViewControllerAnimated:YES];
+                    } else{
+                        SWToast(errorlog.errorDescription);
+                        [Tool hideHUDForView:self.view animated:YES];
+                    }
+
+                } else {
+                    
+                    [Tool hideHUDForView:self.view animated:YES];
+                }
+            }];
+
+            
+            
+        } else {
+        
+            SWToast(netResponse.errorMessage);
+            [Tool hideHUDForView:self.view animated:YES];
         }
         
         

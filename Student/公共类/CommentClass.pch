@@ -36,4 +36,6 @@
 #import "EaseUI.h" //环信
 #import <Hyphenate/Hyphenate.h>
 
+#import "NSString+MD5.h"
+
 #endif /* CommentClass_pch */
